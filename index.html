@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YYH Works Desk</title>
+  <meta
+    name="description"
+    content="YYH 的 GitHub 作品集网站，集中展示 macOS、iOS、Chrome Extension 与 Electron 工具作品。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YYH / GitHub Portfolio</p>
+        <h1>把 7 个真实项目，放到同一张作品桌上。</h1>
+        <p class="lead">
+          这里展示的是最近完成的可运行作品，而不是停留在原型阶段的想法。
+          覆盖 macOS、iOS、Chrome 扩展和 Electron 工具，方便快速评估产品感、
+          工程执行和交付密度。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">
+            GitHub Profile
+          </a>
+          <a class="button secondary" href="#projects">
+            查看项目
+          </a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <div class="metric">
+          <span class="metric-value">7</span>
+          <span class="metric-label">已整理项目</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">4</span>
+          <span class="metric-label">Apple 端应用</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">3</span>
+          <span class="metric-label">效率工具 / 扩展</span>
+        </div>
+        <p class="hero-note">
+          页面会随着 GitHub 仓库公开状态同步更新，适合作为统一作品入口发给老板或合作方查看。
+        </p>
+      </aside>
+    </section>
+
+    <section class="strip">
+      <div class="strip-card">
+        <span class="strip-title">作品范围</span>
+        <p>桌面应用、移动应用、浏览器扩展、自动化工具。</p>
+      </div>
+      <div class="strip-card">
+        <span class="strip-title">展示重点</span>
+        <p>项目定位、技术栈、代表能力、后续仓库入口。</p>
+      </div>
+      <div class="strip-card">
+        <span class="strip-title">当前状态</span>
+        <p>页面已完成，仓库正在按独立公开仓库的方式整理与发布。</p>
+      </div>
+    </section>
+
+    <section class="section-heading" id="projects">
+      <p class="eyebrow">Project Matrix</p>
+      <h2>项目总览</h2>
+      <p>
+        每个卡片都保留了项目定位、核心能力和计划公开的仓库名。
+        仓库创建完成后，这里会直接跳转到对应 GitHub 页面。
+      </p>
+    </section>
+
+    <section class="projects-grid" id="project-grid" aria-live="polite"></section>
+
+    <section class="section-heading">
+      <p class="eyebrow">Why This Page</p>
+      <h2>为什么单独做一个作品站</h2>
+      <p>
+        单个仓库只能解释一个项目，但老板通常先看整体判断，再决定是否深挖。
+        这个页面把项目密度、技术跨度和完成度放在一个入口里，避免在多个仓库之间来回跳。
+      </p>
+    </section>
+
+    <section class="closing">
+      <div class="closing-card">
+        <h3>下一步</h3>
+        <p>
+          7 个项目将分别进入独立公开仓库，同时保留这个总入口作为长期更新的项目橱窗。
+        </p>
+      </div>
+      <div class="closing-card">
+        <h3>查看入口</h3>
+        <p>
+          GitHub 主页：
+          <a href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">
+            github.com/YYH123123813
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
