@@ -11,10 +11,10 @@ const sectionTargets = navLinks
 function fitArtboard() {
   if (!wrap || !artboard) return;
 
-  const availableWidth = Math.max(320, Math.min(window.innerWidth - 32, ARTBOARD_WIDTH));
-  const scale = Math.min(1, availableWidth / ARTBOARD_WIDTH);
+  const availableWidth = Math.max(320, wrap.clientWidth || Math.min(window.innerWidth - 20, ARTBOARD_WIDTH));
+  const scale = Math.max(0.74, Math.min(1.18, availableWidth / ARTBOARD_WIDTH));
 
-  artboard.style.transform = `scale(${scale})`;
+  artboard.style.transform = `translateX(-50%) scale(${scale})`;
   wrap.style.height = `${ARTBOARD_HEIGHT * scale}px`;
 }
 
