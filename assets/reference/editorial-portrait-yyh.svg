@@ -1,0 +1,35 @@
+<svg width="900" height="1125" viewBox="0 0 900 1125" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1125" fill="#EEE7DB"/>
+  <rect x="42" y="42" width="816" height="1041" rx="6" stroke="#B5AA9A" stroke-width="2"/>
+  <rect x="84" y="84" width="732" height="957" fill="#F5F0E8" stroke="#CBC0B2" stroke-width="1.5"/>
+
+  <rect x="120" y="132" width="660" height="735" fill="#D7D1C8"/>
+  <rect x="120" y="132" width="660" height="735" fill="url(#grain)" opacity="0.28"/>
+
+  <path d="M470 294C470 240 430 202 376 202C322 202 282 240 282 294C282 335 306 369 342 387L334 433C284 452 250 496 246 552L236 714H514L500 552C496 498 468 454 418 433L410 387C447 369 470 335 470 294Z" fill="#2F2D2A"/>
+  <path d="M308 294C308 253 338 225 376 225C415 225 444 253 444 294C444 333 415 363 376 363C338 363 308 333 308 294Z" fill="#47423D"/>
+  <path d="M284 297C289 241 331 209 377 209C431 209 470 244 470 300C470 337 448 371 416 390C406 395 395 397 386 397C405 384 421 364 421 336C421 307 407 285 376 285C340 285 313 300 295 328C286 343 282 359 282 376C276 361 281 331 284 297Z" fill="#191816"/>
+  <path d="M262 714C274 596 342 522 427 522C512 522 578 596 594 714H262Z" fill="#45403B"/>
+  <path d="M286 714C299 621 355 565 427 565C500 565 557 621 570 714H286Z" fill="#605852"/>
+  <path d="M350 408C366 419 388 423 405 418L418 488C406 519 387 541 370 553C355 539 338 518 327 487L350 408Z" fill="#777067"/>
+
+  <line x1="126" y1="890" x2="775" y2="890" stroke="#B4A797" stroke-width="1.5"/>
+  <line x1="126" y1="930" x2="775" y2="930" stroke="#D2C7B9" stroke-width="1"/>
+  <line x1="126" y1="970" x2="650" y2="970" stroke="#D2C7B9" stroke-width="1"/>
+
+  <text x="130" y="936" fill="#6C6257" font-family="Inter, Arial, sans-serif" font-size="24" letter-spacing="4">YANG YUHUI</text>
+  <text x="130" y="976" fill="#2C2926" font-family="Georgia, 'Times New Roman', serif" font-size="48">Independent Developer</text>
+  <text x="130" y="1023" fill="#7A6B5F" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="3">GUANGZHOU / WEB RESUME / DOSSIER</text>
+
+  <rect x="660" y="942" width="120" height="70" rx="35" stroke="#9C604B" stroke-width="2"/>
+  <text x="696" y="987" fill="#9C604B" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="2">YYH</text>
+
+  <defs>
+    <pattern id="grain" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.8" fill="#8E8376"/>
+      <circle cx="14" cy="7" r="0.7" fill="#8E8376"/>
+      <circle cx="21" cy="15" r="0.9" fill="#8E8376"/>
+      <circle cx="8" cy="19" r="0.6" fill="#8E8376"/>
+    </pattern>
+  </defs>
+</svg>
