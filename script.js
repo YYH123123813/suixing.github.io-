@@ -1,150 +1,165 @@
 const projects = [
   {
-    name: "Mac 灵动岛",
-    subtitle: "把 Mac 顶部刘海变成可交互的信息中心",
-    type: "macOS App",
-    folder: "Mac灵动岛",
-    status: "已公开",
-    accent: "#d06f3b",
-    description:
-      "基于 macOS 原生能力做动态刘海交互层，覆盖音乐控制、电量、文件拖放、日历、快捷键与菜单栏联动，定位是更完整的桌面效率壳层。",
-    stack: ["SwiftUI", "AppKit", "EventKit", "MediaRemote", "AppleScript"],
-    highlights: ["动态岛交互", "音乐控制", "文件托盘", "系统整合"],
-    repoName: "mac-dynamic-island"
-  },
-  {
-    name: "反重力插件 Auto Approve",
-    subtitle: "把 Run 批准流程从人工点击改为设置级自动化",
-    type: "IDE Extension",
-    folder: "反重力插件-自动run",
-    status: "已公开",
-    accent: "#2f7d75",
-    description:
-      "围绕 Antigravity 内建的工具批准能力做扩展封装，提供状态栏、快速开关与设置入口，目标是让工具批准和终端命令批准更稳定地自动执行。",
-    stack: ["JavaScript", "VS Code API", "Python", "VSIX"],
-    highlights: ["自动批准", "状态栏开关", "设置跳转", "避免坐标点击"],
-    repoName: "antigravity-auto-approve"
-  },
-  {
-    name: "Gemini Navigator",
-    subtitle: "为 Gemini 对话加入目录导航、导出与阅读增强",
-    type: "Chrome Extension",
-    folder: "gemini-sidebar-extension",
-    status: "已公开",
-    accent: "#4d66d5",
-    description:
-      "这是当前目录里最明确对应 Gemini 的扩展项目。它通过侧边目录、搜索过滤、导出 Markdown、复制内容和阅读模式，把长对话浏览体验做成了产品级插件。",
-    stack: ["JavaScript", "Manifest V3", "Shadow DOM", "MutationObserver"],
-    highlights: ["目录导航", "导出 Markdown", "阅读模式", "实时同步"],
-    repoName: "gemini-navigator-sidebar"
-  },
-  {
     name: "随记 / ShadowNote",
-    subtitle: "带预算、账单与通知能力的个人记录应用",
+    subtitle: "带预算、账单、交易、提醒与 OCR 能力的个人管理应用。",
     type: "iOS App",
-    folder: "随记",
-    status: "已公开",
-    accent: "#8f5a2d",
+    status: "公开仓库",
     description:
-      "从工程结构看，它已经扩展到交易记录、预算概览、通知、OCR 与相册能力，不只是普通备忘录，更像轻量个人财务与生活记录工具。",
+      "把记录、预算、交易、通知与 OCR 融成一套轻量但完成度较高的个人管理产品，更能体现移动端信息结构和持续迭代能力。",
+    proof:
+      "更像完整消费级产品，适合快速判断信息结构、功能整合与产品完成度。",
     stack: ["SwiftUI", "Core Data", "UserNotifications", "Vision OCR"],
-    highlights: ["预算管理", "交易记录", "通知提醒", "OCR 能力"],
-    repoName: "shadownote"
-  },
-  {
-    name: "iOS 长截屏",
-    subtitle: "多张截图拼接与作品管理的一体化应用",
-    type: "iOS App",
-    folder: "ios 长截屏",
-    status: "已公开",
-    accent: "#7f4cc9",
-    description:
-      "项目聚焦截图拼接体验，包含拖拽排序、拼接方向控制、实时预览、作品管理与上架准备文档，明显朝 App Store 可交付方向推进。",
-    stack: ["SwiftUI", "iOS 17", "Image Stitching", "Design System"],
-    highlights: ["长图拼接", "实时预览", "作品库", "上架准备"],
-    repoName: "ios-long-screenshot"
-  },
-  {
-    name: "电影邮票 / CinePost",
-    subtitle: "把电影观影记录做成邮票与信封式收藏体验",
-    type: "iOS App",
-    folder: "电影邮票",
-    status: "已公开",
-    accent: "#b48a2d",
-    description:
-      "以电影为内容，以邮票、信封、邮戳为视觉骨架，做观影收藏和归档体验。项目里已经有档案检索、评分、统计和上架准备文档。",
-    stack: ["SwiftUI", "Component Design", "Localization", "App Store Prep"],
-    highlights: ["主题化 UI", "电影归档", "统计视图", "视觉记忆点强"],
-    repoName: "movie-stamps-cinepost"
+    repoName: "shadownote",
+    image: "./assets/covers/shadownote.png",
+    featured: true
   },
   {
     name: "公众号导出工具",
-    subtitle: "批量导出公众号文章到本地的桌面应用",
-    type: "Electron App",
-    folder: "GONGzhonghao",
-    status: "已公开",
-    accent: "#17645c",
+    subtitle: "批量导出文章、图片与媒体资源的桌面工具。",
+    type: "Desktop Tool",
+    status: "公开仓库",
     description:
-      "Electron + React + TypeScript 的桌面工具，支持批量下载公众号文章、图片和媒体内容。发布时会避开内部第三方分析子仓库，保留主应用源码。",
+      "围绕真实内容处理工作流构建的 Electron 桌面应用，能够批量下载公众号文章、图片与媒体内容，强调可交付与可操作性。",
+    proof:
+      "最能证明我把明确需求做成稳定工具产品，而不是只做概念演示。",
     stack: ["Electron", "React", "TypeScript", "Puppeteer", "Ant Design"],
-    highlights: ["批量导出", "桌面应用", "媒体下载", "进度反馈"],
-    repoName: "wechat-article-exporter-desktop"
+    repoName: "wechat-article-exporter-desktop",
+    image: "./assets/covers/wechat-article-exporter-desktop.png",
+    featured: true
+  },
+  {
+    name: "Mac 灵动岛",
+    subtitle: "把 Mac 顶部刘海重做为可交互的信息中心。",
+    type: "macOS App",
+    status: "公开仓库",
+    description:
+      "围绕 macOS 原生能力做动态交互层，覆盖音乐控制、电量状态、文件拖放、日历提醒与菜单栏联动，体现系统级整合能力。",
+    proof:
+      "记忆点强，同时能体现桌面产品感、系统交互理解与实现深度。",
+    stack: ["SwiftUI", "AppKit", "EventKit", "MediaRemote", "AppleScript"],
+    repoName: "mac-dynamic-island",
+    image: "./assets/covers/mac-dynamic-island.png",
+    featured: true
+  },
+  {
+    name: "iOS 长截屏",
+    subtitle: "多张截图拼接与作品管理的一体化工具。",
+    type: "iOS App",
+    status: "公开仓库",
+    description:
+      "聚焦长图拼接体验，包含拖拽排序、拼接方向控制、实时预览与作品管理，更偏工具型产品完成度。",
+    proof:
+      "能够证明我在工具型移动应用中的流程设计与细节打磨能力。",
+    stack: ["SwiftUI", "iOS 17", "Image Stitching"],
+    repoName: "ios-long-screenshot",
+    image: "./assets/covers/ios-long-screenshot.png"
+  },
+  {
+    name: "Gemini Navigator",
+    subtitle: "为长对话加入目录导航、搜索过滤与导出能力。",
+    type: "Chrome Extension",
+    status: "公开仓库",
+    description:
+      "通过侧边目录、搜索过滤、导出 Markdown、复制内容和阅读模式，改善长对话浏览与整理体验。",
+    proof:
+      "体现我对阅读秩序、信息结构和轻量扩展工具的理解。",
+    stack: ["JavaScript", "Manifest V3", "Shadow DOM"],
+    repoName: "gemini-navigator-sidebar",
+    image: "./assets/covers/gemini-navigator-sidebar.png"
+  },
+  {
+    name: "电影邮票 / CinePost",
+    subtitle: "把电影记录做成更有归档感的收藏体验。",
+    type: "iOS App",
+    status: "公开仓库",
+    description:
+      "以邮票、信封、邮戳为视觉骨架，做观影收藏和归档体验，强调内容主题与产品表达的一致性。",
+    proof:
+      "更偏审美与内容表达，能补足我在产品气质和界面叙事上的能力面。",
+    stack: ["SwiftUI", "Component Design", "Localization"],
+    repoName: "movie-stamps-cinepost",
+    image: "./assets/covers/movie-stamps-cinepost.png"
+  },
+  {
+    name: "反重力插件 Auto Approve",
+    subtitle: "把工具批准流程从人工点击改成设置级自动化。",
+    type: "IDE Extension",
+    status: "公开仓库",
+    description:
+      "围绕 Antigravity 的工具批准能力做扩展封装，减少重复人工批准动作，让开发工作流更稳定。",
+    proof:
+      "更偏开发者工具方向，说明我也能处理效率型和工作流型产品。",
+    stack: ["JavaScript", "VS Code API", "Python", "VSIX"],
+    repoName: "antigravity-auto-approve",
+    image: "./assets/covers/antigravity-auto-approve.png"
   }
 ];
 
-const grid = document.querySelector("#project-grid");
+const featuredGrid = document.querySelector("#featured-grid");
+const projectList = document.querySelector("#project-list");
 
-function renderProjects() {
-  grid.innerHTML = projects.map((project) => {
-    const stack = project.stack
-      .map((item) => `<span class="stack-chip">${item}</span>`)
-      .join("");
+function createRepoUrl(repoName) {
+  return `https://github.com/YYH123123813/${repoName}`;
+}
 
-    const highlights = project.highlights
-      .map((item) => `<span class="highlight-chip">${item}</span>`)
-      .join("");
+function renderFeatured() {
+  const featuredProjects = projects.filter((project) => project.featured);
 
-    return `
-      <article class="project-card" style="--card-accent:${project.accent}">
-        <div class="project-header">
-          <div>
-            <h3 class="project-title">${project.name}</h3>
-            <div class="project-subtitle">${project.subtitle}</div>
+  featuredGrid.innerHTML = featuredProjects
+    .map((project) => {
+      const repoUrl = createRepoUrl(project.repoName);
+      return `
+        <article class="featured-card">
+          <div class="featured-visual">
+            <img src="${project.image}" alt="${project.name} 项目封面图" loading="lazy">
           </div>
-          <span class="status-chip">${project.status}</span>
-        </div>
-        <div class="type-row">
-          <span class="type-chip">${project.type}</span>
-          <span class="type-chip">目录：${project.folder}</span>
-          <span class="type-chip">计划仓库：${project.repoName}</span>
-        </div>
-        <p class="project-description">${project.description}</p>
-        <div class="stack-row">${stack}</div>
-        <div class="highlight-row">${highlights}</div>
-        <div class="project-actions">
-          <a class="button secondary" href="https://github.com/YYH123123813/${project.repoName}" target="_blank" rel="noreferrer">查看仓库</a>
-          <a class="button secondary" href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">GitHub 主页</a>
-        </div>
-      </article>
-    `;
-  }).join("");
+          <div class="featured-copy">
+            <div class="card-meta">
+              <span class="card-type">${project.type}</span>
+              <span class="card-status">${project.status}</span>
+            </div>
+            <h3>${project.name}</h3>
+            <p class="featured-subtitle">${project.subtitle}</p>
+            <p class="featured-description">${project.description}</p>
+            <p class="featured-proof">${project.proof}</p>
+            <p class="card-stack">技术栈：${project.stack.join(" · ")}</p>
+            <div class="card-footer">
+              <span class="repo-slug">github.com/YYH123123813/${project.repoName}</span>
+              <a class="text-link" href="${repoUrl}" target="_blank" rel="noreferrer">查看仓库</a>
+            </div>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
 }
 
-function observeCards() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.16 });
+function renderProjectList() {
+  const compactProjects = projects.filter((project) => !project.featured);
 
-  document.querySelectorAll(".project-card").forEach((card, index) => {
-    card.style.transitionDelay = `${index * 70}ms`;
-    observer.observe(card);
-  });
+  projectList.innerHTML = compactProjects
+    .map((project) => {
+      const repoUrl = createRepoUrl(project.repoName);
+      return `
+        <article class="list-card">
+          <div class="list-thumb">
+            <img src="${project.image}" alt="${project.name} 项目封面图" loading="lazy">
+          </div>
+          <div class="list-main">
+            <div class="list-top">
+              <h3 class="list-name">${project.name}</h3>
+              <span class="list-meta">${project.type} · ${project.status}</span>
+            </div>
+            <p class="list-subtitle">${project.subtitle}</p>
+            <p class="list-proof">${project.proof}</p>
+            <p class="list-stack">技术栈：${project.stack.join(" · ")}</p>
+          </div>
+          <a class="button button-ghost" href="${repoUrl}" target="_blank" rel="noreferrer">查看仓库</a>
+        </article>
+      `;
+    })
+    .join("");
 }
 
-renderProjects();
-observeCards();
+renderFeatured();
+renderProjectList();

@@ -3,112 +3,307 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YYH Works Desk</title>
+  <title>杨煜辉｜网页简历与作品集</title>
   <meta
     name="description"
-    content="YYH 的 GitHub 作品集网站，集中展示 macOS、iOS、Chrome Extension 与 Electron 工具作品。"
+    content="杨煜辉的网页简历与作品集。广州城市理工学院本科在读，持续独立开发，已完成 10+ 软件项目；本页已整合简历核心信息与 7 个代表作品，可直接替代 PDF 简历阅读。"
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="noise"></div>
-  <main class="page-shell">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">YYH / GitHub Portfolio</p>
-        <h1>把 7 个真实项目，放到同一张作品桌上。</h1>
-        <p class="lead">
-          这里展示的是最近完成的可运行作品，而不是停留在原型阶段的想法。
-          覆盖 macOS、iOS、Chrome 扩展和 Electron 工具，方便快速评估产品感、
-          工程执行和交付密度。
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">
-            GitHub Profile
-          </a>
-          <a class="button secondary" href="#projects">
-            查看项目
-          </a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="杨煜辉 首页">
+        <span class="brand-name">杨煜辉</span>
+        <span class="brand-slash">/</span>
+        <span class="brand-sub">Resume + Portfolio</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#resume">网页简历</a>
+        <a href="#experience">教育与经历</a>
+        <a href="#projects">代表项目</a>
+        <a href="#proof">能力结构</a>
+        <a href="#contact">联系方式</a>
+      </nav>
+      <a class="button button-ghost" href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">GitHub</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">杨煜辉 / Web Resume &amp; Product Portfolio</p>
+          <h1>把简历信息和作品证据放在同一个页面里。</h1>
+          <p class="hero-lead">
+            广州城市理工学院新能源汽车工程本科在读。2025 年起持续进行独立开发，
+            已完成 10+ 软件 / 网站 / 工具项目，当前公开展示 7 个代表作品。
+            这不是单独挂一个 PDF 的作品站，而是一份可以直接投递的网页化简历。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#resume">查看网页简历</a>
+            <a class="button button-ghost" href="#projects">查看代表项目</a>
+          </div>
+          <div class="hero-metrics" aria-label="核心信息">
+            <div class="metric-item">
+              <span class="metric-label">身份</span>
+              <strong>本科在读 / 独立开发者</strong>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">公开展示</span>
+              <strong>7 个代表作品</strong>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">独立完成</span>
+              <strong>10+ 软件项目</strong>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">覆盖形态</span>
+              <strong>macOS / iOS / Extension / Desktop</strong>
+            </div>
+          </div>
         </div>
-      </div>
-      <aside class="hero-panel">
-        <div class="metric">
-          <span class="metric-value">7</span>
-          <span class="metric-label">已整理项目</span>
+
+        <aside class="identity-panel" aria-label="简历快照">
+          <p class="panel-kicker">Resume Snapshot</p>
+          <div class="identity-list">
+            <div class="identity-row">
+              <span>意向城市</span>
+              <strong>广州</strong>
+            </div>
+            <div class="identity-row">
+              <span>学校</span>
+              <strong>广州城市理工学院</strong>
+            </div>
+            <div class="identity-row">
+              <span>专业</span>
+              <strong>新能源汽车工程</strong>
+            </div>
+            <div class="identity-row">
+              <span>电话</span>
+              <strong><a href="tel:16634118851">16634118851</a></strong>
+            </div>
+            <div class="identity-row">
+              <span>邮箱</span>
+              <strong><a href="mailto:116484728@qq.com">116484728@qq.com</a></strong>
+            </div>
+          </div>
+          <p class="identity-note">
+            本页已经整合简历核心信息、经历说明与项目证据，默认作为“简历链接”使用，
+            不再依赖单独 PDF 才能读懂我做过什么。
+          </p>
+        </aside>
+      </section>
+
+      <section class="section" id="resume">
+        <div class="section-head">
+          <p class="eyebrow">Resume</p>
+          <h2>网页简历</h2>
+          <p>把基础信息、求职摘要、自我评价和附加亮点直接放进网页，替代传统 PDF 简历的阅读路径。</p>
         </div>
-        <div class="metric">
-          <span class="metric-value">4</span>
-          <span class="metric-label">Apple 端应用</span>
+        <div class="resume-grid">
+          <article class="resume-card">
+            <h3>求职摘要</h3>
+            <p>
+              我并非计算机科班出身，但更关注是否能把明确需求做成可交付产品。
+              从需求判断、信息结构、界面设计到编码交付，我尽量自己完成，
+              目前已经持续沉淀出 10+ 软件 / 网站 / 工具项目，并公开展示其中 7 个代表作。
+            </p>
+          </article>
+
+          <article class="resume-card">
+            <h3>基本信息</h3>
+            <ul class="detail-list">
+              <li><span>姓名</span><strong>杨煜辉</strong></li>
+              <li><span>性别</span><strong>男</strong></li>
+              <li><span>年龄</span><strong>19</strong></li>
+              <li><span>学历</span><strong>本科在读</strong></li>
+              <li><span>学校</span><strong>广州城市理工学院</strong></li>
+              <li><span>专业</span><strong>新能源汽车工程</strong></li>
+              <li><span>意向城市</span><strong>广州</strong></li>
+              <li><span>联系方式</span><strong>16634118851 / 116484728@qq.com</strong></li>
+            </ul>
+          </article>
+
+          <article class="resume-card">
+            <h3>自我评价</h3>
+            <ul class="bullet-list">
+              <li>责任心强，偏行动派，拿到任务后更习惯直接推进而不是空想。</li>
+              <li>抗压能力较强，强调准时准点完成任务。</li>
+              <li>做事稳重，思考周到，能从多个角度拆解问题。</li>
+              <li>既重视产品完成度，也重视后续可继续迭代的空间。</li>
+            </ul>
+          </article>
+
+          <article class="resume-card">
+            <h3>附加亮点</h3>
+            <ul class="bullet-list">
+              <li>有个人复读经历，一年提分 100+。</li>
+              <li>策划并落地过 50 人、300 人规模的线上破冰方案。</li>
+              <li>参与过 15 人抖音团队的后台策划与运营支持。</li>
+              <li>曾以“学历贬值”为主题参加答辩比赛，获得二等奖，并担任总负责人。</li>
+              <li>完成过接近一万字的大学与人生方向思维导图，可作为课程讲课大纲。</li>
+            </ul>
+          </article>
         </div>
-        <div class="metric">
-          <span class="metric-value">3</span>
-          <span class="metric-label">效率工具 / 扩展</span>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-head">
+          <p class="eyebrow">Timeline</p>
+          <h2>教育与实践经历</h2>
+          <p>按 HR 的阅读习惯排列，只保留最容易判断执行力、组织协同与产品潜力的经历。</p>
         </div>
-        <p class="hero-note">
-          页面会随着 GitHub 仓库公开状态同步更新，适合作为统一作品入口发给老板或合作方查看。
-        </p>
-      </aside>
-    </section>
+        <div class="timeline-list">
+          <article class="timeline-item">
+            <span class="timeline-date">2025 — 至今</span>
+            <div class="timeline-main">
+              <h3>独立开发者</h3>
+              <p>持续完成软件产品与工具开发，已完成 10+ 软件 / 网站 / 工具项目，公开展示 7 个代表项目。</p>
+              <ul>
+                <li>覆盖 macOS、iOS、Chrome Extension、Electron 桌面工具等形态。</li>
+                <li>更关注真实需求、完成度、能否被理解，以及是否能继续迭代。</li>
+              </ul>
+            </div>
+          </article>
 
-    <section class="strip">
-      <div class="strip-card">
-        <span class="strip-title">作品范围</span>
-        <p>桌面应用、移动应用、浏览器扩展、自动化工具。</p>
-      </div>
-      <div class="strip-card">
-        <span class="strip-title">展示重点</span>
-        <p>项目定位、技术栈、代表能力、后续仓库入口。</p>
-      </div>
-      <div class="strip-card">
-        <span class="strip-title">当前状态</span>
-        <p>页面已完成，仓库正在按独立公开仓库的方式整理与发布。</p>
-      </div>
-    </section>
+          <article class="timeline-item">
+            <span class="timeline-date">2024.09 — 至今</span>
+            <div class="timeline-main">
+              <h3>广州城市理工学院</h3>
+              <p>新能源汽车工程专业，本科在读。</p>
+            </div>
+          </article>
 
-    <section class="section-heading" id="projects">
-      <p class="eyebrow">Project Matrix</p>
-      <h2>项目总览</h2>
-      <p>
-        每个卡片都保留了项目定位、核心能力和计划公开的仓库名。
-        仓库创建完成后，这里会直接跳转到对应 GitHub 页面。
-      </p>
-    </section>
+          <article class="timeline-item">
+            <span class="timeline-date">2024.09 — 2024.10</span>
+            <div class="timeline-main">
+              <h3>AI 系统知识及其应用｜课程项目主理</h3>
+              <p>负责课程内容打磨、流程梳理、团队分工、讲解答疑与项目推进。</p>
+              <ul>
+                <li>完成课程大纲提炼总结，并沉淀为长篇结构化思维导图。</li>
+                <li>有项目主理、内容组织和表达输出经验。</li>
+              </ul>
+            </div>
+          </article>
 
-    <section class="projects-grid" id="project-grid" aria-live="polite"></section>
+          <article class="timeline-item">
+            <span class="timeline-date">2024.09 — 2024.10</span>
+            <div class="timeline-main">
+              <h3>重庆松果仁研习社集团有限公司｜新媒体项目实践</h3>
+              <p>参与公众号运营、新人培训与基础面试协同，偏执行与组织支持。</p>
+            </div>
+          </article>
 
-    <section class="section-heading">
-      <p class="eyebrow">Why This Page</p>
-      <h2>为什么单独做一个作品站</h2>
-      <p>
-        单个仓库只能解释一个项目，但老板通常先看整体判断，再决定是否深挖。
-        这个页面把项目密度、技术跨度和完成度放在一个入口里，避免在多个仓库之间来回跳。
-      </p>
-    </section>
+          <article class="timeline-item">
+            <span class="timeline-date">2024.07 — 2024.08</span>
+            <div class="timeline-main">
+              <h3>杭州树成林教育科技集团有限公司｜课程 / 社群运营实践</h3>
+              <p>参与社群维护、知识星球运营支持与内容整理。</p>
+              <ul>
+                <li>策划并落地过 50 人、300 人规模的线上破冰方案。</li>
+                <li>接触过团队协作、内容运营与用户沟通场景。</li>
+              </ul>
+            </div>
+          </article>
 
-    <section class="closing">
-      <div class="closing-card">
-        <h3>下一步</h3>
-        <p>
-          7 个项目将分别进入独立公开仓库，同时保留这个总入口作为长期更新的项目橱窗。
-        </p>
+          <article class="timeline-item">
+            <span class="timeline-date">2023 — 2024</span>
+            <div class="timeline-main">
+              <h3>个人阶段经历</h3>
+              <p>有一年复读经历，个人提分 100+；也参与过抖音团队后台策划与答辩比赛组织。</p>
+              <ul>
+                <li>参与过 15 人抖音团队的运营与策划支持。</li>
+                <li>以“学历贬值”为主题的答辩比赛获得二等奖，并担任总负责人。</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="proof">
+        <div class="section-head">
+          <p class="eyebrow">Evidence</p>
+          <h2>能力结构</h2>
+          <p>不只列工具名，而是把能力拆成招聘方容易判断的几条主线。</p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card">
+            <h3>独立交付</h3>
+            <p>能把需求判断、信息结构、界面和代码推进到一个完整产品，而不是停在 demo。</p>
+            <p class="proof-links">对应项目：随记 / ShadowNote、公众号导出工具、iOS 长截屏</p>
+          </article>
+          <article class="proof-card">
+            <h3>Apple 生态开发</h3>
+            <p>持续完成 iOS / macOS 应用，处理系统交互、工具流程与移动端体验细节。</p>
+            <p class="proof-links">对应项目：Mac 灵动岛、随记、iOS 长截屏、电影邮票</p>
+          </article>
+          <article class="proof-card">
+            <h3>Web 与工具型开发</h3>
+            <p>能使用 Electron、React、TypeScript 与浏览器扩展能力构建真实工作流工具。</p>
+            <p class="proof-links">对应项目：公众号导出工具、Gemini Navigator、Auto Approve</p>
+          </article>
+          <article class="proof-card">
+            <h3>组织与表达</h3>
+            <p>有课程打磨、讲解答疑、活动策划、项目主理和新人协同经验。</p>
+            <p class="proof-links">对应经历：AI 系统知识及其应用课程、树成林、答辩项目</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-head">
+          <p class="eyebrow">Selected Work</p>
+          <h2>代表项目</h2>
+          <p>这里展示最能判断产品感、完成度和代码交付能力的项目，而不是只堆技术名词。</p>
+        </div>
+        <div class="featured-grid" id="featured-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section section-index" id="index">
+        <div class="section-head section-head-narrow">
+          <p class="eyebrow">Project Index</p>
+          <h2>其余项目</h2>
+          <p>其余项目降为更安静的索引视图，保留必要说明，不把页面重新做成卡片墙。</p>
+        </div>
+        <div class="project-list" id="project-list" aria-live="polite"></div>
+      </section>
+
+      <section class="section section-contact" id="contact">
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>如果你想看一个能把想法做成真实产品的在校开发者</h2>
+            <p>
+              可以直接用这个链接作为简历阅读入口。网页里已经包含我的基础信息、经历摘要和项目证据；
+              如果需要进一步看代码与仓库，再进入 GitHub 即可。
+            </p>
+          </div>
+          <div class="contact-list">
+            <a class="contact-link" href="tel:16634118851">电话：16634118851</a>
+            <a class="contact-link" href="mailto:116484728@qq.com">邮箱：116484728@qq.com</a>
+            <a class="contact-link" href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">GitHub：YYH123123813</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-title">杨煜辉｜网页简历与作品集</p>
+        <p class="footer-meta">广州城市理工学院在读 · 独立开发者 · 本页默认替代 PDF 简历阅读</p>
       </div>
-      <div class="closing-card">
-        <h3>查看入口</h3>
-        <p>
-          GitHub 主页：
-          <a href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">
-            github.com/YYH123123813
-          </a>
-        </p>
+      <div class="footer-actions">
+        <a class="footer-link" href="#resume">网页简历</a>
+        <a class="footer-link" href="#projects">代表项目</a>
+        <a class="footer-link" href="mailto:116484728@qq.com">联系邮箱</a>
       </div>
-    </section>
-  </main>
+    </footer>
+  </div>
 
   <script src="./script.js"></script>
 </body>
