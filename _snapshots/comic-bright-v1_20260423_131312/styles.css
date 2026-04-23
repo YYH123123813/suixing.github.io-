@@ -405,7 +405,7 @@ button {
 
 .hero-stage {
   position: relative;
-  min-height: 540px;
+  min-height: 620px;
   isolation: isolate;
   --pointer-x: 52%;
   --pointer-y: 38%;
@@ -443,7 +443,7 @@ button {
 .stage-card-main {
   top: 10%;
   left: 0;
-  width: 76%;
+  width: 72%;
   border-radius: 32px 34px 26px 36px;
   transform: rotate(-2deg);
 }
@@ -471,7 +471,7 @@ button {
 }
 
 .stage-card-small {
-  width: 40%;
+  width: 44%;
   padding: 18px 18px 20px;
   border-radius: 26px 28px 20px 28px;
 }
@@ -481,6 +481,109 @@ button {
   right: 2%;
   background: linear-gradient(135deg, #fffef7, #fff3cb);
   animation: bob-a 8s ease-in-out infinite;
+}
+
+.stage-card-b {
+  bottom: 16%;
+  right: 0;
+  background: linear-gradient(135deg, #ecfbff, #effff7);
+  animation: bob-b 9.4s ease-in-out infinite;
+}
+
+.stage-note {
+  bottom: 2%;
+  left: 9%;
+  width: 48%;
+  padding: 18px 20px;
+  border-radius: 24px 26px 18px 26px;
+  background: linear-gradient(135deg, #fff9ef, #ffffff);
+}
+
+.stage-note::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  bottom: -14px;
+  width: 26px;
+  height: 26px;
+  border-left: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  background: #fff9ef;
+  transform: rotate(-24deg);
+}
+
+.stage-note ul {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stage-note li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(32, 48, 82, 0.18);
+}
+
+.stage-note span {
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+}
+
+.stage-note strong {
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.marquee {
+  margin-top: 46px;
+  overflow: hidden;
+  border: 2px solid rgba(32, 48, 82, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 10px 0 rgba(82, 201, 255, 0.12);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: max-content;
+  padding: 14px 0;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-track span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-family: "Shantell Sans", cursive;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.marquee-track span:nth-child(4n + 1) {
+  background: #effbff;
+}
+
+.marquee-track span:nth-child(4n + 2) {
+  background: #fff6d6;
+}
+
+.marquee-track span:nth-child(4n + 3) {
+  background: #ffeaf5;
+}
+
+.marquee-track span:nth-child(4n + 4) {
+  background: #eefef5;
 }
 
 .section {
@@ -745,7 +848,7 @@ button {
 
 .capability-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   margin-top: 34px;
 }
@@ -1003,6 +1106,16 @@ button {
   background: linear-gradient(135deg, #fff0f8, #ffffff);
 }
 
+.project-row::after {
+  content: "✦";
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  color: rgba(32, 48, 82, 0.18);
+  font-family: "Shantell Sans", cursive;
+  font-size: 1.2rem;
+}
+
 .project-row-copy {
   display: grid;
   gap: 10px;
@@ -1034,6 +1147,16 @@ button {
   padding: 22px 24px;
 }
 
+.timeline-item::after {
+  content: "note";
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  color: rgba(32, 48, 82, 0.16);
+  font-family: "Shantell Sans", cursive;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
 .timeline-item:nth-child(1) {
   background: linear-gradient(135deg, #eefaff, #ffffff);
 }
@@ -1159,6 +1282,16 @@ button {
   }
 }
 
+@keyframes bob-b {
+  0%,
+  100% {
+    transform: rotate(-4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-6deg) translateY(10px);
+  }
+}
+
 @media (max-width: 1160px) {
   .hero-grid,
   .project-stage,
@@ -1172,7 +1305,7 @@ button {
   }
 
   .hero-stage {
-    min-height: 500px;
+    min-height: 580px;
   }
 
   .overview-card-large,
@@ -1273,7 +1406,7 @@ button {
   }
 
   .hero-stage {
-    min-height: 420px;
+    min-height: 520px;
   }
 
   .stage-card-main {
@@ -1282,10 +1415,25 @@ button {
     left: 0;
   }
 
-  .stage-card-a {
+  .stage-card-a,
+  .stage-card-b,
+  .stage-note {
     width: min(82%, 290px);
+  }
+
+  .stage-card-a {
     top: 55%;
     right: 0;
+  }
+
+  .stage-card-b {
+    bottom: 8%;
+    left: 0;
+    right: auto;
+  }
+
+  .stage-note {
+    display: none;
   }
 
   .capability-grid {
@@ -1294,7 +1442,8 @@ button {
 
   .project-row-top,
   .project-foot,
-  .detail-list li {
+  .detail-list li,
+  .stage-note li {
     flex-direction: column;
     align-items: flex-start;
   }

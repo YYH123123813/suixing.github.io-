@@ -124,7 +124,8 @@ function renderFeatured() {
           </div>
           <h3>${leadProject.name}</h3>
           <p class="project-subtitle">${leadProject.subtitle}</p>
-          <p class="project-proof">${leadProject.proof}</p>
+          <p class="project-description">${leadProject.description}</p>
+          <p class="project-proof">为什么它值得被放到首页：${leadProject.proof}</p>
           <div class="project-foot">
             <p class="stack-line">${leadProject.stack.join(" · ")}</p>
             <a class="text-link" href="${createRepoUrl(leadProject.repoName)}" target="_blank" rel="noreferrer">查看仓库 ↗</a>
@@ -146,7 +147,7 @@ function renderFeatured() {
                     <span class="project-status">${project.status}</span>
                   </div>
                   <h3>${project.name}</h3>
-                  <p class="project-description">${project.subtitle}</p>
+                  <p class="project-description">${project.proof}</p>
                   <div class="project-foot">
                     <p class="stack-line">${project.stack.join(" · ")}</p>
                     <a class="text-link" href="${createRepoUrl(project.repoName)}" target="_blank" rel="noreferrer">查看仓库 ↗</a>
@@ -180,6 +181,7 @@ function renderProjectList() {
             </div>
             <div class="project-row-content">
               <p>${project.subtitle}</p>
+              <p>${project.proof}</p>
             </div>
             <a class="project-row-link" href="${createRepoUrl(project.repoName)}" target="_blank" rel="noreferrer">打开仓库 ↗</a>
           </div>
