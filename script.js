@@ -1,56 +1,67 @@
-const sections = document.querySelectorAll('.reveal-section');
-const navLinks = document.querySelectorAll('.topnav a');
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const ARTBOARD_WIDTH = 1086;
+const ARTBOARD_HEIGHT = 1448;
 
-function initReveal() {
-  if (prefersReducedMotion) {
-    sections.forEach((section) => section.classList.add('is-visible'));
-    return;
+const wrap = document.querySelector('.browser-scale-wrap');
+const artboard = document.querySelector('.browser-scale');
+const navLinks = Array.from(document.querySelectorAll('.topnav a'));
+const sectionTargets = navLinks
+  .map((link) => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+
+function fitArtboard() {
+  if (!wrap || !artboard) return;
+
+  const availableWidth = Math.max(320, Math.min(window.innerWidth - 32, ARTBOARD_WIDTH));
+  const scale = Math.min(1, availableWidth / ARTBOARD_WIDTH);
+
+  artboard.style.transform = `scale(${scale})`;
+  wrap.style.height = `${ARTBOARD_HEIGHT * scale}px`;
+}
+
+function setActiveLink(id) {
+  navLinks.forEach((link) => {
+    link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+  });
+}
+
+function scrollToTarget(target) {
+  if (!target) return;
+  const top = target.getBoundingClientRect().top + window.scrollY - 24;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
+
+function updateActiveByViewport() {
+  if (!sectionTargets.length) return;
+
+  const viewportAnchor = window.innerHeight * 0.28;
+  const ranked = sectionTargets
+    .map((section) => ({
+      id: section.id,
+      distance: Math.abs(section.getBoundingClientRect().top - viewportAnchor)
+    }))
+    .sort((a, b) => a.distance - b.distance);
+
+  if (ranked[0]) {
+    setActiveLink(ranked[0].id);
   }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-      });
-    },
-    {
-      threshold: 0.14,
-      rootMargin: '0px 0px -8% 0px'
-    }
-  );
-
-  sections.forEach((section) => observer.observe(section));
 }
 
-function initNavSpy() {
-  const targets = Array.from(document.querySelectorAll('main [id], footer[id]'));
-  if (!targets.length) return;
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    event.preventDefault();
+    setActiveLink(target.id);
+    scrollToTarget(target);
+  });
+});
 
-  const setActive = (id) => {
-    navLinks.forEach((link) => {
-      link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
-    });
-  };
+window.addEventListener('resize', fitArtboard);
+window.addEventListener('load', () => {
+  fitArtboard();
+  updateActiveByViewport();
+});
+window.addEventListener('scroll', updateActiveByViewport, { passive: true });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-      if (!visible) return;
-      setActive(visible.target.id);
-    },
-    {
-      threshold: [0.2, 0.45, 0.7],
-      rootMargin: '-18% 0px -55% 0px'
-    }
-  );
-
-  targets.forEach((target) => observer.observe(target));
-}
-
-initReveal();
-initNavSpy();
+fitArtboard();
+updateActiveByViewport();

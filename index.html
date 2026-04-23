@@ -1,310 +1,289 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>杨煜辉｜网页替代简历</title>
+  <title>JIAHAO LI｜Editorial Portfolio</title>
   <meta
     name="description"
-    content="杨煜辉的网页替代简历与个人作品集首页。以编辑感、档案感、拼贴感呈现个人简介、精选作品、经历、能力结构与联系方式。"
+    content="A faithful browser-framed editorial collage homepage recreated as a real webpage with tactile paper layers, serif-led typography, bilingual copy, and asymmetrical portfolio composition."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Caveat:wght@500&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="paper-noise" aria-hidden="true"></div>
-  <div class="paper-vignette" aria-hidden="true"></div>
-
-  <div class="site-shell">
-    <header class="topbar" id="top">
-      <a class="brand" href="#top" aria-label="杨煜辉 首页">
-        <span class="brand-latin">YANG YUHUI</span>
-        <span class="brand-dot"></span>
-        <span class="brand-cjk">WEB RESUME / DOSSIER</span>
-      </a>
-
-      <div class="topbar-note">github.com/YYH123123813</div>
-
-      <nav class="topnav" aria-label="主导航">
-        <a href="#works">WORKS</a>
-        <a href="#manifesto">MANIFESTO</a>
-        <a href="#experience">EXPERIENCE</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
-    </header>
-
-    <main class="dossier-page">
-      <section class="hero-spread reveal-section">
-        <div class="hero-copy">
-          <p class="section-kicker">YANG YUHUI / INDEPENDENT DEVELOPER / GUANGZHOU</p>
-          <h1 class="hero-title">YANG<br>YUHUI</h1>
-          <div class="hero-rule" aria-hidden="true"></div>
-          <p class="hero-zh">
-            把需求判断、产品结构、界面表达和代码实现，
-            整理成一张可以直接投递、也可以直接验证的网页。
-          </p>
-          <p class="hero-en">
-            I care less about describing ideas than about turning them into software people can actually use.
-          </p>
-          <a class="hero-link" href="#works">VIEW SELECTED WORKS</a>
-
-          <div class="hero-meta">
-            <div>
-              <span>Born</span>
-              <strong>2005</strong>
+  <main class="stage">
+    <div class="browser-scale-wrap">
+      <div class="browser-scale" id="artboard">
+        <div class="browser-window">
+          <div class="browser-chrome" aria-hidden="true">
+            <div class="chrome-top">
+              <div class="traffic-lights">
+                <span class="traffic-close"></span>
+                <span class="traffic-minimize"></span>
+                <span class="traffic-expand"></span>
+              </div>
+              <div class="tab-pill">
+                <span class="tab-icon"></span>
+                <span class="tab-title">jiahaoli.com — portfolio</span>
+              </div>
+              <div class="chrome-icons">
+                <span></span>
+                <span></span>
+              </div>
             </div>
-            <div>
-              <span>Based in</span>
-              <strong>Guangzhou</strong>
-            </div>
-            <div>
-              <span>Currently</span>
-              <strong>Student + Independent Developer</strong>
-            </div>
-            <div>
-              <span>Focus</span>
-              <strong>iOS / macOS / Web Tools</strong>
+            <div class="chrome-bottom">
+              <div class="url-bar">
+                <span class="url-lock">⌁</span>
+                <span class="url-text">https://jiahaoli.com</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="hero-side">
-          <figure class="hero-portrait collage-photo">
-            <div class="tape tape-left" aria-hidden="true"></div>
-            <div class="tape tape-right" aria-hidden="true"></div>
-            <img src="./assets/reference/editorial-portrait-yyh.svg" alt="杨煜辉的档案风格黑白肖像插画" loading="eager">
-            <figcaption class="portrait-caption">
-              <span>YANG YUHUI</span>
-              <strong>Independent Developer / Guangzhou</strong>
-            </figcaption>
-          </figure>
+          <article class="page-canvas">
+            <div class="page-grain" aria-hidden="true"></div>
+            <div class="page-vignette" aria-hidden="true"></div>
 
-          <aside class="hero-note collage-card">
-            <span class="note-label">WEB RESUME</span>
-            <p>
-              这张首页把身份、精选项目、经历与联系方式压进同一条阅读路径，
-              用网页本身代替单独 PDF 简历。
-            </p>
-          </aside>
-        </div>
-
-        <div class="hero-stamp" aria-hidden="true">
-          <span>FILE 2026</span>
-        </div>
-      </section>
-
-      <section class="mid-board reveal-section">
-        <article class="works-board ink-board" id="works">
-          <div class="paperclip" aria-hidden="true"></div>
-          <div class="board-head">
-            <p class="board-kicker">SELECTED WORKS.</p>
-            <p class="board-kicker cjk">精选作品</p>
-          </div>
-
-          <div class="works-list">
-            <article class="work-item work-item-large">
-              <div class="work-thumb">
-                <img src="./assets/covers/shadownote.png" alt="随记 ShadowNote 项目封面图" loading="lazy">
+            <header class="topbar">
+              <div class="brandmark">
+                <span class="brand-en">JIAHAO LI</span>
+                <span class="brand-dot"></span>
+                <span class="brand-zh">李嘉豪</span>
               </div>
-              <div class="work-copy">
-                <h3>ShadowNote</h3>
-                <p class="work-type">iOS App · Public Repo</p>
-                <p class="work-desc">预算、交易、提醒与 OCR 被整合进一套完成度较高的个人管理产品里，能直接体现信息结构、功能整合与成品意识。</p>
-                <a class="work-link" href="https://github.com/YYH123123813/shadownote" target="_blank" rel="noreferrer">Repository ↗</a>
+              <nav class="topnav" aria-label="Primary">
+                <a href="#works">WORKS</a>
+                <a href="#about">ABOUT</a>
+                <a href="#note">NOTE</a>
+                <a href="#contact">CONTACT</a>
+              </nav>
+            </header>
+
+            <section class="hero-copy" aria-labelledby="hero-title">
+              <div class="hero-crest" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1.8"></circle>
+                  <path d="M20 38.5C23.4 31.2 28.4 25 35.2 22.2C39.1 20.6 43 20.1 46 20.4C42.8 21.9 40.3 24 38.7 27.6C43.4 28.6 46.4 31.9 47.5 37.2C44.4 34.5 41 33.6 37.2 34.4C34.6 35 32 36.9 29.7 40.1C28 42.4 26.8 44.7 26 47C25.8 43 23.8 40.2 20 38.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M22 44.8C26.6 44.7 30.4 46 33.2 48.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
               </div>
-            </article>
 
-            <article class="work-item">
-              <div class="work-thumb">
-                <img src="./assets/covers/wechat-article-exporter-desktop.png" alt="公众号导出工具封面图" loading="lazy">
+              <h1 class="hero-title" id="hero-title">
+                DESIGN
+                <span>AS POETRY<span class="headline-dot"></span></span>
+              </h1>
+
+              <p class="hero-chinese">
+                以設計為詩，<br>
+                以視覺為語言，<br>
+                在混沌中尋找秩序。
+              </p>
+
+              <p class="hero-english">
+                I believe design is more than
+                solving problems—it’s about
+                expressing perspective, evoking
+                emotion, and shaping meaning.
+              </p>
+
+              <a class="hero-cta" href="#works">VIEW SELECTED WORKS</a>
+
+              <p class="handwritten-note">
+                Design is<br>
+                where logic and<br>
+                intuition meet.
+              </p>
+            </section>
+
+            <section class="hero-portrait-panel" aria-label="Monochrome editorial portrait">
+              <div class="portrait-card paper-card">
+                <span class="masking-tape"></span>
+                <img src="./assets/editorial/portrait-yyh.svg" alt="Monochrome editorial portrait illustration of a young East Asian man looking to the right">
               </div>
-              <div class="work-copy">
-                <h3>公众号导出工具</h3>
-                <p class="work-type">Desktop Tool · Public Repo</p>
-                <p class="work-desc">围绕真实内容工作流做出的桌面端下载与导出工具，证明我能把明确需求做成稳定可用的软件。</p>
-                <a class="work-link" href="https://github.com/YYH123123813/wechat-article-exporter-desktop" target="_blank" rel="noreferrer">Repository ↗</a>
+
+              <div class="scroll-tag">
+                <span>Scroll</span>
+                <span class="arrow">↓</span>
               </div>
-            </article>
 
-            <article class="work-item">
-              <div class="work-thumb">
-                <img src="./assets/covers/mac-dynamic-island.png" alt="Mac 灵动岛封面图" loading="lazy">
+              <svg class="ink-doodle" viewBox="0 0 140 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M104 14C84 23 66 42 55 71C47 92 45 113 53 132C60 149 77 161 99 165C114 168 124 177 126 193C128 209 121 227 107 247C94 265 75 279 52 289"></path>
+                <path d="M82 42C95 56 101 74 98 96C95 115 83 128 61 135"></path>
+                <path d="M41 109C24 130 17 152 22 173C26 190 40 203 64 212"></path>
+              </svg>
+            </section>
+
+            <section class="works-board ink-board" id="works" aria-labelledby="works-title">
+              <div class="paperclip" aria-hidden="true"></div>
+              <h2 id="works-title">SELECTED WORKS <span>精選作品</span></h2>
+
+              <ol class="works-list">
+                <li class="work-row">
+                  <div class="work-thumb thumb-packaging" aria-hidden="true"></div>
+                  <div class="work-meta">
+                    <span class="work-no">01</span>
+                    <h3>Ouur Coffee</h3>
+                    <p>Branding &amp; Packaging</p>
+                  </div>
+                </li>
+                <li class="work-row">
+                  <div class="work-thumb thumb-identity" aria-hidden="true"></div>
+                  <div class="work-meta">
+                    <span class="work-no">02</span>
+                    <h3>Lightfall</h3>
+                    <p>Visual Identity</p>
+                  </div>
+                </li>
+                <li class="work-row">
+                  <div class="work-thumb thumb-gallery" aria-hidden="true"></div>
+                  <div class="work-meta">
+                    <span class="work-no">03</span>
+                    <h3>Wonder in Chaos</h3>
+                    <p>Gallery Website</p>
+                  </div>
+                </li>
+              </ol>
+
+              <a class="view-all-link" href="#contact">VIEW ALL WORKS <span>→</span></a>
+            </section>
+
+            <figure class="coast-photo paper-card" aria-hidden="true">
+              <div class="coast-scene"></div>
+            </figure>
+
+            <section class="manifesto-card paper-card" id="about" aria-labelledby="manifesto-title">
+              <h2 id="manifesto-title">A LITTLE MANIFESTO <span>一些想法</span></h2>
+              <p class="manifesto-en">
+                In a world that moves fast,<br>
+                I choose depth over speed.<br>
+                I care about craft, process,<br>
+                and the quiet details that<br>
+                make something honest.
+              </p>
+              <p class="manifesto-zh">
+                在這個追求效率的時代，<br>
+                我更在意深度與真誠。<br>
+                好的設計，<br>
+                來自於對細節的偏執與熱愛。
+              </p>
+              <svg class="flower-sketch" viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M70 215C68 174 74 140 87 112C99 86 111 70 124 60"/>
+                <path d="M90 118C111 122 125 115 132 98C114 91 101 94 90 118Z"/>
+                <path d="M82 126C61 119 47 124 38 140C56 146 71 141 82 126Z"/>
+                <path d="M72 162C87 162 99 155 107 140C95 133 84 136 72 162Z"/>
+                <path d="M70 165C54 161 44 165 37 178C50 183 60 179 70 165Z"/>
+                <path d="M74 110C72 90 79 71 96 55C102 72 95 91 74 110Z"/>
+                <path d="M86 54C83 38 87 22 98 8C105 20 102 35 86 54Z"/>
+              </svg>
+            </section>
+
+            <section class="experience-panel" aria-labelledby="experience-title">
+              <h2 id="experience-title">EXPERIENCE <span>經歷</span></h2>
+              <div class="timeline">
+                <article class="timeline-item">
+                  <time datetime="2022">2022 — Now</time>
+                  <h3>Freelance Designer &amp; Art Director</h3>
+                  <p class="timeline-place">Taipei, Taiwan</p>
+                  <p class="timeline-desc">Working with global clients and independent studios on branding, digital, and art direction.</p>
+                </article>
+                <article class="timeline-item">
+                  <time datetime="2020">2020 — 2022</time>
+                  <h3>Art Director</h3>
+                  <p class="timeline-place">Simple Studio · Taipei, Taiwan</p>
+                  <p class="timeline-desc">Led branding and visual projects across lifestyle, culture, and tech industries.</p>
+                </article>
+                <article class="timeline-item">
+                  <time datetime="2018">2018 — 2020</time>
+                  <h3>Graphic Designer</h3>
+                  <p class="timeline-place">InBloom Design · Taipei, Taiwan</p>
+                  <p class="timeline-desc">Focused on visual identity, print design, and creative collaborations.</p>
+                </article>
               </div>
-              <div class="work-copy">
-                <h3>Mac 灵动岛</h3>
-                <p class="work-type">macOS App · Public Repo</p>
-                <p class="work-desc">把顶部刘海重做为可交互的信息中心，展示系统级交互理解、桌面产品表达和工程实现能力。</p>
-                <a class="work-link" href="https://github.com/YYH123123813/mac-dynamic-island" target="_blank" rel="noreferrer">Repository ↗</a>
+            </section>
+
+            <aside class="note-card paper-card" id="note" aria-label="Handwritten note card">
+              <span class="note-tape"></span>
+              <svg class="figure-sketch" viewBox="0 0 96 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M48 18C55 18 61 24 61 31C61 38 55 44 48 44C41 44 35 38 35 31C35 24 41 18 48 18Z"></path>
+                <path d="M47 45C45 58 40 69 32 79C25 88 18 96 11 103"></path>
+                <path d="M48 46C52 58 59 69 68 80C74 88 81 95 90 103"></path>
+                <path d="M46 59C38 61 29 67 21 77"></path>
+                <path d="M52 62C60 63 69 69 78 80"></path>
+              </svg>
+              <p>
+                Ideas<br>
+                come from<br>
+                life.
+              </p>
+            </aside>
+
+            <section class="skills-panel" aria-labelledby="skills-title">
+              <h2 id="skills-title">SKILLS &amp; DISCIPLINES <span>技能與專長</span></h2>
+              <div class="skills-content">
+                <ul class="skills-list">
+                  <li><span class="skill-en">Branding</span><span class="skill-zh">品牌識別</span></li>
+                  <li><span class="skill-en">Art Direction</span><span class="skill-zh">藝術指導</span></li>
+                  <li><span class="skill-en">Typography</span><span class="skill-zh">排版設計</span></li>
+                  <li><span class="skill-en">Web Design</span><span class="skill-zh">網頁設計</span></li>
+                  <li><span class="skill-en">Editorial</span><span class="skill-zh">編輯設計</span></li>
+                  <li><span class="skill-en">Packaging</span><span class="skill-zh">包裝設計</span></li>
+                </ul>
+                <div class="skill-matrix" aria-hidden="true"></div>
               </div>
-            </article>
-          </div>
+            </section>
 
-          <div class="works-footer">
-            <a href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">VIEW FULL GITHUB ARCHIVE →</a>
-            <p>更多项目：iOS 长截屏 / Gemini Navigator / CinePost / Auto Approve</p>
-          </div>
-        </article>
-
-        <article class="manifesto-card collage-card" id="manifesto">
-          <div class="board-head">
-            <p class="board-kicker">A LITTLE MANIFESTO.</p>
-            <p class="board-kicker cjk">一点说明</p>
-          </div>
-
-          <p class="profile-intro">
-            我更相信作品本身，而不是空泛的自我描述。
-            这也是为什么我把简历做成网页：让项目截图、仓库入口、身份信息和联系方式出现在同一条阅读路径里。
-          </p>
-
-          <div class="manifesto-lines">
-            <p>我关心需求是否真实，而不是概念是否漂亮。</p>
-            <p>我希望项目可以被打开、被使用、被验证，而不是只停留在展示图里。</p>
-            <p>我正在用持续交付和公开仓库，替代传统简历里那些空洞形容词。</p>
-          </div>
-
-          <div class="archive-facts">
-            <div>
-              <span>学校</span>
-              <strong>广州城市理工学院</strong>
-            </div>
-            <div>
-              <span>专业</span>
-              <strong>新能源汽车工程</strong>
-            </div>
-            <div>
-              <span>公开展示</span>
-              <strong>7 个代表项目</strong>
-            </div>
-            <div>
-              <span>岗位方向</span>
-              <strong>iOS / macOS / 前端 / 工具产品</strong>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="lower-board reveal-section">
-        <article class="experience-card ink-board" id="experience">
-          <div class="board-head">
-            <p class="board-kicker">EXPERIENCE.</p>
-            <p class="board-kicker cjk">经历</p>
-          </div>
-
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-year">2025 — Now</div>
-              <div class="timeline-main">
-                <h3>独立开发者</h3>
-                <p class="timeline-place">Guangzhou</p>
-                <p>持续完成软件产品与工具开发，已完成 10+ 软件 / 网站 / 工具项目，并整理出可公开展示的网页作品集。</p>
+            <footer class="bottom-band" id="contact">
+              <div class="resume-tile">
+                <span class="resume-label">RESUME</span>
+                <span class="resume-sub">個人檔案</span>
+                <span class="resume-arrow">↘</span>
               </div>
-            </article>
 
-            <article class="timeline-item">
-              <div class="timeline-year">2024.09 — Now</div>
-              <div class="timeline-main">
-                <h3>广州城市理工学院</h3>
-                <p class="timeline-place">新能源汽车工程 / 本科在读</p>
-                <p>在校阶段把主要精力投入到独立开发、项目实践与作品沉淀，而不是停留在课堂概念层。</p>
+              <div class="meta-columns">
+                <div class="meta-column">
+                  <span class="meta-label">Born</span>
+                  <strong class="meta-value">1997: Taipei, Taiwan</strong>
+                </div>
+                <div class="meta-column">
+                  <span class="meta-label">Based in</span>
+                  <strong class="meta-value">Taipei, Taiwan</strong>
+                </div>
+                <div class="meta-column">
+                  <span class="meta-label">Languages</span>
+                  <strong class="meta-value">中文 / English</strong>
+                </div>
+                <div class="meta-column">
+                  <span class="meta-label">Currently</span>
+                  <strong class="meta-value">Available for work</strong>
+                </div>
               </div>
-            </article>
 
-            <article class="timeline-item">
-              <div class="timeline-year">2024</div>
-              <div class="timeline-main">
-                <h3>内容组织与协作实践</h3>
-                <p class="timeline-place">Course Project / Operations</p>
-                <p>做过课程整理、内容提炼、流程协作与项目推进，补足执行、沟通与落地能力。</p>
+              <div class="contact-block">
+                <div class="contact-copy">
+                  <h2>LET’S CONNECT <span>聯繫我</span></h2>
+                  <a href="mailto:hello@jiahaoli.com">hello@jiahaoli.com</a>
+                  <a href="https://instagram.com/jiahao.li.design" target="_blank" rel="noreferrer">@jiahao.li.design</a>
+                  <a href="tel:+886912345678">+886 912 345 678</a>
+                </div>
+                <div class="contact-seal" aria-hidden="true">
+                  <svg viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="56" cy="56" r="49" stroke="#B96A45" stroke-width="2.2"></circle>
+                    <circle cx="56" cy="56" r="35" stroke="#B96A45" stroke-width="1.5" stroke-dasharray="2.8 5"></circle>
+                    <path d="M28 28C38 21 47 18 56 18C65 18 74 21 84 28" stroke="#B96A45" stroke-width="1.3" stroke-linecap="round"></path>
+                    <path d="M84 84C74 91 65 94 56 94C47 94 38 91 28 84" stroke="#B96A45" stroke-width="1.3" stroke-linecap="round"></path>
+                    <circle cx="56" cy="26" r="2.5" fill="#B96A45"></circle>
+                    <circle cx="56" cy="86" r="2.5" fill="#B96A45"></circle>
+                    <path d="M36 73V39H44L56 58L68 39H76V73H67V54L56 68L45 54V73H36Z" fill="#B96A45"></path>
+                  </svg>
+                </div>
               </div>
-            </article>
-          </div>
-        </article>
-
-        <article class="skills-card collage-card">
-          <div class="board-head">
-            <p class="board-kicker">SKILLS &amp; DISCIPLINES.</p>
-            <p class="board-kicker cjk">能力结构</p>
-          </div>
-
-          <div class="capability-list">
-            <article class="capability-item">
-              <span>01</span>
-              <div>
-                <strong>Problem Framing</strong>
-                <p>能从真实工作流里判断问题，而不是只做概念演示。</p>
-              </div>
-            </article>
-            <article class="capability-item">
-              <span>02</span>
-              <div>
-                <strong>Independent Shipping</strong>
-                <p>能独立完成信息结构、界面表达、前端或客户端实现，并把项目真正交付出来。</p>
-              </div>
-            </article>
-            <article class="capability-item">
-              <span>03</span>
-              <div>
-                <strong>Apple &amp; Web Stack</strong>
-                <p>覆盖 SwiftUI、AppKit、React、TypeScript、JavaScript 等实际项目技术栈。</p>
-              </div>
-            </article>
-            <article class="capability-item">
-              <span>04</span>
-              <div>
-                <strong>Presentation</strong>
-                <p>能把项目整理成网页简历、README、仓库说明与可浏览的作品证据。</p>
-              </div>
-            </article>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <footer class="footer-board reveal-section" id="contact">
-      <div class="profile-block rust-card">
-        <span class="footer-label">ARCHIVE NOTE</span>
-        <strong>网页替代简历</strong>
-        <p>身份、作品截图、仓库入口和联系方式都被整理在同一页里，方便直接投递，也方便直接验证。</p>
-      </div>
-
-      <div class="footer-facts collage-card">
-        <div>
-          <span>Born</span>
-          <strong>2005</strong>
-        </div>
-        <div>
-          <span>Based in</span>
-          <strong>Guangzhou</strong>
-        </div>
-        <div>
-          <span>Currently</span>
-          <strong>Student / Independent Developer</strong>
-        </div>
-        <div>
-          <span>Focus</span>
-          <strong>iOS / macOS / Web Tools</strong>
+            </footer>
+          </article>
         </div>
       </div>
-
-      <div class="contact-block ink-board">
-        <div class="contact-copy">
-          <span class="footer-label inverse">LET’S CONNECT</span>
-          <strong>联系我</strong>
-          <p>如果你想快速判断项目证据与代码能力，精选作品和 GitHub 已经放在上面。</p>
-          <a href="mailto:116484728@qq.com">116484728@qq.com</a>
-          <a href="https://github.com/YYH123123813" target="_blank" rel="noreferrer">github.com/YYH123123813</a>
-          <a href="tel:16634118851">16634118851</a>
-        </div>
-        <div class="contact-seal" aria-hidden="true">
-          <span>Y</span>
-          <span>Y</span>
-          <span>H</span>
-        </div>
-      </div>
-    </footer>
-  </div>
+    </div>
+  </main>
 
   <script src="./script.js"></script>
 </body>
