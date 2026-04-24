@@ -1735,6 +1735,441 @@ a {
   }
 }
 
+/* Tactile landscape refactor: physical paper depth + distinct desktop/tablet/mobile systems */
+:root {
+  --page-max: 1480px;
+  --desk-grain: rgba(69, 56, 43, 0.09);
+  --shadow: 0 2px 2px rgba(33, 26, 19, 0.05), 0 18px 42px rgba(45, 34, 25, 0.15), 0 46px 110px rgba(45, 34, 25, 0.12);
+  --paper-shadow: 0 1px 1px rgba(34, 27, 20, 0.08), 0 7px 15px rgba(34, 27, 20, 0.10), 0 26px 54px rgba(34, 27, 20, 0.095);
+  --paper-shadow-high: 0 1px 1px rgba(32, 25, 18, 0.10), 0 10px 24px rgba(32, 25, 18, 0.13), 0 34px 72px rgba(32, 25, 18, 0.11);
+  --paper-contact: inset 0 1px 0 rgba(255, 255, 255, 0.32), inset 0 -1px 0 rgba(56, 43, 32, 0.06);
+  --dark-object-shadow: 0 1px 1px rgba(0, 0, 0, 0.22), 0 14px 32px rgba(0, 0, 0, 0.22), 0 40px 84px rgba(35, 25, 18, 0.20);
+}
+
+body {
+  background:
+    radial-gradient(circle at 14% 4%, rgba(255, 252, 246, 0.82), transparent 28%),
+    radial-gradient(circle at 88% 8%, rgba(166, 93, 61, 0.14), transparent 24%),
+    radial-gradient(circle, rgba(69, 56, 43, 0.07) 0.65px, transparent 0.85px),
+    linear-gradient(135deg, #eadfd1 0%, #d2c4b3 46%, #eee5da 100%);
+  background-size: auto, auto, 20px 20px, auto;
+}
+
+.site-shell {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.28), transparent 22%, transparent 78%, rgba(97, 74, 56, 0.035)),
+    var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.paper-card {
+  border-color: rgba(82, 66, 53, 0.16);
+  box-shadow: var(--paper-shadow), var(--paper-contact);
+}
+
+.paper-card::after {
+  background:
+    radial-gradient(circle, rgba(53, 44, 36, 0.12) 0.72px, transparent 0.95px),
+    linear-gradient(110deg, rgba(255, 255, 255, 0.14), transparent 26%, rgba(69, 54, 40, 0.045) 100%),
+    radial-gradient(circle at 20% 24%, rgba(56, 47, 39, 0.055), transparent 22%),
+    radial-gradient(circle at 72% 68%, rgba(56, 47, 39, 0.045), transparent 20%);
+  background-size: 17px 17px, auto, auto, auto;
+  opacity: 0.2;
+}
+
+.masking-tape,
+.note-tape {
+  background:
+    linear-gradient(90deg, rgba(201, 186, 164, 0.20), transparent 18%, transparent 82%, rgba(201, 186, 164, 0.22)),
+    radial-gradient(circle, rgba(95, 78, 58, 0.12) 0.65px, transparent 0.9px),
+    rgba(247, 238, 222, 0.76);
+  background-size: auto, 9px 9px, auto;
+  box-shadow: 0 1px 1px rgba(54, 42, 31, 0.10), 0 7px 14px rgba(54, 42, 31, 0.13);
+  mix-blend-mode: multiply;
+}
+
+.masking-tape::before,
+.note-tape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+  border-bottom: 1px solid rgba(96, 76, 55, 0.08);
+  pointer-events: none;
+}
+
+.portrait-card {
+  box-shadow: 0 1px 1px rgba(31, 25, 19, 0.12), 0 10px 24px rgba(31, 25, 19, 0.16), 0 36px 76px rgba(31, 25, 19, 0.13);
+}
+
+.portrait-card::after {
+  content: "";
+  position: absolute;
+  inset: 10px 12px 12px;
+  z-index: 2;
+  border: 1px solid rgba(73, 61, 49, 0.08);
+  background:
+    radial-gradient(circle, rgba(45, 37, 29, 0.10) 0.65px, transparent 0.9px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 22%, rgba(30, 24, 19, 0.08));
+  background-size: 14px 14px, auto;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.portrait-photo-frame {
+  box-shadow: inset 0 0 0 1px rgba(58, 48, 39, 0.15), inset 10px 0 18px rgba(32, 26, 20, 0.08), inset 0 -14px 24px rgba(18, 15, 13, 0.12);
+}
+
+.works-board {
+  box-shadow: var(--dark-object-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.055), inset 0 -1px 0 rgba(0, 0, 0, 0.32);
+}
+
+.project-thumb,
+.coast-photo,
+.note-card,
+.manifesto-card,
+.skills-card,
+.resume-tile,
+.contact-block {
+  box-shadow: var(--paper-shadow-high), var(--paper-contact);
+}
+
+.project-thumb {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.18), 0 9px 18px rgba(0, 0, 0, 0.18);
+}
+
+.coast-photo {
+  box-shadow: 0 1px 1px rgba(42, 32, 24, 0.12), 0 9px 18px rgba(42, 32, 24, 0.14), 0 28px 50px rgba(42, 32, 24, 0.12);
+}
+
+.contact-block {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.22), 0 14px 28px rgba(0, 0, 0, 0.24), 0 42px 78px rgba(27, 20, 15, 0.22);
+}
+
+.contact-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.055) 0.65px, transparent 0.9px),
+    linear-gradient(135deg, rgba(255,255,255,0.05), transparent 35%, rgba(0,0,0,0.18));
+  background-size: 16px 16px, auto;
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.contact-copy,
+.contact-seal {
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .portrait-card,
+  .works-board,
+  .manifesto-card,
+  .note-card,
+  .skills-card,
+  .resume-tile,
+  .contact-block {
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .portrait-card:hover {
+    transform: translateY(-3px) rotate(0.75deg);
+  }
+
+  .works-board:hover {
+    transform: translateY(-3px) rotate(-0.32deg);
+  }
+
+  .manifesto-card:hover {
+    transform: translateY(-3px) rotate(0.24deg);
+  }
+
+  .note-card:hover {
+    transform: translateY(-3px) rotate(-3.1deg);
+  }
+}
+
+@media (min-width: 1100px) {
+  .site-shell {
+    width: min(calc(100% - 32px), var(--page-max));
+  }
+
+  .hero-section {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: clamp(34px, 4vw, 64px);
+    align-items: center;
+    padding-top: clamp(48px, 4.8vw, 68px);
+    padding-bottom: clamp(48px, 4.6vw, 68px);
+  }
+
+  .hero-copy {
+    grid-column: 1 / span 7;
+  }
+
+  .hero-visual {
+    grid-column: 8 / -1;
+  }
+
+  .hero-body-grid {
+    max-width: 840px;
+  }
+
+  .editorial-spread {
+    grid-template-columns: minmax(0, 1.24fr) minmax(390px, 0.76fr);
+    grid-template-areas: "works about";
+    gap: clamp(44px, 4.4vw, 68px);
+    align-items: center;
+    padding-top: clamp(48px, 4.8vw, 64px);
+    padding-bottom: clamp(46px, 4.8vw, 66px);
+  }
+
+  .works-stage {
+    padding: 0 clamp(24px, 2.8vw, 42px) clamp(28px, 3.2vw, 46px) 0;
+  }
+
+  .works-board {
+    padding: clamp(30px, 3vw, 42px);
+  }
+
+  .project-card {
+    grid-template-columns: minmax(142px, 188px) minmax(0, 1fr);
+    padding: 10px 36px 10px 10px;
+  }
+
+  .project-thumb,
+  .project-thumb img {
+    min-height: 88px;
+  }
+
+  .project-title {
+    font-size: clamp(2rem, 2.35vw, 2.62rem);
+  }
+
+  .project-summary {
+    font-size: 0.78rem;
+    line-height: 1.42;
+  }
+
+  .manifesto-card {
+    min-height: auto;
+    align-self: center;
+  }
+
+  .manifesto-text {
+    grid-template-columns: 1fr;
+    gap: clamp(18px, 2vw, 24px);
+    padding-right: clamp(52px, 5.5vw, 82px);
+  }
+
+  .manifesto-en {
+    max-width: 13.5em;
+    font-size: clamp(1.82rem, 2.08vw, 2.34rem);
+  }
+
+  .manifesto-zh {
+    max-width: 18em;
+    font-size: clamp(0.94rem, 1vw, 1.05rem);
+  }
+
+  .flower-sketch {
+    width: clamp(86px, 7.6vw, 118px);
+    opacity: 0.84;
+  }
+
+  .lower-spread {
+    grid-template-columns: minmax(0, 1.05fr) minmax(184px, 0.34fr) minmax(390px, 0.82fr);
+    grid-template-areas: "experience note skills";
+    gap: clamp(28px, 3.5vw, 48px);
+    align-items: center;
+    padding-top: clamp(52px, 5vw, 70px);
+    padding-bottom: clamp(52px, 5vw, 72px);
+  }
+
+  .experience-section {
+    grid-area: experience;
+  }
+
+  .note-card {
+    grid-area: note;
+    justify-self: center;
+    align-self: center;
+    width: min(100%, 210px);
+    margin: clamp(42px, 5vw, 76px) 0 0;
+  }
+
+  .skills-section {
+    grid-area: skills;
+  }
+
+  .skills-card {
+    min-height: 510px;
+  }
+
+  .resume-contact {
+    grid-template-columns: minmax(154px, 190px) minmax(0, 1fr) minmax(300px, 372px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  :root {
+    --page-x: clamp(30px, 4vw, 42px);
+  }
+
+  .site-shell {
+    width: min(100% - 24px, 1080px);
+  }
+
+  .editorial-spread {
+    grid-template-columns: minmax(0, 1fr) minmax(270px, 0.74fr);
+    grid-template-areas: "works about";
+    gap: clamp(24px, 3.4vw, 34px);
+    align-items: start;
+  }
+
+  .works-section,
+  .about-section {
+    width: auto;
+    justify-self: stretch;
+  }
+
+  .works-section {
+    grid-area: works;
+  }
+
+  .about-section {
+    grid-area: about;
+  }
+
+  .works-board {
+    padding: clamp(24px, 3vw, 32px);
+  }
+
+  .project-card {
+    grid-template-columns: minmax(104px, 132px) minmax(0, 1fr);
+    gap: 16px;
+    padding: 10px 0;
+  }
+
+  .project-card::after {
+    left: calc(104px + 16px);
+  }
+
+  .project-thumb,
+  .project-thumb img {
+    min-height: 86px;
+  }
+
+  .project-copy {
+    grid-template-columns: 30px minmax(0, 1fr);
+    row-gap: 4px;
+  }
+
+  .project-title {
+    font-size: clamp(1.58rem, 3.15vw, 2rem);
+  }
+
+  .project-type {
+    font-size: 10px;
+    letter-spacing: 0.11em;
+  }
+
+  .project-summary {
+    display: none;
+  }
+
+  .manifesto-card {
+    min-height: auto;
+  }
+
+  .manifesto-text {
+    padding-right: 18px;
+  }
+
+  .manifesto-en {
+    font-size: clamp(1.55rem, 2.8vw, 2.05rem);
+  }
+
+  .manifesto-zh {
+    font-size: 0.95rem;
+  }
+
+  .flower-sketch {
+    opacity: 0.28;
+  }
+
+  .lower-spread {
+    grid-template-columns: minmax(0, 1fr) minmax(290px, 0.82fr);
+    grid-template-areas:
+      "experience skills"
+      "note skills";
+    gap: clamp(28px, 4vw, 42px);
+    align-items: start;
+  }
+
+  .experience-section {
+    grid-area: experience;
+  }
+
+  .note-card {
+    grid-area: note;
+    justify-self: start;
+    width: min(100%, 220px);
+    margin: 8px 0 0;
+  }
+
+  .skills-section {
+    grid-area: skills;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .timeline-desc {
+    grid-column: auto;
+  }
+
+  .skills-card {
+    grid-template-columns: 1fr;
+  }
+
+  .matrix-art {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-shell {
+    box-shadow: 0 1px 1px rgba(34, 27, 20, 0.08), 0 12px 32px rgba(34, 27, 20, 0.12);
+  }
+
+  .hero-meta-row {
+    display: grid;
+  }
+
+  .manifesto-card {
+    min-height: auto;
+  }
+
+  .project-summary {
+    grid-column: 2;
+    font-size: 0.82rem;
+  }
+
+  .lower-spread {
+    gap: clamp(44px, 11vw, 58px);
+  }
+
+  .note-card {
+    justify-self: end;
+    margin: -8px 0 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
