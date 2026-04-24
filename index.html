@@ -6,7 +6,7 @@
   <title>JIAHAO LI｜Editorial Portfolio</title>
   <meta
     name="description"
-    content="Jiahao Li's bilingual editorial portfolio and visual resume — a real responsive website with tactile paper, monochrome portrait, selected works, manifesto, experience, skills, resume metadata, and contact links."
+    content="Jiahao Li's bilingual editorial portfolio and visual resume — a responsive editorial website with tactile paper, monochrome portrait, selected works, manifesto, experience, skills, resume metadata, and contact links."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,8 @@
   <a class="skip-link" href="#works">Skip to selected works</a>
 
   <main class="site-shell" id="top">
+    <div class="surface-stamp" aria-hidden="true">JH / 1997</div>
+
     <header class="site-header" aria-label="Primary navigation">
       <a class="brandmark" href="#top" aria-label="Back to top">
         <span class="brand-en">JIAHAO LI</span>
@@ -48,23 +50,26 @@
           <span>AS POETRY<span class="headline-dot" aria-hidden="true"></span></span>
         </h1>
 
-        <p class="hero-chinese">
-          以設計為詩，<br>
-          以視覺為語言，<br>
-          在混沌中尋找秩序。
-        </p>
+        <div class="hero-body-grid">
+          <p class="hero-chinese">
+            以設計為詩，<br>
+            以視覺為語言，<br>
+            在混沌中尋找秩序。
+          </p>
 
-        <p class="hero-english">
-          I believe design is more than solving problems—it’s about expressing perspective,
-          evoking emotion, and shaping meaning.
-        </p>
+          <p class="hero-english">
+            I believe design is more than solving problems—it’s about expressing perspective,
+            evoking emotion, and shaping meaning.
+          </p>
+        </div>
 
-        <a class="text-cta" href="#works">VIEW SELECTED WORKS</a>
-
-        <p class="handwritten-note" aria-hidden="true">
-          Design is where<br>
-          logic and intuition meet.
-        </p>
+        <div class="hero-actions">
+          <a class="text-cta" href="#works">VIEW SELECTED WORKS</a>
+          <p class="handwritten-note" aria-hidden="true">
+            Design is where<br>
+            logic and intuition meet.
+          </p>
+        </div>
       </div>
 
       <div class="hero-visual" aria-label="Monochrome editorial portrait">
@@ -90,104 +95,111 @@
           <path d="M82 42C95 56 101 74 98 96C95 115 83 128 61 135"></path>
           <path d="M41 109C24 130 17 152 22 173C26 190 40 203 64 212"></path>
         </svg>
+
+        <div class="portrait-caption" aria-hidden="true">
+          <span>Portrait study</span>
+          <span>Monochrome archive</span>
+        </div>
       </div>
     </section>
 
-    <section class="section-block works-section" id="works" aria-labelledby="works-title">
-      <div class="section-heading">
-        <p class="section-index">01 / Selected archive</p>
-        <h2 id="works-title">SELECTED WORKS <span>精選作品</span></h2>
-      </div>
-
-      <div class="works-cluster">
-        <div class="works-board ink-board">
-          <span class="paperclip" aria-hidden="true"></span>
-
-          <ol class="project-list">
-            <li>
-              <a class="project-card" href="#contact" aria-label="Open Ouur Coffee project placeholder">
-                <span class="project-thumb">
-                  <img src="./assets/editorial/work-1.png" alt="Ouur Coffee branding and packaging grayscale project preview" loading="lazy">
-                </span>
-                <span class="project-copy">
-                  <span class="project-no">01</span>
-                  <span class="project-title">Ouur Coffee</span>
-                  <span class="project-type">Branding &amp; Packaging</span>
-                </span>
-              </a>
-            </li>
-
-            <li>
-              <a class="project-card" href="#contact" aria-label="Open Lightfall project placeholder">
-                <span class="project-thumb">
-                  <img src="./assets/editorial/work-2.png" alt="Lightfall visual identity grayscale project preview" loading="lazy">
-                </span>
-                <span class="project-copy">
-                  <span class="project-no">02</span>
-                  <span class="project-title">Lightfall</span>
-                  <span class="project-type">Visual Identity</span>
-                </span>
-              </a>
-            </li>
-
-            <li>
-              <a class="project-card" href="#contact" aria-label="Open Wonder in Chaos project placeholder">
-                <span class="project-thumb">
-                  <img src="./assets/editorial/work-3.png" alt="Wonder in Chaos gallery website grayscale project preview" loading="lazy">
-                </span>
-                <span class="project-copy">
-                  <span class="project-no">03</span>
-                  <span class="project-title">Wonder in Chaos</span>
-                  <span class="project-type">Gallery Website</span>
-                </span>
-              </a>
-            </li>
-          </ol>
-
-          <a class="board-link" href="#contact">VIEW ALL WORKS <span aria-hidden="true">→</span></a>
+    <section class="editorial-spread" aria-label="Selected works and manifesto spread">
+      <section class="works-section" id="works" aria-labelledby="works-title">
+        <div class="section-heading">
+          <p class="section-index">01 / Selected archive</p>
+          <h2 id="works-title">SELECTED WORKS <span>精選作品</span></h2>
         </div>
 
-        <figure class="coast-photo paper-card" aria-label="Small monochrome coastal inspiration print">
-          <img src="./assets/editorial/coast-photo.png" alt="Small monochrome coastal landscape print" loading="lazy">
-          <figcaption>Quiet reference / visual rhythm</figcaption>
-        </figure>
-      </div>
-    </section>
+        <div class="works-stage">
+          <div class="works-board ink-board">
+            <span class="paperclip" aria-hidden="true"></span>
 
-    <section class="section-block about-section" id="about" aria-labelledby="manifesto-title">
-      <article class="manifesto-card paper-card">
-        <div class="section-heading compact-heading">
-          <p class="section-index">02 / Manifesto</p>
-          <h2 id="manifesto-title">A LITTLE MANIFESTO <span>一些想法</span></h2>
+            <ol class="project-list">
+              <li>
+                <a class="project-card" href="#contact" aria-label="Open Ouur Coffee project placeholder">
+                  <span class="project-thumb">
+                    <img src="./assets/editorial/work-1.png" alt="Ouur Coffee branding and packaging grayscale project preview" loading="lazy">
+                  </span>
+                  <span class="project-copy">
+                    <span class="project-no">01</span>
+                    <span class="project-title">Ouur Coffee</span>
+                    <span class="project-type">Branding &amp; Packaging</span>
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a class="project-card" href="#contact" aria-label="Open Lightfall project placeholder">
+                  <span class="project-thumb">
+                    <img src="./assets/editorial/work-2.png" alt="Lightfall visual identity grayscale project preview" loading="lazy">
+                  </span>
+                  <span class="project-copy">
+                    <span class="project-no">02</span>
+                    <span class="project-title">Lightfall</span>
+                    <span class="project-type">Visual Identity</span>
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a class="project-card" href="#contact" aria-label="Open Wonder in Chaos project placeholder">
+                  <span class="project-thumb">
+                    <img src="./assets/editorial/work-3.png" alt="Wonder in Chaos gallery website grayscale project preview" loading="lazy">
+                  </span>
+                  <span class="project-copy">
+                    <span class="project-no">03</span>
+                    <span class="project-title">Wonder in Chaos</span>
+                    <span class="project-type">Gallery Website</span>
+                  </span>
+                </a>
+              </li>
+            </ol>
+
+            <a class="board-link" href="#contact">VIEW ALL WORKS <span aria-hidden="true">→</span></a>
+          </div>
+
+          <figure class="coast-photo paper-card" aria-label="Small monochrome coastal inspiration print">
+            <img src="./assets/editorial/coast-photo.png" alt="Small monochrome coastal landscape print" loading="lazy">
+            <figcaption>Quiet reference / visual rhythm</figcaption>
+          </figure>
         </div>
+      </section>
 
-        <div class="manifesto-text">
-          <p class="manifesto-en">
-            In a world that moves fast,<br>
-            I choose depth over speed.<br>
-            I care about craft, process,<br>
-            and the quiet details that<br>
-            make something honest.
-          </p>
+      <section class="about-section" id="about" aria-labelledby="manifesto-title">
+        <article class="manifesto-card paper-card">
+          <div class="section-heading compact-heading">
+            <p class="section-index">02 / Manifesto</p>
+            <h2 id="manifesto-title">A LITTLE MANIFESTO <span>一些想法</span></h2>
+          </div>
 
-          <p class="manifesto-zh">
-            在這個追求效率的時代，<br>
-            我更在意深度與真誠。<br>
-            好的設計，<br>
-            來自於對細節的偏執與熱愛。
-          </p>
-        </div>
+          <div class="manifesto-text">
+            <p class="manifesto-en">
+              In a world that moves fast,<br>
+              I choose depth over speed.<br>
+              I care about craft, process,<br>
+              and the quiet details that<br>
+              make something honest.
+            </p>
 
-        <svg class="flower-sketch" viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M70 215C68 174 74 140 87 112C99 86 111 70 124 60"/>
-          <path d="M90 118C111 122 125 115 132 98C114 91 101 94 90 118Z"/>
-          <path d="M82 126C61 119 47 124 38 140C56 146 71 141 82 126Z"/>
-          <path d="M72 162C87 162 99 155 107 140C95 133 84 136 72 162Z"/>
-          <path d="M70 165C54 161 44 165 37 178C50 183 60 179 70 165Z"/>
-          <path d="M74 110C72 90 79 71 96 55C102 72 95 91 74 110Z"/>
-          <path d="M86 54C83 38 87 22 98 8C105 20 102 35 86 54Z"/>
-        </svg>
-      </article>
+            <p class="manifesto-zh">
+              在這個追求效率的時代，<br>
+              我更在意深度與真誠。<br>
+              好的設計，<br>
+              來自於對細節的偏執與熱愛。
+            </p>
+          </div>
+
+          <svg class="flower-sketch" viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M70 215C68 174 74 140 87 112C99 86 111 70 124 60"/>
+            <path d="M90 118C111 122 125 115 132 98C114 91 101 94 90 118Z"/>
+            <path d="M82 126C61 119 47 124 38 140C56 146 71 141 82 126Z"/>
+            <path d="M72 162C87 162 99 155 107 140C95 133 84 136 72 162Z"/>
+            <path d="M70 165C54 161 44 165 37 178C50 183 60 179 70 165Z"/>
+            <path d="M74 110C72 90 79 71 96 55C102 72 95 91 74 110Z"/>
+            <path d="M86 54C83 38 87 22 98 8C105 20 102 35 86 54Z"/>
+          </svg>
+        </article>
+      </section>
 
       <aside class="note-card paper-card" id="note" aria-label="Decorative note: Ideas come from life">
         <span class="note-tape" aria-hidden="true"></span>
@@ -202,78 +214,80 @@
       </aside>
     </section>
 
-    <section class="section-block experience-section" id="experience" aria-labelledby="experience-title">
-      <div class="section-heading">
-        <p class="section-index">03 / Chronology</p>
-        <h2 id="experience-title">EXPERIENCE <span>經歷</span></h2>
-      </div>
+    <section class="lower-spread" aria-label="Experience and skills spread">
+      <section class="experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="section-index">03 / Chronology</p>
+          <h2 id="experience-title">EXPERIENCE <span>經歷</span></h2>
+        </div>
 
-      <div class="timeline" role="list">
-        <article class="timeline-item" role="listitem">
-          <time datetime="2022">2022 — Now</time>
-          <div class="timeline-role">
-            <h3>Freelance Designer &amp; Art Director</h3>
-            <p>Taipei, Taiwan</p>
-          </div>
-          <p class="timeline-desc">Working with global clients and independent studios on branding, digital, and art direction.</p>
-        </article>
+        <div class="timeline" role="list">
+          <article class="timeline-item" role="listitem">
+            <time datetime="2022">2022 — Now</time>
+            <div class="timeline-role">
+              <h3>Freelance Designer &amp; Art Director</h3>
+              <p>Taipei, Taiwan</p>
+            </div>
+            <p class="timeline-desc">Working with global clients and independent studios on branding, digital, and art direction.</p>
+          </article>
 
-        <article class="timeline-item" role="listitem">
-          <time datetime="2020">2020 — 2022</time>
-          <div class="timeline-role">
-            <h3>Art Director</h3>
-            <p>Simple Studio, Taipei</p>
-          </div>
-          <p class="timeline-desc">Led branding and visual projects across lifestyle, culture, and tech industries.</p>
-        </article>
+          <article class="timeline-item" role="listitem">
+            <time datetime="2020">2020 — 2022</time>
+            <div class="timeline-role">
+              <h3>Art Director</h3>
+              <p>Simple Studio, Taipei</p>
+            </div>
+            <p class="timeline-desc">Led branding and visual projects across lifestyle, culture, and tech industries.</p>
+          </article>
 
-        <article class="timeline-item" role="listitem">
-          <time datetime="2018">2018 — 2020</time>
-          <div class="timeline-role">
-            <h3>Graphic Designer</h3>
-            <p>InBloom Design, Taipei</p>
-          </div>
-          <p class="timeline-desc">Focused on visual identity, print design, and creative collaborations.</p>
-        </article>
-      </div>
-    </section>
+          <article class="timeline-item" role="listitem">
+            <time datetime="2018">2018 — 2020</time>
+            <div class="timeline-role">
+              <h3>Graphic Designer</h3>
+              <p>InBloom Design, Taipei</p>
+            </div>
+            <p class="timeline-desc">Focused on visual identity, print design, and creative collaborations.</p>
+          </article>
+        </div>
+      </section>
 
-    <section class="section-block skills-section" id="skills" aria-labelledby="skills-title">
-      <div class="section-heading">
-        <p class="section-index">04 / Disciplines</p>
-        <h2 id="skills-title">SKILLS &amp; DISCIPLINES <span>技能與專長</span></h2>
-      </div>
+      <section class="skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading compact-heading">
+          <p class="section-index">04 / Disciplines</p>
+          <h2 id="skills-title">SKILLS &amp; DISCIPLINES <span>技能與專長</span></h2>
+        </div>
 
-      <div class="skills-card paper-card">
-        <ul class="skills-list">
-          <li>
-            <span class="skill-label"><strong>Branding</strong><em>品牌識別</em></span>
-            <span class="dot-scale" aria-label="Branding proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-          </li>
-          <li>
-            <span class="skill-label"><strong>Art Direction</strong><em>藝術指導</em></span>
-            <span class="dot-scale" aria-label="Art Direction proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-          </li>
-          <li>
-            <span class="skill-label"><strong>Typography</strong><em>排版設計</em></span>
-            <span class="dot-scale" aria-label="Typography proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
-          </li>
-          <li>
-            <span class="skill-label"><strong>Web Design</strong><em>網頁設計</em></span>
-            <span class="dot-scale" aria-label="Web Design proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
-          </li>
-          <li>
-            <span class="skill-label"><strong>Editorial</strong><em>編輯設計</em></span>
-            <span class="dot-scale" aria-label="Editorial proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-          </li>
-          <li>
-            <span class="skill-label"><strong>Packaging</strong><em>包裝設計</em></span>
-            <span class="dot-scale" aria-label="Packaging proficiency 4 of 6"><i></i><i></i><i></i><i></i><i class="muted-dot"></i><i class="muted-dot"></i></span>
-          </li>
-        </ul>
+        <div class="skills-card paper-card">
+          <ul class="skills-list">
+            <li>
+              <span class="skill-label"><strong>Branding</strong><em>品牌識別</em></span>
+              <span class="dot-scale" aria-label="Branding proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </li>
+            <li>
+              <span class="skill-label"><strong>Art Direction</strong><em>藝術指導</em></span>
+              <span class="dot-scale" aria-label="Art Direction proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </li>
+            <li>
+              <span class="skill-label"><strong>Typography</strong><em>排版設計</em></span>
+              <span class="dot-scale" aria-label="Typography proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+            </li>
+            <li>
+              <span class="skill-label"><strong>Web Design</strong><em>網頁設計</em></span>
+              <span class="dot-scale" aria-label="Web Design proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+            </li>
+            <li>
+              <span class="skill-label"><strong>Editorial</strong><em>編輯設計</em></span>
+              <span class="dot-scale" aria-label="Editorial proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </li>
+            <li>
+              <span class="skill-label"><strong>Packaging</strong><em>包裝設計</em></span>
+              <span class="dot-scale" aria-label="Packaging proficiency 4 of 6"><i></i><i></i><i></i><i></i><i class="muted-dot"></i><i class="muted-dot"></i></span>
+            </li>
+          </ul>
 
-        <div class="matrix-art" aria-hidden="true"></div>
-      </div>
+          <div class="matrix-art" aria-hidden="true"></div>
+        </div>
+      </section>
     </section>
 
     <section class="resume-contact" id="contact" aria-labelledby="contact-title">
