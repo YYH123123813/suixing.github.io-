@@ -12,12 +12,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Caveat:wght@500;600&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./depth.css">
 </head>
 <body>
   <a class="skip-link" href="#works">Skip to selected works</a>
 
-  <main class="site-shell" id="top">
-    <div class="surface-stamp" aria-hidden="true">JH / 1997</div>
+  <div class="depth-scene">
+  <main class="site-shell depth-page portfolio-page" id="top">
+    <span class="depth-page-ao" aria-hidden="true"></span>
+    <span class="depth-page-edge" aria-hidden="true"></span>
+    <div class="surface-stamp depth-stamp" aria-hidden="true">JH / 1997</div>
     <div class="paper-registration" aria-hidden="true">
       <span></span>
       <span></span>
@@ -39,7 +43,7 @@
     </header>
 
     <section class="hero-section" aria-labelledby="hero-title">
-      <div class="hero-copy">
+      <div class="hero-copy depth-surface">
         <div class="hero-crest" aria-hidden="true">
           <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1.8"></circle>
@@ -82,10 +86,12 @@
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Monochrome editorial portrait">
-        <div class="portrait-card paper-card">
-          <span class="masking-tape" aria-hidden="true"></span>
-          <div class="portrait-photo-frame">
+      <div class="hero-visual depth-surface" aria-label="Monochrome editorial portrait">
+        <div class="portrait-card paper-card depth-card-lifted depth-photo-mount">
+          <span class="depth-ao" aria-hidden="true"></span>
+          <span class="depth-thickness" aria-hidden="true"></span>
+          <span class="masking-tape depth-tape" aria-hidden="true"></span>
+          <div class="portrait-photo-frame depth-photo">
             <img
               class="portrait-photo"
               src="./assets/editorial/portrait-photo.png"
@@ -95,18 +101,18 @@
           </div>
         </div>
 
-        <a class="scroll-tag" href="#works" aria-label="Scroll to selected works">
+        <a class="scroll-tag depth-floating" href="#works" aria-label="Scroll to selected works">
           <span>Scroll</span>
           <span class="arrow" aria-hidden="true">↓</span>
         </a>
 
-        <svg class="ink-doodle" viewBox="0 0 140 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="ink-doodle depth-floating" viewBox="0 0 140 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M104 14C84 23 66 42 55 71C47 92 45 113 53 132C60 149 77 161 99 165C114 168 124 177 126 193C128 209 121 227 107 247C94 265 75 279 52 289"></path>
           <path d="M82 42C95 56 101 74 98 96C95 115 83 128 61 135"></path>
           <path d="M41 109C24 130 17 152 22 173C26 190 40 203 64 212"></path>
         </svg>
 
-        <div class="portrait-caption" aria-hidden="true">
+        <div class="portrait-caption depth-caption" aria-hidden="true">
           <span>Portrait study</span>
           <span>Monochrome archive</span>
         </div>
@@ -121,8 +127,10 @@
         </div>
 
         <div class="works-stage">
-          <div class="works-board ink-board">
-            <span class="paperclip" aria-hidden="true"></span>
+          <div class="works-board ink-board depth-board">
+            <span class="depth-ao" aria-hidden="true"></span>
+            <span class="depth-thickness" aria-hidden="true"></span>
+            <span class="paperclip depth-paperclip" aria-hidden="true"></span>
             <div class="board-meta" aria-hidden="true">
               <span>Portfolio evidence</span>
               <span>03 selected studies</span>
@@ -130,8 +138,8 @@
 
             <ol class="project-list">
               <li>
-                <a class="project-card" href="#contact" aria-label="Open Ouur Coffee project placeholder">
-                  <span class="project-thumb">
+                <a class="project-card depth-card" href="#contact" aria-label="Open Ouur Coffee project placeholder">
+                  <span class="project-thumb depth-photo">
                     <img src="./assets/editorial/work-1.png" alt="Ouur Coffee branding and packaging grayscale project preview" loading="lazy">
                   </span>
                   <span class="project-copy">
@@ -144,8 +152,8 @@
               </li>
 
               <li>
-                <a class="project-card" href="#contact" aria-label="Open Lightfall project placeholder">
-                  <span class="project-thumb">
+                <a class="project-card depth-card" href="#contact" aria-label="Open Lightfall project placeholder">
+                  <span class="project-thumb depth-photo">
                     <img src="./assets/editorial/work-2.png" alt="Lightfall visual identity grayscale project preview" loading="lazy">
                   </span>
                   <span class="project-copy">
@@ -158,8 +166,8 @@
               </li>
 
               <li>
-                <a class="project-card" href="#contact" aria-label="Open Wonder in Chaos project placeholder">
-                  <span class="project-thumb">
+                <a class="project-card depth-card" href="#contact" aria-label="Open Wonder in Chaos project placeholder">
+                  <span class="project-thumb depth-photo">
                     <img src="./assets/editorial/work-3.png" alt="Wonder in Chaos gallery website grayscale project preview" loading="lazy">
                   </span>
                   <span class="project-copy">
@@ -175,7 +183,9 @@
             <a class="board-link" href="#contact">VIEW ALL WORKS <span aria-hidden="true">→</span></a>
           </div>
 
-          <figure class="coast-photo paper-card" aria-label="Small monochrome coastal inspiration print">
+          <figure class="coast-photo paper-card depth-photo depth-floating" aria-label="Small monochrome coastal inspiration print">
+            <span class="depth-ao" aria-hidden="true"></span>
+            <span class="depth-thickness" aria-hidden="true"></span>
             <img src="./assets/editorial/coast-photo.png" alt="Small monochrome coastal landscape print" loading="lazy">
             <figcaption>Quiet reference / visual rhythm</figcaption>
           </figure>
@@ -183,7 +193,9 @@
       </section>
 
       <section class="about-section" id="about" aria-labelledby="manifesto-title">
-        <article class="manifesto-card paper-card">
+        <article class="manifesto-card paper-card depth-card depth-paper-insert">
+          <span class="depth-ao" aria-hidden="true"></span>
+          <span class="depth-thickness" aria-hidden="true"></span>
           <div class="section-heading compact-heading">
             <p class="section-index">02 / Manifesto</p>
             <h2 id="manifesto-title">A LITTLE MANIFESTO <span>一些想法</span></h2>
@@ -260,8 +272,10 @@
         </div>
       </section>
 
-      <aside class="note-card paper-card" id="note" aria-label="Decorative note: Ideas come from life">
-        <span class="note-tape" aria-hidden="true"></span>
+      <aside class="note-card paper-card depth-note depth-floating" id="note" aria-label="Decorative note: Ideas come from life">
+        <span class="depth-ao" aria-hidden="true"></span>
+        <span class="depth-thickness" aria-hidden="true"></span>
+        <span class="note-tape depth-tape" aria-hidden="true"></span>
         <svg class="figure-sketch" viewBox="0 0 96 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M48 18C55 18 61 24 61 31C61 38 55 44 48 44C41 44 35 38 35 31C35 24 41 18 48 18Z"></path>
           <path d="M47 45C45 58 40 69 32 79C25 88 18 96 11 103"></path>
@@ -278,7 +292,9 @@
           <h2 id="skills-title">SKILLS &amp; DISCIPLINES <span>技能與專長</span></h2>
         </div>
 
-        <div class="skills-card paper-card">
+        <div class="skills-card paper-card depth-card">
+          <span class="depth-ao" aria-hidden="true"></span>
+          <span class="depth-thickness" aria-hidden="true"></span>
           <ul class="skills-list">
             <li>
               <span class="skill-label"><strong>Branding</strong><em>品牌識別</em></span>
@@ -311,10 +327,12 @@
       </section>
     </section>
 
-    <section class="resume-contact" id="contact" aria-labelledby="contact-title">
+    <section class="resume-contact depth-surface" id="contact" aria-labelledby="contact-title">
       <div class="archive-ruler" aria-hidden="true">Archive strip / web résumé / contact record</div>
 
-      <a class="resume-tile" href="mailto:hello@jiahaoli.com?subject=Resume%20request" aria-label="Request resume by email">
+      <a class="resume-tile depth-card" href="mailto:hello@jiahaoli.com?subject=Resume%20request" aria-label="Request resume by email">
+        <span class="depth-ao" aria-hidden="true"></span>
+        <span class="depth-thickness" aria-hidden="true"></span>
         <span class="resume-label">RESUME</span>
         <span class="resume-sub">個人檔案</span>
         <span class="resume-arrow" aria-hidden="true">↘</span>
@@ -339,7 +357,9 @@
         </div>
       </div>
 
-      <footer class="contact-block">
+      <footer class="contact-block depth-board depth-contact">
+        <span class="depth-ao" aria-hidden="true"></span>
+        <span class="depth-thickness" aria-hidden="true"></span>
         <div class="contact-copy">
           <h2 id="contact-title">LET’S CONNECT <span>聯繫我</span></h2>
           <a href="mailto:hello@jiahaoli.com">hello@jiahaoli.com</a>
@@ -361,6 +381,7 @@
       </footer>
     </section>
   </main>
+  </div>
 
   <script src="./script.js"></script>
 </body>

@@ -1,0 +1,563 @@
+/*
+  Structural 3D depth system
+  Purpose: make the editorial portfolio read as physical paper objects in space,
+  not flat cards with generic shadows.
+*/
+:root {
+  --depth-perspective: 1800px;
+  --depth-light-x: -10px;
+  --depth-light-y: -12px;
+  --depth-z-page: 0px;
+  --depth-z-surface: 14px;
+  --depth-z-card: 34px;
+  --depth-z-lifted: 58px;
+  --depth-z-floating: 82px;
+  --depth-z-detail: 112px;
+
+  --depth-desk: #d8c9b8;
+  --depth-paper: #f5efe6;
+  --depth-paper-soft: #efe5da;
+  --depth-paper-card: #f8f2ea;
+  --depth-paper-edge: #d4c2ae;
+  --depth-paper-edge-dark: #b89f88;
+  --depth-ink: #191511;
+  --depth-charcoal: #12100e;
+  --depth-charcoal-soft: #1a1714;
+  --depth-terracotta: #a65d3d;
+  --depth-terracotta-deep: #7f3f2c;
+  --depth-terracotta-faded: #c18462;
+
+  --depth-shadow-contact:
+    0 1px 1px rgba(35, 26, 18, 0.16),
+    0 2px 4px rgba(35, 26, 18, 0.10);
+  --depth-shadow-paper:
+    0 1px 2px rgba(35, 26, 18, 0.12),
+    0 10px 24px rgba(35, 26, 18, 0.12),
+    0 28px 60px rgba(35, 26, 18, 0.08);
+  --depth-shadow-lifted:
+    0 2px 4px rgba(35, 26, 18, 0.16),
+    0 18px 36px rgba(35, 26, 18, 0.16),
+    0 48px 100px rgba(35, 26, 18, 0.10);
+  --depth-shadow-board:
+    0 2px 4px rgba(0, 0, 0, 0.26),
+    0 18px 42px rgba(22, 17, 13, 0.28),
+    0 60px 120px rgba(22, 17, 13, 0.16);
+  --depth-shadow-floating:
+    0 2px 3px rgba(35, 26, 18, 0.18),
+    0 16px 34px rgba(35, 26, 18, 0.16),
+    0 46px 90px rgba(35, 26, 18, 0.10);
+  --depth-shadow-tape:
+    0 1px 1px rgba(35, 26, 18, 0.16),
+    0 4px 8px rgba(35, 26, 18, 0.10);
+  --depth-edge-light: inset 0 1px 0 rgba(255,255,255,0.50), inset 0 -1px 0 rgba(67, 49, 35, 0.08);
+
+  --z-depth-page: 1;
+  --z-depth-surface: 5;
+  --z-depth-card: 10;
+  --z-depth-lifted: 18;
+  --z-depth-floating: 26;
+  --z-depth-detail: 36;
+  --z-depth-interactive: 44;
+}
+
+.depth-scene {
+  position: relative;
+  perspective: var(--depth-perspective);
+  perspective-origin: 50% 28%;
+  transform-style: preserve-3d;
+  isolation: isolate;
+  overflow-x: clip;
+}
+
+.depth-page,
+.portfolio-page {
+  position: relative;
+  z-index: var(--z-depth-page);
+  overflow: visible;
+  transform-style: preserve-3d;
+  transform: translateZ(var(--depth-z-page));
+  box-shadow:
+    0 2px 2px rgba(45, 34, 24, 0.08),
+    0 28px 70px rgba(45, 34, 24, 0.18),
+    0 90px 180px rgba(45, 34, 24, 0.14);
+}
+
+.depth-page-ao,
+.depth-page-edge,
+.depth-ao,
+.depth-thickness {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.depth-page-ao {
+  left: 3.5%;
+  right: 3.5%;
+  bottom: -46px;
+  height: 94px;
+  z-index: -3;
+  background: radial-gradient(ellipse at center, rgba(39, 28, 20, 0.22), transparent 72%);
+  filter: blur(26px);
+  opacity: 0.72;
+  transform: translateZ(-34px);
+}
+
+.depth-page-edge {
+  left: 10px;
+  right: -10px;
+  bottom: -12px;
+  height: 18px;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(160, 136, 111, 0.20), rgba(190, 166, 140, 0.30) 18%, rgba(122, 98, 76, 0.19) 100%),
+    var(--depth-paper-edge);
+  filter: blur(0.35px);
+  opacity: 0.70;
+  transform: translateZ(-18px);
+}
+
+.depth-surface,
+.depth-card,
+.depth-card-lifted,
+.depth-photo,
+.depth-board,
+.depth-note,
+.depth-floating,
+.depth-tape,
+.depth-stamp,
+.depth-paperclip,
+.depth-contact {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.depth-surface {
+  position: relative;
+  z-index: var(--z-depth-surface);
+  transform: translateZ(var(--depth-z-surface));
+}
+
+.depth-card,
+.depth-card-lifted,
+.depth-board,
+.depth-note,
+.depth-floating,
+.depth-contact {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.depth-card {
+  z-index: var(--z-depth-card);
+  transform: translateZ(var(--depth-z-card));
+  box-shadow: var(--depth-shadow-paper), var(--depth-edge-light);
+}
+
+.depth-card-lifted {
+  z-index: var(--z-depth-lifted);
+  box-shadow: var(--depth-shadow-lifted), var(--depth-edge-light);
+}
+
+.depth-floating,
+.depth-note {
+  z-index: var(--z-depth-floating);
+  box-shadow: var(--depth-shadow-floating), var(--depth-edge-light);
+}
+
+.depth-board,
+.depth-contact {
+  z-index: var(--z-depth-lifted);
+  box-shadow: var(--depth-shadow-board), inset 0 1px 0 rgba(255,255,255,0.07), inset 0 -1px 0 rgba(0,0,0,0.42);
+}
+
+.depth-ao {
+  left: 8%;
+  right: 8%;
+  bottom: -18px;
+  height: 34px;
+  z-index: -3;
+  background: radial-gradient(ellipse at center, rgba(30, 22, 16, 0.22), rgba(30, 22, 16, 0.08) 38%, transparent 74%);
+  filter: blur(12px);
+  opacity: 0.82;
+  transform: translateZ(-18px);
+}
+
+.depth-thickness {
+  left: 4px;
+  right: -5px;
+  bottom: -8px;
+  height: 10px;
+  z-index: -2;
+  border-radius: 0 0 2px 2px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.18), transparent 16%, rgba(72, 51, 35, 0.10) 100%),
+    linear-gradient(180deg, rgba(212, 194, 174, 0.76), rgba(157, 129, 102, 0.32));
+  filter: blur(0.24px);
+  opacity: 0.86;
+  transform: translateZ(-8px);
+}
+
+.depth-board > .depth-ao,
+.depth-contact > .depth-ao {
+  left: 6%;
+  right: 5%;
+  bottom: -24px;
+  height: 44px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.34), rgba(26, 19, 14, 0.16) 42%, transparent 75%);
+  filter: blur(16px);
+  opacity: 0.88;
+}
+
+.depth-board > .depth-thickness,
+.depth-contact > .depth-thickness {
+  left: 5px;
+  right: -8px;
+  bottom: -12px;
+  height: 14px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.06), transparent 20%, rgba(0,0,0,0.32) 100%),
+    linear-gradient(180deg, #1d1915, #090806);
+  opacity: 0.92;
+}
+
+.depth-photo > .depth-thickness,
+.coast-photo > .depth-thickness {
+  left: 3px;
+  right: -4px;
+  bottom: -7px;
+  height: 8px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.16), transparent 22%, rgba(64, 47, 33, 0.11)),
+    linear-gradient(180deg, #ded0bf, #b9a18a);
+}
+
+/* Physical object mapping: each object keeps its designed rotation but gets a Z position. */
+.portrait-card.depth-photo-mount {
+  overflow: visible;
+  transform: translate3d(0, 0, var(--depth-z-lifted)) rotate(0.75deg);
+  box-shadow:
+    var(--depth-shadow-lifted),
+    7px 10px 0 rgba(147, 126, 103, 0.18),
+    var(--depth-edge-light);
+}
+
+.portrait-card.depth-photo-mount > .depth-ao {
+  bottom: -26px;
+  height: 48px;
+  opacity: 0.92;
+}
+
+.portrait-card.depth-photo-mount > .depth-thickness {
+  left: 7px;
+  right: -7px;
+  bottom: -10px;
+  height: 13px;
+}
+
+.portrait-photo-frame.depth-photo {
+  transform: translateZ(22px);
+  box-shadow:
+    0 1px 1px rgba(26, 19, 14, 0.16),
+    0 9px 18px rgba(26, 19, 14, 0.16),
+    inset 0 0 0 1px rgba(43, 33, 25, 0.20),
+    inset 12px 0 22px rgba(32, 26, 20, 0.10),
+    inset 0 -18px 30px rgba(18, 15, 13, 0.15);
+}
+
+.portrait-photo-frame.depth-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 10px;
+  z-index: 3;
+  background: linear-gradient(180deg, transparent, rgba(21, 17, 13, 0.18));
+  pointer-events: none;
+}
+
+.masking-tape.depth-tape {
+  z-index: var(--z-depth-detail);
+  transform: translateX(-50%) translateZ(var(--depth-z-detail)) rotate(-4.8deg);
+  box-shadow: var(--depth-shadow-tape);
+  filter: drop-shadow(1px 2px 1px rgba(35,26,18,0.12));
+}
+
+.note-tape.depth-tape {
+  z-index: var(--z-depth-detail);
+  transform: translateX(-50%) translateZ(var(--depth-z-detail)) rotate(4deg);
+  box-shadow: var(--depth-shadow-tape);
+  filter: drop-shadow(1px 2px 1px rgba(35,26,18,0.13));
+}
+
+.scroll-tag.depth-floating {
+  z-index: var(--z-depth-floating);
+  transform: translateZ(74px);
+  box-shadow: var(--depth-shadow-floating);
+}
+
+.ink-doodle.depth-floating {
+  z-index: var(--z-depth-floating);
+  transform: translateZ(80px);
+  filter: drop-shadow(0 3px 2px rgba(35,26,18,0.10));
+}
+
+.portrait-caption.depth-caption {
+  z-index: var(--z-depth-floating);
+  transform: translateZ(88px);
+  box-shadow: var(--depth-shadow-contact);
+}
+
+.works-board.depth-board {
+  overflow: visible;
+  transform: translate3d(0, 0, 48px) rotate(-0.32deg);
+  box-shadow:
+    var(--depth-shadow-board),
+    8px 11px 0 rgba(11, 9, 7, 0.26),
+    inset 0 1px 0 rgba(255,255,255,0.075),
+    inset 0 -1px 0 rgba(0,0,0,0.48);
+}
+
+.depth-paperclip {
+  z-index: var(--z-depth-detail);
+  transform: translateZ(118px) rotate(9deg);
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.26)) drop-shadow(0 7px 8px rgba(0,0,0,0.18));
+}
+
+.project-card.depth-card {
+  transform: translateZ(12px);
+  box-shadow: none;
+}
+
+.project-thumb.depth-photo {
+  transform: translateZ(24px);
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.24),
+    0 8px 15px rgba(0, 0, 0, 0.20),
+    3px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.coast-photo.depth-floating {
+  overflow: visible;
+  transform: translate3d(0, 0, 82px) rotate(-2.4deg);
+  box-shadow:
+    var(--depth-shadow-floating),
+    5px 6px 0 rgba(151, 126, 102, 0.22),
+    var(--depth-edge-light);
+}
+
+.manifesto-card.depth-paper-insert {
+  overflow: visible;
+  transform: translate3d(0, 0, 38px) rotate(0.24deg);
+  box-shadow:
+    var(--depth-shadow-paper),
+    5px 7px 0 rgba(170, 146, 120, 0.20),
+    var(--depth-edge-light);
+}
+
+.manifesto-card.depth-paper-insert > .depth-ao {
+  opacity: 0.68;
+}
+
+.note-card.depth-note {
+  overflow: visible;
+  transform: translate3d(0, 0, 84px) rotate(-3.1deg);
+  box-shadow:
+    var(--depth-shadow-floating),
+    5px 7px 0 rgba(170, 146, 120, 0.20),
+    var(--depth-edge-light);
+}
+
+.skills-card.depth-card {
+  overflow: visible;
+  transform: translateZ(28px);
+  box-shadow:
+    var(--depth-shadow-paper),
+    4px 6px 0 rgba(170, 146, 120, 0.14),
+    var(--depth-edge-light);
+}
+
+.resume-contact.depth-surface {
+  transform: translateZ(18px);
+}
+
+.resume-tile.depth-card {
+  overflow: visible;
+  transform: translateZ(42px) rotate(-1deg);
+  box-shadow:
+    var(--depth-shadow-paper),
+    6px 7px 0 rgba(127, 63, 44, 0.18),
+    var(--depth-edge-light);
+}
+
+.contact-block.depth-contact {
+  overflow: visible;
+  transform: translate3d(0, 0, 50px) rotate(-0.7deg);
+  box-shadow:
+    var(--depth-shadow-board),
+    8px 10px 0 rgba(11, 9, 7, 0.28),
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    inset 0 -1px 0 rgba(0,0,0,0.42);
+}
+
+.depth-stamp {
+  z-index: var(--z-depth-surface);
+  transform: translateZ(18px) rotate(-14deg);
+  filter: drop-shadow(0 1px 0 rgba(127,63,44,0.08));
+}
+
+@media (min-width: 1100px) {
+  .hero-visual.depth-surface {
+    height: clamp(650px, 48vw, 720px);
+  }
+}
+
+/* Tactile hover behavior: subtle Z-axis lift, no flashy motion. */
+@media (hover: hover) {
+  .depth-card,
+  .depth-card-lifted,
+  .depth-board,
+  .depth-floating,
+  .depth-note,
+  .depth-contact,
+  .depth-photo,
+  .depth-tape {
+    transition: transform 280ms ease, box-shadow 280ms ease, filter 280ms ease;
+  }
+
+  .portrait-card.depth-photo-mount:hover {
+    transform: translate3d(0, -4px, 76px) rotate(0.75deg);
+    box-shadow:
+      0 2px 4px rgba(35, 26, 18, 0.18),
+      0 24px 48px rgba(35, 26, 18, 0.18),
+      0 68px 132px rgba(35, 26, 18, 0.12),
+      8px 12px 0 rgba(147, 126, 103, 0.18),
+      var(--depth-edge-light);
+  }
+
+  .works-board.depth-board:hover {
+    transform: translate3d(0, -3px, 62px) rotate(-0.32deg);
+    box-shadow:
+      0 2px 5px rgba(0, 0, 0, 0.28),
+      0 24px 50px rgba(22, 17, 13, 0.30),
+      0 76px 140px rgba(22, 17, 13, 0.18),
+      8px 12px 0 rgba(11, 9, 7, 0.28),
+      inset 0 1px 0 rgba(255,255,255,0.08),
+      inset 0 -1px 0 rgba(0,0,0,0.48);
+  }
+
+  .project-card.depth-card:hover,
+  .project-card.depth-card:focus-visible {
+    transform: translate3d(0, -3px, 34px);
+  }
+
+  .project-card.depth-card:hover .project-thumb.depth-photo,
+  .project-card.depth-card:focus-visible .project-thumb.depth-photo {
+    transform: translateZ(38px);
+    box-shadow:
+      0 1px 1px rgba(0, 0, 0, 0.26),
+      0 12px 22px rgba(0, 0, 0, 0.24),
+      4px 5px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  .manifesto-card.depth-paper-insert:hover,
+  .skills-card.depth-card:hover,
+  .note-card.depth-note:hover {
+    box-shadow:
+      var(--depth-shadow-lifted),
+      6px 8px 0 rgba(170, 146, 120, 0.20),
+      var(--depth-edge-light);
+  }
+
+  .manifesto-card.depth-paper-insert:hover {
+    transform: translate3d(0, -3px, 50px) rotate(0.24deg);
+  }
+
+  .note-card.depth-note:hover {
+    transform: translate3d(0, -4px, 98px) rotate(-3.1deg);
+  }
+
+  .resume-tile.depth-card:hover,
+  .resume-tile.depth-card:focus-visible {
+    transform: translate3d(0, -3px, 58px) rotate(-1deg);
+  }
+
+  .contact-block.depth-contact:hover {
+    transform: translate3d(0, -2px, 62px) rotate(-0.7deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .depth-scene {
+    perspective: 1300px;
+    perspective-origin: 50% 18%;
+  }
+
+  .depth-page,
+  .portfolio-page {
+    box-shadow:
+      0 1px 1px rgba(45, 34, 24, 0.08),
+      0 16px 38px rgba(45, 34, 24, 0.14);
+  }
+
+  .depth-page-edge {
+    bottom: -8px;
+    height: 12px;
+    opacity: 0.48;
+  }
+
+  .depth-page-ao {
+    bottom: -28px;
+    height: 56px;
+    filter: blur(18px);
+    opacity: 0.42;
+  }
+
+  .depth-ao {
+    bottom: -12px;
+    height: 24px;
+    filter: blur(9px);
+    opacity: 0.58;
+  }
+
+  .depth-thickness {
+    left: 2px;
+    right: 0;
+    bottom: -5px;
+    height: 7px;
+    opacity: 0.62;
+  }
+
+  .portrait-card.depth-photo-mount {
+    transform: translateZ(32px) rotate(0.75deg);
+  }
+
+  .works-board.depth-board {
+    transform: translateZ(30px) rotate(-0.32deg);
+  }
+
+  .manifesto-card.depth-paper-insert {
+    transform: translateZ(24px) rotate(0.24deg);
+  }
+
+  .note-card.depth-note {
+    transform: translateZ(48px) rotate(-3.1deg);
+  }
+
+  .contact-block.depth-contact {
+    transform: translateZ(30px) rotate(-0.7deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .depth-card,
+  .depth-card-lifted,
+  .depth-board,
+  .depth-floating,
+  .depth-note,
+  .depth-contact,
+  .depth-photo,
+  .depth-tape {
+    transition: none !important;
+  }
+}
