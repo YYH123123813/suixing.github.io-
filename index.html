@@ -6,296 +6,323 @@
   <title>JIAHAO LI｜Editorial Portfolio</title>
   <meta
     name="description"
-    content="A faithful browser-framed editorial collage homepage recreated as a real webpage with tactile paper layers, serif-led typography, bilingual copy, and asymmetrical portfolio composition."
+    content="Jiahao Li's bilingual editorial portfolio and visual resume — a real responsive website with tactile paper, monochrome portrait, selected works, manifesto, experience, skills, resume metadata, and contact links."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Caveat:wght@500&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Caveat:wght@500;600&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main class="stage">
-    <div class="browser-scale-wrap">
-      <div class="browser-scale" id="artboard">
-        <div class="browser-window">
-          <div class="browser-chrome" aria-hidden="true">
-            <div class="chrome-top">
-              <div class="traffic-lights">
-                <span class="traffic-close"></span>
-                <span class="traffic-minimize"></span>
-                <span class="traffic-expand"></span>
-              </div>
-              <div class="tab-pill">
-                <span class="tab-icon"></span>
-                <span class="tab-title">jiahaoli.com — portfolio</span>
-              </div>
-              <div class="chrome-icons">
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="chrome-bottom">
-              <div class="url-bar">
-                <span class="url-lock">⌁</span>
-                <span class="url-text">https://jiahaoli.com</span>
-              </div>
-            </div>
+  <a class="skip-link" href="#works">Skip to selected works</a>
+
+  <main class="site-shell" id="top">
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brandmark" href="#top" aria-label="Back to top">
+        <span class="brand-en">JIAHAO LI</span>
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-zh">李嘉豪</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#works">WORKS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#note">NOTE</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="hero-crest" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1.8"></circle>
+            <path d="M20 38.5C23.4 31.2 28.4 25 35.2 22.2C39.1 20.6 43 20.1 46 20.4C42.8 21.9 40.3 24 38.7 27.6C43.4 28.6 46.4 31.9 47.5 37.2C44.4 34.5 41 33.6 37.2 34.4C34.6 35 32 36.9 29.7 40.1C28 42.4 26.8 44.7 26 47C25.8 43 23.8 40.2 20 38.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M22 44.8C26.6 44.7 30.4 46 33.2 48.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+        </div>
+
+        <p class="eyebrow">Editorial Portfolio / Visual Resume</p>
+        <h1 class="hero-title" id="hero-title">
+          <span>DESIGN</span>
+          <span>AS POETRY<span class="headline-dot" aria-hidden="true"></span></span>
+        </h1>
+
+        <p class="hero-chinese">
+          以設計為詩，<br>
+          以視覺為語言，<br>
+          在混沌中尋找秩序。
+        </p>
+
+        <p class="hero-english">
+          I believe design is more than solving problems—it’s about expressing perspective,
+          evoking emotion, and shaping meaning.
+        </p>
+
+        <a class="text-cta" href="#works">VIEW SELECTED WORKS</a>
+
+        <p class="handwritten-note" aria-hidden="true">
+          Design is where<br>
+          logic and intuition meet.
+        </p>
+      </div>
+
+      <div class="hero-visual" aria-label="Monochrome editorial portrait">
+        <div class="portrait-card paper-card">
+          <span class="masking-tape" aria-hidden="true"></span>
+          <div class="portrait-photo-frame">
+            <img
+              class="portrait-photo"
+              src="./assets/editorial/portrait-photo.png"
+              alt="Monochrome editorial portrait of a young East Asian man looking to the right"
+              loading="eager"
+            >
           </div>
+        </div>
 
-          <article class="page-canvas">
-            <div class="page-grain" aria-hidden="true"></div>
-            <div class="page-vignette" aria-hidden="true"></div>
+        <a class="scroll-tag" href="#works" aria-label="Scroll to selected works">
+          <span>Scroll</span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
 
-            <header class="topbar">
-              <div class="brandmark">
-                <span class="brand-en">JIAHAO LI</span>
-                <span class="brand-dot"></span>
-                <span class="brand-zh">李嘉豪</span>
-              </div>
-              <nav class="topnav" aria-label="Primary">
-                <a href="#works">WORKS</a>
-                <a href="#about">ABOUT</a>
-                <a href="#note">NOTE</a>
-                <a href="#contact">CONTACT</a>
-              </nav>
-            </header>
+        <svg class="ink-doodle" viewBox="0 0 140 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M104 14C84 23 66 42 55 71C47 92 45 113 53 132C60 149 77 161 99 165C114 168 124 177 126 193C128 209 121 227 107 247C94 265 75 279 52 289"></path>
+          <path d="M82 42C95 56 101 74 98 96C95 115 83 128 61 135"></path>
+          <path d="M41 109C24 130 17 152 22 173C26 190 40 203 64 212"></path>
+        </svg>
+      </div>
+    </section>
 
-            <section class="hero-copy" aria-labelledby="hero-title">
-              <div class="hero-crest" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1.8"></circle>
-                  <path d="M20 38.5C23.4 31.2 28.4 25 35.2 22.2C39.1 20.6 43 20.1 46 20.4C42.8 21.9 40.3 24 38.7 27.6C43.4 28.6 46.4 31.9 47.5 37.2C44.4 34.5 41 33.6 37.2 34.4C34.6 35 32 36.9 29.7 40.1C28 42.4 26.8 44.7 26 47C25.8 43 23.8 40.2 20 38.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M22 44.8C26.6 44.7 30.4 46 33.2 48.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-                </svg>
-              </div>
+    <section class="section-block works-section" id="works" aria-labelledby="works-title">
+      <div class="section-heading">
+        <p class="section-index">01 / Selected archive</p>
+        <h2 id="works-title">SELECTED WORKS <span>精選作品</span></h2>
+      </div>
 
-              <h1 class="hero-title" id="hero-title">
-                DESIGN
-                <span>AS POETRY<span class="headline-dot"></span></span>
-              </h1>
+      <div class="works-cluster">
+        <div class="works-board ink-board">
+          <span class="paperclip" aria-hidden="true"></span>
 
-              <p class="hero-chinese">
-                以設計為詩，<br>
-                以視覺為語言，<br>
-                在混沌中尋找秩序。
-              </p>
+          <ol class="project-list">
+            <li>
+              <a class="project-card" href="#contact" aria-label="Open Ouur Coffee project placeholder">
+                <span class="project-thumb">
+                  <img src="./assets/editorial/work-1.png" alt="Ouur Coffee branding and packaging grayscale project preview" loading="lazy">
+                </span>
+                <span class="project-copy">
+                  <span class="project-no">01</span>
+                  <span class="project-title">Ouur Coffee</span>
+                  <span class="project-type">Branding &amp; Packaging</span>
+                </span>
+              </a>
+            </li>
 
-              <p class="hero-english">
-                I believe design is more than
-                solving problems—it’s about
-                expressing perspective, evoking
-                emotion, and shaping meaning.
-              </p>
+            <li>
+              <a class="project-card" href="#contact" aria-label="Open Lightfall project placeholder">
+                <span class="project-thumb">
+                  <img src="./assets/editorial/work-2.png" alt="Lightfall visual identity grayscale project preview" loading="lazy">
+                </span>
+                <span class="project-copy">
+                  <span class="project-no">02</span>
+                  <span class="project-title">Lightfall</span>
+                  <span class="project-type">Visual Identity</span>
+                </span>
+              </a>
+            </li>
 
-              <a class="hero-cta" href="#works">VIEW SELECTED WORKS</a>
+            <li>
+              <a class="project-card" href="#contact" aria-label="Open Wonder in Chaos project placeholder">
+                <span class="project-thumb">
+                  <img src="./assets/editorial/work-3.png" alt="Wonder in Chaos gallery website grayscale project preview" loading="lazy">
+                </span>
+                <span class="project-copy">
+                  <span class="project-no">03</span>
+                  <span class="project-title">Wonder in Chaos</span>
+                  <span class="project-type">Gallery Website</span>
+                </span>
+              </a>
+            </li>
+          </ol>
 
-              <p class="handwritten-note">
-                Design is<br>
-                where logic and<br>
-                intuition meet.
-              </p>
-            </section>
+          <a class="board-link" href="#contact">VIEW ALL WORKS <span aria-hidden="true">→</span></a>
+        </div>
 
-            <section class="hero-portrait-panel" aria-label="Monochrome editorial portrait">
-              <div class="portrait-card paper-card">
-                <span class="masking-tape"></span>
-                <div class="portrait-photo-frame">
-                  <img
-                    class="portrait-photo"
-                    src="./assets/editorial/portrait-photo.png"
-                    alt="Monochrome editorial portrait of a young East Asian man looking to the right"
-                    loading="eager"
-                  >
-                </div>
-              </div>
+        <figure class="coast-photo paper-card" aria-label="Small monochrome coastal inspiration print">
+          <img src="./assets/editorial/coast-photo.png" alt="Small monochrome coastal landscape print" loading="lazy">
+          <figcaption>Quiet reference / visual rhythm</figcaption>
+        </figure>
+      </div>
+    </section>
 
-              <div class="scroll-tag">
-                <span>Scroll</span>
-                <span class="arrow">↓</span>
-              </div>
+    <section class="section-block about-section" id="about" aria-labelledby="manifesto-title">
+      <article class="manifesto-card paper-card">
+        <div class="section-heading compact-heading">
+          <p class="section-index">02 / Manifesto</p>
+          <h2 id="manifesto-title">A LITTLE MANIFESTO <span>一些想法</span></h2>
+        </div>
 
-              <svg class="ink-doodle" viewBox="0 0 140 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M104 14C84 23 66 42 55 71C47 92 45 113 53 132C60 149 77 161 99 165C114 168 124 177 126 193C128 209 121 227 107 247C94 265 75 279 52 289"></path>
-                <path d="M82 42C95 56 101 74 98 96C95 115 83 128 61 135"></path>
-                <path d="M41 109C24 130 17 152 22 173C26 190 40 203 64 212"></path>
-              </svg>
-            </section>
+        <div class="manifesto-text">
+          <p class="manifesto-en">
+            In a world that moves fast,<br>
+            I choose depth over speed.<br>
+            I care about craft, process,<br>
+            and the quiet details that<br>
+            make something honest.
+          </p>
 
-            <section class="works-board ink-board" id="works" aria-labelledby="works-title">
-              <div class="paperclip" aria-hidden="true"></div>
-              <h2 id="works-title">SELECTED WORKS <span>精選作品</span></h2>
+          <p class="manifesto-zh">
+            在這個追求效率的時代，<br>
+            我更在意深度與真誠。<br>
+            好的設計，<br>
+            來自於對細節的偏執與熱愛。
+          </p>
+        </div>
 
-              <ol class="works-list">
-                <li class="work-row">
-                  <div class="work-thumb" aria-hidden="true">
-                    <img class="work-thumb-image" src="./assets/editorial/work-1.png" alt="" loading="eager">
-                  </div>
-                  <div class="work-meta">
-                    <span class="work-no">01</span>
-                    <h3>Ouur Coffee</h3>
-                    <p>Branding &amp; Packaging</p>
-                  </div>
-                </li>
-                <li class="work-row">
-                  <div class="work-thumb" aria-hidden="true">
-                    <img class="work-thumb-image" src="./assets/editorial/work-2.png" alt="" loading="eager">
-                  </div>
-                  <div class="work-meta">
-                    <span class="work-no">02</span>
-                    <h3>Lightfall</h3>
-                    <p>Visual Identity</p>
-                  </div>
-                </li>
-                <li class="work-row">
-                  <div class="work-thumb" aria-hidden="true">
-                    <img class="work-thumb-image" src="./assets/editorial/work-3.png" alt="" loading="eager">
-                  </div>
-                  <div class="work-meta">
-                    <span class="work-no">03</span>
-                    <h3>Wonder in Chaos</h3>
-                    <p>Gallery Website</p>
-                  </div>
-                </li>
-              </ol>
+        <svg class="flower-sketch" viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M70 215C68 174 74 140 87 112C99 86 111 70 124 60"/>
+          <path d="M90 118C111 122 125 115 132 98C114 91 101 94 90 118Z"/>
+          <path d="M82 126C61 119 47 124 38 140C56 146 71 141 82 126Z"/>
+          <path d="M72 162C87 162 99 155 107 140C95 133 84 136 72 162Z"/>
+          <path d="M70 165C54 161 44 165 37 178C50 183 60 179 70 165Z"/>
+          <path d="M74 110C72 90 79 71 96 55C102 72 95 91 74 110Z"/>
+          <path d="M86 54C83 38 87 22 98 8C105 20 102 35 86 54Z"/>
+        </svg>
+      </article>
 
-              <a class="view-all-link" href="#contact">VIEW ALL WORKS <span>→</span></a>
-            </section>
+      <aside class="note-card paper-card" id="note" aria-label="Decorative note: Ideas come from life">
+        <span class="note-tape" aria-hidden="true"></span>
+        <svg class="figure-sketch" viewBox="0 0 96 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M48 18C55 18 61 24 61 31C61 38 55 44 48 44C41 44 35 38 35 31C35 24 41 18 48 18Z"></path>
+          <path d="M47 45C45 58 40 69 32 79C25 88 18 96 11 103"></path>
+          <path d="M48 46C52 58 59 69 68 80C74 88 81 95 90 103"></path>
+          <path d="M46 59C38 61 29 67 21 77"></path>
+          <path d="M52 62C60 63 69 69 78 80"></path>
+        </svg>
+        <p>Ideas<br>come from<br>life.</p>
+      </aside>
+    </section>
 
-            <figure class="coast-photo paper-card" aria-hidden="true">
-              <img class="coast-scene-image" src="./assets/editorial/coast-photo.png" alt="" loading="eager">
-            </figure>
+    <section class="section-block experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <p class="section-index">03 / Chronology</p>
+        <h2 id="experience-title">EXPERIENCE <span>經歷</span></h2>
+      </div>
 
-            <section class="manifesto-card paper-card" id="about" aria-labelledby="manifesto-title">
-              <h2 id="manifesto-title">A LITTLE MANIFESTO <span>一些想法</span></h2>
-              <p class="manifesto-en">
-                In a world that moves fast,<br>
-                I choose depth over speed.<br>
-                I care about craft, process,<br>
-                and the quiet details that<br>
-                make something honest.
-              </p>
-              <p class="manifesto-zh">
-                在這個追求效率的時代，<br>
-                我更在意深度與真誠。<br>
-                好的設計，<br>
-                來自於對細節的偏執與熱愛。
-              </p>
-              <svg class="flower-sketch" viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M70 215C68 174 74 140 87 112C99 86 111 70 124 60"/>
-                <path d="M90 118C111 122 125 115 132 98C114 91 101 94 90 118Z"/>
-                <path d="M82 126C61 119 47 124 38 140C56 146 71 141 82 126Z"/>
-                <path d="M72 162C87 162 99 155 107 140C95 133 84 136 72 162Z"/>
-                <path d="M70 165C54 161 44 165 37 178C50 183 60 179 70 165Z"/>
-                <path d="M74 110C72 90 79 71 96 55C102 72 95 91 74 110Z"/>
-                <path d="M86 54C83 38 87 22 98 8C105 20 102 35 86 54Z"/>
-              </svg>
-            </section>
+      <div class="timeline" role="list">
+        <article class="timeline-item" role="listitem">
+          <time datetime="2022">2022 — Now</time>
+          <div class="timeline-role">
+            <h3>Freelance Designer &amp; Art Director</h3>
+            <p>Taipei, Taiwan</p>
+          </div>
+          <p class="timeline-desc">Working with global clients and independent studios on branding, digital, and art direction.</p>
+        </article>
 
-            <section class="experience-panel" aria-labelledby="experience-title">
-              <h2 id="experience-title">EXPERIENCE <span>經歷</span></h2>
-              <div class="timeline">
-                <article class="timeline-item">
-                  <time datetime="2022">2022 — Now</time>
-                  <h3>Freelance Designer &amp; Art Director</h3>
-                  <p class="timeline-place">Taipei, Taiwan</p>
-                  <p class="timeline-desc">Working with global clients and independent studios on branding, digital, and art direction.</p>
-                </article>
-                <article class="timeline-item">
-                  <time datetime="2020">2020 — 2022</time>
-                  <h3>Art Director</h3>
-                  <p class="timeline-place">Simple Studio · Taipei, Taiwan</p>
-                  <p class="timeline-desc">Led branding and visual projects across lifestyle, culture, and tech industries.</p>
-                </article>
-                <article class="timeline-item">
-                  <time datetime="2018">2018 — 2020</time>
-                  <h3>Graphic Designer</h3>
-                  <p class="timeline-place">InBloom Design · Taipei, Taiwan</p>
-                  <p class="timeline-desc">Focused on visual identity, print design, and creative collaborations.</p>
-                </article>
-              </div>
-            </section>
+        <article class="timeline-item" role="listitem">
+          <time datetime="2020">2020 — 2022</time>
+          <div class="timeline-role">
+            <h3>Art Director</h3>
+            <p>Simple Studio, Taipei</p>
+          </div>
+          <p class="timeline-desc">Led branding and visual projects across lifestyle, culture, and tech industries.</p>
+        </article>
 
-            <aside class="note-card paper-card" id="note" aria-label="Handwritten note card">
-              <span class="note-tape"></span>
-              <svg class="figure-sketch" viewBox="0 0 96 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M48 18C55 18 61 24 61 31C61 38 55 44 48 44C41 44 35 38 35 31C35 24 41 18 48 18Z"></path>
-                <path d="M47 45C45 58 40 69 32 79C25 88 18 96 11 103"></path>
-                <path d="M48 46C52 58 59 69 68 80C74 88 81 95 90 103"></path>
-                <path d="M46 59C38 61 29 67 21 77"></path>
-                <path d="M52 62C60 63 69 69 78 80"></path>
-              </svg>
-              <p>
-                Ideas<br>
-                come from<br>
-                life.
-              </p>
-            </aside>
+        <article class="timeline-item" role="listitem">
+          <time datetime="2018">2018 — 2020</time>
+          <div class="timeline-role">
+            <h3>Graphic Designer</h3>
+            <p>InBloom Design, Taipei</p>
+          </div>
+          <p class="timeline-desc">Focused on visual identity, print design, and creative collaborations.</p>
+        </article>
+      </div>
+    </section>
 
-            <section class="skills-panel" aria-labelledby="skills-title">
-              <h2 id="skills-title">SKILLS &amp; DISCIPLINES <span>技能與專長</span></h2>
-              <div class="skills-content">
-                <ul class="skills-list">
-                  <li><span class="skill-en">Branding</span><span class="skill-zh">品牌識別</span></li>
-                  <li><span class="skill-en">Art Direction</span><span class="skill-zh">藝術指導</span></li>
-                  <li><span class="skill-en">Typography</span><span class="skill-zh">排版設計</span></li>
-                  <li><span class="skill-en">Web Design</span><span class="skill-zh">網頁設計</span></li>
-                  <li><span class="skill-en">Editorial</span><span class="skill-zh">編輯設計</span></li>
-                  <li><span class="skill-en">Packaging</span><span class="skill-zh">包裝設計</span></li>
-                </ul>
-                <div class="skill-matrix" aria-hidden="true"></div>
-              </div>
-            </section>
+    <section class="section-block skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <p class="section-index">04 / Disciplines</p>
+        <h2 id="skills-title">SKILLS &amp; DISCIPLINES <span>技能與專長</span></h2>
+      </div>
 
-            <footer class="bottom-band" id="contact">
-              <div class="resume-tile">
-                <span class="resume-label">RESUME</span>
-                <span class="resume-sub">個人檔案</span>
-                <span class="resume-arrow">↘</span>
-              </div>
+      <div class="skills-card paper-card">
+        <ul class="skills-list">
+          <li>
+            <span class="skill-label"><strong>Branding</strong><em>品牌識別</em></span>
+            <span class="dot-scale" aria-label="Branding proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          </li>
+          <li>
+            <span class="skill-label"><strong>Art Direction</strong><em>藝術指導</em></span>
+            <span class="dot-scale" aria-label="Art Direction proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          </li>
+          <li>
+            <span class="skill-label"><strong>Typography</strong><em>排版設計</em></span>
+            <span class="dot-scale" aria-label="Typography proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+          </li>
+          <li>
+            <span class="skill-label"><strong>Web Design</strong><em>網頁設計</em></span>
+            <span class="dot-scale" aria-label="Web Design proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+          </li>
+          <li>
+            <span class="skill-label"><strong>Editorial</strong><em>編輯設計</em></span>
+            <span class="dot-scale" aria-label="Editorial proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          </li>
+          <li>
+            <span class="skill-label"><strong>Packaging</strong><em>包裝設計</em></span>
+            <span class="dot-scale" aria-label="Packaging proficiency 4 of 6"><i></i><i></i><i></i><i></i><i class="muted-dot"></i><i class="muted-dot"></i></span>
+          </li>
+        </ul>
 
-              <div class="meta-columns">
-                <div class="meta-column">
-                  <span class="meta-label">Born</span>
-                  <strong class="meta-value">1997: Taipei, Taiwan</strong>
-                </div>
-                <div class="meta-column">
-                  <span class="meta-label">Based in</span>
-                  <strong class="meta-value">Taipei, Taiwan</strong>
-                </div>
-                <div class="meta-column">
-                  <span class="meta-label">Languages</span>
-                  <strong class="meta-value">中文 / English</strong>
-                </div>
-                <div class="meta-column">
-                  <span class="meta-label">Currently</span>
-                  <strong class="meta-value">Available for work</strong>
-                </div>
-              </div>
+        <div class="matrix-art" aria-hidden="true"></div>
+      </div>
+    </section>
 
-              <div class="contact-block">
-                <div class="contact-copy">
-                  <h2>LET’S CONNECT <span>聯繫我</span></h2>
-                  <a href="mailto:hello@jiahaoli.com">hello@jiahaoli.com</a>
-                  <a href="https://instagram.com/jiahao.li.design" target="_blank" rel="noreferrer">@jiahao.li.design</a>
-                  <a href="tel:+886912345678">+886 912 345 678</a>
-                </div>
-                <div class="contact-seal" aria-hidden="true">
-                  <svg viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="56" cy="56" r="49" stroke="#B96A45" stroke-width="2.2"></circle>
-                    <circle cx="56" cy="56" r="35" stroke="#B96A45" stroke-width="1.5" stroke-dasharray="2.8 5"></circle>
-                    <path d="M28 28C38 21 47 18 56 18C65 18 74 21 84 28" stroke="#B96A45" stroke-width="1.3" stroke-linecap="round"></path>
-                    <path d="M84 84C74 91 65 94 56 94C47 94 38 91 28 84" stroke="#B96A45" stroke-width="1.3" stroke-linecap="round"></path>
-                    <circle cx="56" cy="26" r="2.5" fill="#B96A45"></circle>
-                    <circle cx="56" cy="86" r="2.5" fill="#B96A45"></circle>
-                    <path d="M36 73V39H44L56 58L68 39H76V73H67V54L56 68L45 54V73H36Z" fill="#B96A45"></path>
-                  </svg>
-                </div>
-              </div>
-            </footer>
-          </article>
+    <section class="resume-contact" id="contact" aria-labelledby="contact-title">
+      <a class="resume-tile" href="mailto:hello@jiahaoli.com?subject=Resume%20request" aria-label="Request resume by email">
+        <span class="resume-label">RESUME</span>
+        <span class="resume-sub">個人檔案</span>
+        <span class="resume-arrow" aria-hidden="true">↘</span>
+      </a>
+
+      <div class="meta-columns" aria-label="Personal metadata">
+        <div class="meta-column">
+          <span class="meta-label">Born</span>
+          <strong class="meta-value">1997: Taipei, Taiwan</strong>
+        </div>
+        <div class="meta-column">
+          <span class="meta-label">Based in</span>
+          <strong class="meta-value">Taipei, Taiwan</strong>
+        </div>
+        <div class="meta-column">
+          <span class="meta-label">Languages</span>
+          <strong class="meta-value">中文 / English</strong>
+        </div>
+        <div class="meta-column">
+          <span class="meta-label">Currently</span>
+          <strong class="meta-value">Available for work</strong>
         </div>
       </div>
-    </div>
+
+      <footer class="contact-block">
+        <div class="contact-copy">
+          <h2 id="contact-title">LET’S CONNECT <span>聯繫我</span></h2>
+          <a href="mailto:hello@jiahaoli.com">hello@jiahaoli.com</a>
+          <a href="https://instagram.com/jiahao.li.design" target="_blank" rel="noreferrer">@jiahao.li.design</a>
+          <a href="tel:+886-912-345-678">+886 912 345 678</a>
+        </div>
+
+        <div class="contact-seal" aria-hidden="true">
+          <svg viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="56" cy="56" r="49" stroke="currentColor" stroke-width="2.2"></circle>
+            <circle cx="56" cy="56" r="35" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2.8 5"></circle>
+            <path d="M28 28C38 21 47 18 56 18C65 18 74 21 84 28" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path>
+            <path d="M84 84C74 91 65 94 56 94C47 94 38 91 28 84" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path>
+            <circle cx="56" cy="26" r="2.5" fill="currentColor"></circle>
+            <circle cx="56" cy="86" r="2.5" fill="currentColor"></circle>
+            <path d="M36 73V39H44L56 58L68 39H76V73H67V54L56 68L45 54V73H36Z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </footer>
+    </section>
   </main>
 
   <script src="./script.js"></script>
