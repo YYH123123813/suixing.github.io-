@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Caveat:wght@500;600&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./depth.css">
+  <link rel="stylesheet" href="./interaction.css">
 </head>
 <body>
   <a class="skip-link" href="#works">Skip to selected works</a>
@@ -42,7 +43,7 @@
       </nav>
     </header>
 
-    <section class="hero-section" aria-labelledby="hero-title">
+    <section class="hero-section reveal-scene" aria-labelledby="hero-title" data-scene="arrival">
       <div class="hero-copy depth-surface">
         <div class="hero-crest" aria-hidden="true">
           <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +88,7 @@
       </div>
 
       <div class="hero-visual depth-surface" aria-label="Monochrome editorial portrait">
-        <div class="portrait-card paper-card depth-card-lifted depth-photo-mount">
+        <button class="portrait-card paper-card depth-card-lifted depth-photo-mount" type="button" aria-expanded="false" aria-label="Reveal portrait note">
           <span class="depth-ao" aria-hidden="true"></span>
           <span class="depth-thickness" aria-hidden="true"></span>
           <span class="masking-tape depth-tape" aria-hidden="true"></span>
@@ -99,7 +100,7 @@
               loading="eager"
             >
           </div>
-        </div>
+        </button>
 
         <a class="scroll-tag depth-floating" href="#works" aria-label="Scroll to selected works">
           <span>Scroll</span>
@@ -116,10 +117,11 @@
           <span>Portrait study</span>
           <span>Monochrome archive</span>
         </div>
+        <p class="portrait-secret" aria-hidden="true">Profile note / I build quiet systems with visible craft.</p>
       </div>
     </section>
 
-    <section class="editorial-spread" aria-label="Selected works and manifesto spread">
+    <section class="editorial-spread reveal-scene" aria-label="Selected works and manifesto spread" data-scene="exploration">
       <section class="works-section" id="works" aria-labelledby="works-title">
         <div class="section-heading">
           <p class="section-index">01 / Selected archive</p>
@@ -138,7 +140,7 @@
 
             <ol class="project-list">
               <li>
-                <a class="project-card depth-card" href="#contact" aria-label="Open Ouur Coffee project placeholder">
+                <a class="project-card depth-card" href="#project-ouur" data-project="ouur" aria-label="Open Ouur Coffee project sheet">
                   <span class="project-thumb depth-photo">
                     <img src="./assets/editorial/work-1.png" alt="Ouur Coffee branding and packaging grayscale project preview" loading="lazy">
                   </span>
@@ -146,13 +148,14 @@
                     <span class="project-no">01</span>
                     <span class="project-title">Ouur Coffee</span>
                     <span class="project-type">Branding &amp; Packaging</span>
-                    <span class="project-summary">Warm packaging system for a slower lifestyle ritual.</span>
+                    <span class="project-summary">A packaging system for a slower lifestyle ritual.</span>
+                    <span class="project-mobile-action">Open project sheet →</span>
                   </span>
                 </a>
               </li>
 
               <li>
-                <a class="project-card depth-card" href="#contact" aria-label="Open Lightfall project placeholder">
+                <a class="project-card depth-card" href="#project-lightfall" data-project="lightfall" aria-label="Open Lightfall project sheet">
                   <span class="project-thumb depth-photo">
                     <img src="./assets/editorial/work-2.png" alt="Lightfall visual identity grayscale project preview" loading="lazy">
                   </span>
@@ -160,13 +163,14 @@
                     <span class="project-no">02</span>
                     <span class="project-title">Lightfall</span>
                     <span class="project-type">Visual Identity</span>
-                    <span class="project-summary">A quiet identity built around contrast, glow, and restraint.</span>
+                    <span class="project-summary">A visual identity built around contrast, glow, and restraint.</span>
+                    <span class="project-mobile-action">Open project sheet →</span>
                   </span>
                 </a>
               </li>
 
               <li>
-                <a class="project-card depth-card" href="#contact" aria-label="Open Wonder in Chaos project placeholder">
+                <a class="project-card depth-card" href="#project-chaos" data-project="chaos" aria-label="Open Wonder in Chaos project sheet">
                   <span class="project-thumb depth-photo">
                     <img src="./assets/editorial/work-3.png" alt="Wonder in Chaos gallery website grayscale project preview" loading="lazy">
                   </span>
@@ -175,6 +179,7 @@
                     <span class="project-title">Wonder in Chaos</span>
                     <span class="project-type">Gallery Website</span>
                     <span class="project-summary">An online gallery rhythm shaped for visual disorder.</span>
+                    <span class="project-mobile-action">Open project sheet →</span>
                   </span>
                 </a>
               </li>
@@ -219,6 +224,14 @@
             </p>
           </div>
 
+          <div class="manifesto-extra" id="manifesto-extra" hidden>
+            <p>I design slowly because meaning needs silence. I care about the space between image and thought, between structure and emotion.</p>
+          </div>
+
+          <button class="manifesto-toggle" type="button" aria-expanded="false" aria-controls="manifesto-extra">
+            UNFOLD THOUGHT <span aria-hidden="true">＋</span>
+          </button>
+
           <svg class="flower-sketch" viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M70 215C68 174 74 140 87 112C99 86 111 70 124 60"/>
             <path d="M90 118C111 122 125 115 132 98C114 91 101 94 90 118Z"/>
@@ -233,7 +246,7 @@
 
     </section>
 
-    <section class="lower-spread" aria-label="Experience and skills spread">
+    <section class="lower-spread reveal-scene" aria-label="Experience and skills spread" data-scene="depth">
       <aside class="lower-index" aria-hidden="true">2018—Now / Practice record</aside>
 
       <section class="experience-section" id="experience" aria-labelledby="experience-title">
@@ -243,31 +256,37 @@
         </div>
 
         <div class="timeline" role="list">
-          <article class="timeline-item" role="listitem">
+          <article class="timeline-item" role="listitem" data-note="Selected practice period">
             <time datetime="2022">2022 — Now</time>
             <div class="timeline-role">
               <h3>Freelance Designer &amp; Art Director</h3>
               <p>Taipei, Taiwan</p>
             </div>
             <p class="timeline-desc">Working with global clients and independent studios on branding, digital, and art direction.</p>
+            <button class="timeline-toggle" type="button" aria-expanded="false">More detail</button>
+            <p class="timeline-more" hidden>Selected practice period: visual systems, art direction, and client-facing creative delivery.</p>
           </article>
 
-          <article class="timeline-item" role="listitem">
+          <article class="timeline-item" role="listitem" data-note="Visual systems">
             <time datetime="2020">2020 — 2022</time>
             <div class="timeline-role">
               <h3>Art Director</h3>
               <p>Simple Studio, Taipei</p>
             </div>
             <p class="timeline-desc">Led branding and visual projects across lifestyle, culture, and tech industries.</p>
+            <button class="timeline-toggle" type="button" aria-expanded="false">More detail</button>
+            <p class="timeline-more" hidden>Visual systems: identity rhythm, campaign language, and refined execution across touchpoints.</p>
           </article>
 
-          <article class="timeline-item" role="listitem">
+          <article class="timeline-item" role="listitem" data-note="Brand and editorial work">
             <time datetime="2018">2018 — 2020</time>
             <div class="timeline-role">
               <h3>Graphic Designer</h3>
               <p>InBloom Design, Taipei</p>
             </div>
             <p class="timeline-desc">Focused on visual identity, print design, and creative collaborations.</p>
+            <button class="timeline-toggle" type="button" aria-expanded="false">More detail</button>
+            <p class="timeline-more" hidden>Brand and editorial work: layout craft, print sensibility, and material-first visual thinking.</p>
           </article>
         </div>
       </section>
@@ -296,29 +315,35 @@
           <span class="depth-ao" aria-hidden="true"></span>
           <span class="depth-thickness" aria-hidden="true"></span>
           <ul class="skills-list">
-            <li>
+            <li data-skill-note="Identity systems and narrative logic.">
               <span class="skill-label"><strong>Branding</strong><em>品牌識別</em></span>
               <span class="dot-scale" aria-label="Branding proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Branding note">?</button>
             </li>
-            <li>
+            <li data-skill-note="Mood, material, visual rhythm.">
               <span class="skill-label"><strong>Art Direction</strong><em>藝術指導</em></span>
               <span class="dot-scale" aria-label="Art Direction proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Art Direction note">?</button>
             </li>
-            <li>
+            <li data-skill-note="Editorial hierarchy and emotional tone.">
               <span class="skill-label"><strong>Typography</strong><em>排版設計</em></span>
               <span class="dot-scale" aria-label="Typography proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Typography note">?</button>
             </li>
-            <li>
+            <li data-skill-note="Responsive interfaces and crafted interactions.">
               <span class="skill-label"><strong>Web Design</strong><em>網頁設計</em></span>
               <span class="dot-scale" aria-label="Web Design proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Web Design note">?</button>
             </li>
-            <li>
+            <li data-skill-note="Layout rhythm, sequence, and reading flow.">
               <span class="skill-label"><strong>Editorial</strong><em>編輯設計</em></span>
               <span class="dot-scale" aria-label="Editorial proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Editorial note">?</button>
             </li>
-            <li>
+            <li data-skill-note="Material thinking and tactile presentation.">
               <span class="skill-label"><strong>Packaging</strong><em>包裝設計</em></span>
               <span class="dot-scale" aria-label="Packaging proficiency 4 of 6"><i></i><i></i><i></i><i></i><i class="muted-dot"></i><i class="muted-dot"></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Packaging note">?</button>
             </li>
           </ul>
 
@@ -327,7 +352,7 @@
       </section>
     </section>
 
-    <section class="resume-contact depth-surface" id="contact" aria-labelledby="contact-title">
+    <section class="resume-contact depth-surface reveal-scene" id="contact" aria-labelledby="contact-title" data-scene="closure">
       <div class="archive-ruler" aria-hidden="true">Archive strip / web résumé / contact record</div>
 
       <a class="resume-tile depth-card" href="mailto:hello@jiahaoli.com?subject=Resume%20request" aria-label="Request resume by email">
@@ -382,6 +407,31 @@
     </section>
   </main>
   </div>
+
+  <div class="project-drawer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="drawer-title">
+    <button class="drawer-backdrop" type="button" aria-label="Close project sheet"></button>
+    <aside class="drawer-panel" tabindex="-1">
+      <div class="drawer-paper-mark" aria-hidden="true">PROJECT SHEET / SELECTED ARCHIVE</div>
+      <button class="drawer-close" type="button" aria-label="Close project sheet">×</button>
+      <p class="drawer-kicker" id="drawer-kicker">Selected archive</p>
+      <h2 id="drawer-title">Project title</h2>
+      <dl class="drawer-meta">
+        <div><dt>Category</dt><dd id="drawer-category">Identity</dd></div>
+        <div><dt>Year</dt><dd id="drawer-year">2024</dd></div>
+        <div><dt>Role</dt><dd id="drawer-role">Art direction</dd></div>
+      </dl>
+      <figure class="drawer-image-wrap">
+        <img id="drawer-image" src="./assets/editorial/work-1.png" alt="">
+      </figure>
+      <p id="drawer-description" class="drawer-description">Project description.</p>
+      <div class="drawer-controls">
+        <button class="drawer-prev" type="button">← Previous</button>
+        <button class="drawer-next" type="button">Next →</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="skill-tooltip" role="status" aria-live="polite" hidden></div>
 
   <script src="./script.js"></script>
 </body>
