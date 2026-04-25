@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yyh123123813.github.io/suixing.github.io-/sitemap.xml

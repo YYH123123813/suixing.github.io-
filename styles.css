@@ -13,11 +13,11 @@
   --line: #d8cec1;
   --shadow: 0 26px 64px rgba(45, 34, 25, 0.18);
   --paper-shadow: 0 16px 34px rgba(54, 42, 31, 0.13);
-  --serif-display: "Bodoni Moda", "Cormorant Garamond", Georgia, serif;
-  --serif: "Cormorant Garamond", "Noto Serif TC", Georgia, serif;
-  --zh-serif: "Noto Serif TC", "Songti TC", "Source Han Serif TC", serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --hand: "Caveat", "Comic Sans MS", cursive;
+  --serif-display: "Bodoni 72 Display", "Bodoni 72", "Didot", "Times New Roman", "Songti SC", "Noto Serif SC", Georgia, serif;
+  --serif: "Iowan Old Style", "Songti SC", "Noto Serif SC", "Noto Serif TC", Georgia, serif;
+  --zh-serif: "Songti SC", "Songti TC", "Noto Serif SC", "Noto Serif TC", "Source Han Serif SC", serif;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  --hand: "Bradley Hand", "Kaiti SC", "STKaiti", "Comic Sans MS", cursive;
   --page-x: clamp(30px, 5vw, 84px);
   --page-edge: clamp(8px, 1.35vw, 22px);
   --page-max: 1440px;
@@ -46,9 +46,25 @@ body {
 }
 
 img,
-svg {
+svg,
+picture {
   display: block;
   max-width: 100%;
+}
+
+picture {
+  width: 100%;
+}
+
+.no-script-notice {
+  width: min(100% - 32px, 960px);
+  margin: 14px auto 0;
+  padding: 10px 14px;
+  color: var(--ink-soft);
+  background: rgba(244, 240, 232, 0.92);
+  border: 1px solid rgba(82, 66, 53, 0.12);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 a,
@@ -491,6 +507,11 @@ a {
   box-shadow: inset 0 0 0 1px rgba(58, 48, 39, 0.12);
 }
 
+.portrait-photo-frame picture {
+  width: 100%;
+  height: 100%;
+}
+
 .portrait-photo-frame::after {
   content: "";
   position: absolute;
@@ -784,6 +805,11 @@ a {
   pointer-events: none;
 }
 
+.project-thumb picture {
+  width: 100%;
+  height: 100%;
+}
+
 .project-thumb img {
   width: 100%;
   height: 100%;
@@ -795,7 +821,12 @@ a {
 }
 
 .project-card:hover .project-thumb img,
-.project-card:focus-visible .project-thumb img {
+.project-card:focus-visible .project-thumb picture {
+  width: 100%;
+  height: 100%;
+}
+
+.project-thumb img {
   transform: scale(1.08);
 }
 
@@ -864,6 +895,11 @@ a {
   transform: rotate(-2.4deg);
   background: #eee7dc;
   pointer-events: none;
+}
+
+.coast-photo picture {
+  width: 100%;
+  height: 100%;
 }
 
 .coast-photo img {
@@ -1634,7 +1670,12 @@ a {
   }
 
   .project-thumb,
-  .project-thumb img {
+  .project-thumb picture {
+  width: 100%;
+  height: 100%;
+}
+
+.project-thumb img {
     min-height: 152px;
   }
 
@@ -1940,7 +1981,12 @@ body {
   }
 
   .project-thumb,
-  .project-thumb img {
+  .project-thumb picture {
+  width: 100%;
+  height: 100%;
+}
+
+.project-thumb img {
     min-height: 88px;
   }
 
@@ -2058,7 +2104,12 @@ body {
   }
 
   .project-thumb,
-  .project-thumb img {
+  .project-thumb picture {
+  width: 100%;
+  height: 100%;
+}
+
+.project-thumb img {
     min-height: 86px;
   }
 
@@ -2475,6 +2526,11 @@ body::before {
 }
 
 .project-thumb img,
+.coast-photo picture {
+  width: 100%;
+  height: 100%;
+}
+
 .coast-photo img {
   filter: grayscale(1) sepia(0.09) contrast(1.09) brightness(0.93) saturate(0.82);
 }
@@ -2629,5 +2685,21 @@ body::before {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* Production mobile cost guard */
+@media (max-width: 767px), (pointer: coarse) {
+  .portrait-photo,
+  .project-thumb img,
+  .coast-photo img {
+    filter: grayscale(1) contrast(1.04) brightness(0.96);
+  }
+
+  .paper-card,
+  .ink-board,
+  .contact-block,
+  .resume-tile {
+    box-shadow: 0 10px 22px rgba(54, 42, 31, 0.12);
   }
 }

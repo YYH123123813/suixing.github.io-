@@ -28,17 +28,17 @@ const navItems = [
                 label: 'DIY 行程规划',
                 labelEn: 'DIY Itinerary',
                 children: [
-                  { label: '时间轴编辑器', labelEn: 'Timeline Editor', href: '#timeline-interaction' },
-                  { label: '城市选择系统', labelEn: 'City Selector', href: '#city-selector' },
-                  { label: '多日路线规划', labelEn: 'Multi-day Route', href: '#multi-day-route' }
+                  { label: '时间轴编辑器', labelEn: 'Timeline Editor', href: '#works' },
+                  { label: '城市选择系统', labelEn: 'City Selector', href: '#works' },
+                  { label: '多日路线规划', labelEn: 'Multi-day Route', href: '#works' }
                 ]
               },
               {
                 label: 'Creator-led Travel',
                 labelEn: 'Creator-led Travel',
                 children: [
-                  { label: '行程产品化', labelEn: 'Itinerary Productization', href: '#itinerary-productization' },
-                  { label: '链上旅行资产概念', labelEn: 'On-chain Travel Asset', href: '#travel-asset' }
+                  { label: '行程产品化', labelEn: 'Itinerary Productization', href: '#works' },
+                  { label: '链上旅行资产概念', labelEn: 'On-chain Travel Asset', href: '#works' }
                 ]
               }
             ]
@@ -120,8 +120,8 @@ const navItems = [
                 label: 'Serif System',
                 labelEn: 'Serif System',
                 children: [
-                  { label: 'Display Title', labelEn: 'Display Title', href: '#visual-display-title' },
-                  { label: 'Micro Labels', labelEn: 'Micro Labels', href: '#visual-micro-labels' }
+                  { label: 'Display Title', labelEn: 'Display Title', href: '#skills' },
+                  { label: 'Micro Labels', labelEn: 'Micro Labels', href: '#skills' }
                 ]
               }
             ]
@@ -140,7 +140,7 @@ const navItems = [
                 label: 'Terracotta Accent',
                 labelEn: 'Terracotta Accent',
                 children: [
-                  { label: 'Charcoal Contrast', labelEn: 'Charcoal Contrast', href: '#color-charcoal-contrast' }
+                  { label: 'Charcoal Contrast', labelEn: 'Charcoal Contrast', href: '#skills' }
                 ]
               }
             ]
@@ -159,7 +159,7 @@ const navItems = [
                 label: 'Shadow System',
                 labelEn: 'Shadow System',
                 children: [
-                  { label: 'Tape / Stamp / Paperclip', labelEn: 'Tactile Objects', href: '#paper-object-system' }
+                  { label: 'Tape / Stamp / Paperclip', labelEn: 'Tactile Objects', href: '#skills' }
                 ]
               }
             ]
@@ -184,8 +184,8 @@ const navItems = [
                 label: 'Website Portrait Prompts',
                 labelEn: 'Website Portrait Prompts',
                 children: [
-                  { label: 'Editorial Portrait', labelEn: 'Editorial Portrait', href: '#editorial-portrait' },
-                  { label: 'Monochrome Photo', labelEn: 'Monochrome Photo', href: '#monochrome-photo' }
+                  { label: 'Editorial Portrait', labelEn: 'Editorial Portrait', href: '#top' },
+                  { label: 'Monochrome Photo', labelEn: 'Monochrome Photo', href: '#top' }
                 ]
               }
             ]
@@ -204,8 +204,8 @@ const navItems = [
                 label: 'WeChat Mini Program',
                 labelEn: 'WeChat Mini Program',
                 children: [
-                  { label: 'UI Reconstruction', labelEn: 'UI Reconstruction', href: '#ui-reconstruction' },
-                  { label: 'Interaction Optimization', labelEn: 'Interaction Optimization', href: '#interaction-optimization' }
+                  { label: 'UI Reconstruction', labelEn: 'UI Reconstruction', href: '#works' },
+                  { label: 'Interaction Optimization', labelEn: 'Interaction Optimization', href: '#skills' }
                 ]
               }
             ]
@@ -285,7 +285,7 @@ const projectData = [
     category: 'macOS 工具 / Vibe Coding',
     year: '2025',
     role: 'macOS 交互原型',
-    image: './assets/covers/mac-dynamic-island.png',
+    image: './assets/covers/mac-dynamic-island-960.jpg',
     alt: 'Mac 灵动岛项目预览',
     repo: 'https://github.com/YYH123123813/mac-dynamic-island',
     description: '桌面端灵动岛交互实验，把通知、快捷操作和状态信息做成更轻的 macOS 浮层体验。'
@@ -296,7 +296,7 @@ const projectData = [
     category: 'iOS App / 个人效率 / Vibe Coding',
     year: '2025',
     role: 'iOS 应用原型',
-    image: './assets/covers/shadownote.png',
+    image: './assets/covers/shadownote-960.jpg',
     alt: 'ShadowNote 记账软件预览',
     repo: 'https://github.com/YYH123123813/shadownote',
     description: '围绕预算、账单、交易记录、提醒与 OCR 记账做的个人管理类 App 原型。'
@@ -307,7 +307,7 @@ const projectData = [
     category: '桌面工具 / 内容自动化 / Vibe Coding',
     year: '2025',
     role: 'Electron 工具原型',
-    image: './assets/covers/wechat-article-exporter-desktop.png',
+    image: './assets/covers/wechat-article-exporter-desktop-960.jpg',
     alt: '公众号导出桌面工具预览',
     repo: 'https://github.com/YYH123123813/wechat-article-exporter-desktop',
     description: '用于公众号文章、图片和媒体内容批量导出的桌面工具，减少重复整理成本。'
@@ -318,7 +318,7 @@ const projectData = [
     category: 'iOS Utility / Screenshot / Vibe Coding',
     year: '2025',
     role: 'iOS 工具原型',
-    image: './assets/covers/ios-long-screenshot.png',
+    image: './assets/covers/ios-long-screenshot-960.jpg',
     alt: 'iOS 长截屏工具预览',
     repo: 'https://github.com/YYH123123813/ios-long-screenshot',
     description: '面向移动端长图拼接、页面整理和截图导出的 iOS 工具尝试。'
@@ -329,7 +329,7 @@ const projectData = [
     category: 'Browser Extension / AI Workflow',
     year: '2025',
     role: '浏览器扩展原型',
-    image: './assets/covers/gemini-navigator-sidebar.png',
+    image: './assets/covers/gemini-navigator-sidebar-960.jpg',
     alt: 'Gemini Navigator Sidebar 项目预览',
     repo: 'https://github.com/YYH123123813/gemini-navigator-sidebar',
     description: '围绕 Gemini 使用场景做的侧边栏扩展，把导航、上下文和操作入口集中到浏览器侧栏。'
@@ -340,7 +340,7 @@ const projectData = [
     category: 'iOS App / Visual Product / Vibe Coding',
     year: '2025',
     role: '视觉产品原型',
-    image: './assets/covers/movie-stamps-cinepost.png',
+    image: './assets/covers/movie-stamps-cinepost-960.jpg',
     alt: '电影邮票 CinePost 项目预览',
     repo: 'https://github.com/YYH123123813/movie-stamps-cinepost',
     description: '把电影画面、邮票式视觉和收藏卡片结合，探索影像内容的移动端视觉呈现。'
@@ -351,7 +351,7 @@ const projectData = [
     category: 'VS Code Extension / Automation',
     year: '2025',
     role: '开发自动化插件',
-    image: './assets/covers/antigravity-auto-approve.png',
+    image: './assets/covers/antigravity-auto-approve-960.jpg',
     alt: 'Antigravity Auto Approve 项目预览',
     repo: 'https://github.com/YYH123123813/antigravity-auto-approve',
     description: '面向 Antigravity/Coding Agent 工作流的自动确认插件，减少重复点击和上下文切换。'

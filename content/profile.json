@@ -12,8 +12,8 @@
     "major": "新能源汽车工程"
   },
   "positioning": {
-    "zh": "AI 产品实践者 / 新媒体运营 / Vibe Coding 创作者",
-    "en": "AI-assisted product builder, media operator, and vibe coding maker",
+    "zh": "AI 产品实践者 / 视觉设计 / Vibe Coding 创作者",
+    "en": "AI-assisted product builder, visual designer, and vibe coding maker",
     "summaryZh": "用 AI 提升执行力，用内容验证需求，把课程、运营和软件做成真实作品。",
     "summaryEn": "I use AI, media operation and vibe coding to turn ideas into shippable products."
   },
@@ -30,7 +30,7 @@
       "description": "桌面端灵动岛交互实验，把通知、快捷操作和状态信息做成更轻的 macOS 浮层体验。",
       "role": "macOS 交互原型",
       "year": "2025",
-      "image": "./assets/covers/mac-dynamic-island.png",
+      "image": "./assets/covers/mac-dynamic-island-960.jpg",
       "repo": "https://github.com/YYH123123813/mac-dynamic-island",
       "repoStatus": "verified"
     },
@@ -41,7 +41,7 @@
       "description": "围绕预算、账单、交易记录、提醒与 OCR 记账做的个人管理类 App 原型。",
       "role": "iOS 应用原型",
       "year": "2025",
-      "image": "./assets/covers/shadownote.png",
+      "image": "./assets/covers/shadownote-960.jpg",
       "repo": "https://github.com/YYH123123813/shadownote",
       "repoStatus": "verified"
     },
@@ -52,7 +52,7 @@
       "description": "用于公众号文章、图片和媒体内容批量导出的桌面工具，减少重复整理成本。",
       "role": "Electron 工具原型",
       "year": "2025",
-      "image": "./assets/covers/wechat-article-exporter-desktop.png",
+      "image": "./assets/covers/wechat-article-exporter-desktop-960.jpg",
       "repo": "https://github.com/YYH123123813/wechat-article-exporter-desktop",
       "repoStatus": "verified"
     },
@@ -63,7 +63,7 @@
       "description": "面向移动端长图拼接、页面整理和截图导出的 iOS 工具尝试。",
       "role": "iOS 工具原型",
       "year": "2025",
-      "image": "./assets/covers/ios-long-screenshot.png",
+      "image": "./assets/covers/ios-long-screenshot-960.jpg",
       "repo": "https://github.com/YYH123123813/ios-long-screenshot",
       "repoStatus": "verified"
     },
@@ -74,7 +74,7 @@
       "description": "围绕 Gemini 使用场景做的侧边栏扩展，把导航、上下文和操作入口集中到浏览器侧栏。",
       "role": "浏览器扩展原型",
       "year": "2025",
-      "image": "./assets/covers/gemini-navigator-sidebar.png",
+      "image": "./assets/covers/gemini-navigator-sidebar-960.jpg",
       "repo": "https://github.com/YYH123123813/gemini-navigator-sidebar",
       "repoStatus": "verified"
     },
@@ -85,7 +85,7 @@
       "description": "把电影画面、邮票式视觉和收藏卡片结合，探索影像内容的移动端视觉呈现。",
       "role": "视觉产品原型",
       "year": "2025",
-      "image": "./assets/covers/movie-stamps-cinepost.png",
+      "image": "./assets/covers/movie-stamps-cinepost-960.jpg",
       "repo": "https://github.com/YYH123123813/movie-stamps-cinepost",
       "repoStatus": "verified"
     },
@@ -96,7 +96,7 @@
       "description": "面向 Antigravity/Coding Agent 工作流的自动确认插件，减少重复点击和上下文切换。",
       "role": "开发自动化插件",
       "year": "2025",
-      "image": "./assets/covers/antigravity-auto-approve.png",
+      "image": "./assets/covers/antigravity-auto-approve-960.jpg",
       "repo": "https://github.com/YYH123123813/antigravity-auto-approve",
       "repoStatus": "verified"
     }
