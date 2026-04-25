@@ -11,64 +11,64 @@ let updateRevealScenes = () => {};
 
 const projectData = [
   {
-    id: 'ego-travel',
-    title: 'Ego Travel / 易旅出行',
-    category: 'Travel-tech Product / WeChat Mini Program',
-    year: '2025-2026',
-    role: 'Founder / Product direction / UI concept',
-    image: './assets/covers/wechat-article-exporter-desktop.png',
-    alt: 'Ego Travel travel-tech mini program product preview',
-    description: 'A Gen Z travel planning product focused on DIY itineraries, AI-assisted planning, and creator-led travel experiences.'
-  },
-  {
-    id: 'itinerary-builder',
-    title: 'DIY Itinerary Builder',
-    category: 'Mini Program UI / Product Interaction',
-    year: '2025-2026',
-    role: 'Product UI / Interaction design',
-    image: './assets/covers/ios-long-screenshot.png',
-    alt: 'DIY itinerary builder timeline interface preview',
-    description: 'A timeline-based itinerary editor with drag-and-drop planning, day tabs, route structure, and visual schedule organization.'
-  },
-  {
-    id: 'mac-dynamic-island',
-    title: 'Mac Dynamic Island',
-    category: 'macOS Utility / Product Prototype',
-    year: '2025',
-    role: 'Product prototype / macOS UI behavior',
-    image: './assets/covers/mac-dynamic-island.png',
-    alt: 'Mac Dynamic Island macOS utility preview',
-    description: 'A macOS native notch-style interaction concept with clipboard history, activity notifications, timers, and refined Apple-like UI behavior.'
-  },
-  {
-    id: 'skuboard',
-    title: 'AI Visual Workflow / SkuBoard',
-    category: 'AI Design Tool / Image Template System',
-    year: '2025-2026',
-    role: 'AI workflow / Visual system',
+    id: 'ai-course',
+    title: 'AI 系统知识及应用课程',
+    category: '课程产品 / AI 教育 / SOP 搭建',
+    year: '2024.09—2024.10',
+    role: '课程创始人 / 主理人 / 主讲人',
     image: './assets/covers/gemini-navigator-sidebar.png',
-    alt: 'AI visual workflow and template system preview',
-    description: 'An AI-assisted visual production workflow for template replacement, product image preparation, background cleanup, and export-ready design boards.'
+    alt: 'AI 系统知识及应用课程项目预览',
+    description: '从 0 组建团队打磨 AI 系统课程，建立课程 SOP、分销机制与答疑流程，负责 AI 知识讲解和课程交付。'
   },
   {
-    id: 'kids-coding',
-    title: 'Kids Coding Course',
-    category: 'Education Product / Web Prototype',
-    year: '2025',
-    role: 'Education product / Web prototype',
-    image: './assets/covers/shadownote.png',
-    alt: 'Kids coding course web prototype preview',
-    description: 'A Code.org-inspired children’s programming course interface with interactive levels, visual feedback, Blockly-style learning, and playful AI-assisted teaching.'
+    id: 'songguoren-media',
+    title: '松果仁研习社新媒体项目',
+    category: '新媒体运营 / 公众号 / 团队培养',
+    year: '2024.09—2024.10',
+    role: '新媒体项目部负责人',
+    image: './assets/covers/wechat-article-exporter-desktop.png',
+    alt: '松果仁研习社新媒体项目预览',
+    description: '负责公司公众号运营、新人面试与培养，带领团队快速理解公众号基础技能、内容流程与项目协作方式。'
   },
   {
-    id: 'wechat-covers',
-    title: 'WeChat Content Covers',
-    category: 'Editorial Design / AI Visual Direction',
-    year: '2025-2026',
-    role: 'Editorial direction / AI visual production',
+    id: 'shuchenglin-ip',
+    title: '树成林 IP 觉醒课程实践',
+    category: '社群运营 / 知识星球 / 内容整理',
+    year: '2024.07—2024.09',
+    role: '线上群维护 / 运营执行',
     image: './assets/covers/movie-stamps-cinepost.png',
-    alt: 'WeChat content cover visual direction preview',
-    description: 'A series of metaphorical minimalist charcoal cover images for公众号 articles, using strong visual symbolism and consistent art direction.'
+    alt: '树成林 IP 觉醒课程实践项目预览',
+    description: '参与杭州树成林教育科技集团 IP 觉醒课程实践，负责线上群聊维护、内容整理，并接触知识星球运营管理。'
+  },
+  {
+    id: 'vibe-coding',
+    title: 'Vibe Coding 软件作品集',
+    category: 'AI Coding / 全栈开发 / 软件原型',
+    year: '2025—至今',
+    role: '个体开发者 / 产品原型实现',
+    image: './assets/covers/mac-dynamic-island.png',
+    alt: 'Vibe Coding 软件作品集项目预览',
+    description: '一年内用 AI 辅助开发 10+ 款软件与原型，包含 Mac 灵动岛、公众号工具、自主下单网站、记账软件、小程序与网页产品。'
+  },
+  {
+    id: 'video-account-viral',
+    title: '微信视频号爆款内容',
+    category: '短视频内容 / AI 视频 / 流量增长',
+    year: '2025—至今',
+    role: '选题 / 生成 / 发布 / 复盘',
+    image: './assets/covers/ios-long-screenshot.png',
+    alt: '微信视频号爆款内容项目预览',
+    description: '围绕 AI 视频与平台选题做内容实验，微信视频号爆款视频累计约 300w 播放，形成选题、生成、发布、复盘的实战经验。'
+  },
+  {
+    id: 'xianyu-growth',
+    title: '闲鱼引流变现项目',
+    category: '需求捕捉 / 引流转化 / 商业验证',
+    year: '2024—2025',
+    role: '个人项目 / 获客与成交',
+    image: './assets/covers/shadownote.png',
+    alt: '闲鱼引流变现项目预览',
+    description: '通过闲鱼捕捉真实需求并做引流转化，曾实现 24 小时收入 4k，用低成本验证需求、话术、成交链路与交付效率。'
   }
 ];
 
@@ -223,7 +223,7 @@ function openProject(index) {
   lastFocusedElement = document.activeElement;
 
   drawerTitle.textContent = project.title;
-  drawerKicker.textContent = 'Selected archive / project sheet';
+  drawerKicker.textContent = '精选项目 / Project sheet';
   drawerCategory.textContent = project.category;
   drawerYear.textContent = project.year;
   drawerRole.textContent = project.role;

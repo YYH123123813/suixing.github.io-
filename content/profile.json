@@ -1,93 +1,103 @@
 {
-  "displayName": "NexTrek-CEO",
+  "displayName": "杨煜辉",
+  "brand": "NexTrek",
   "realNameZh": "杨煜辉",
-  "aliases": ["Yang Yuhui", "YYH"],
-  "location": "Guangzhou, China",
+  "aliases": [
+    "Yang Yuhui",
+    "YYH"
+  ],
+  "location": "广州 / 山西长治",
   "education": {
     "school": "广州城市理工学院",
     "major": "新能源汽车工程"
   },
   "positioning": {
-    "zh": "旅游创业者 / 视觉设计师 / AI 产品实践者",
-    "en": "Travel-tech founder, visual designer, and AI-assisted product builder",
-    "summaryZh": "以设计表达审美，以 AI 放大执行力，把旅行、内容与产品变成可展示的作品。",
-    "summaryEn": "I build visual systems, AI-assisted products, and travel-tech experiences that turn ideas into usable digital work."
+    "zh": "AI 产品实践者 / 新媒体运营 / Vibe Coding 创作者",
+    "en": "AI-assisted product builder, media operator, and vibe coding maker",
+    "summaryZh": "用 AI 提升执行力，用内容验证需求，把课程、运营和软件做成真实作品。",
+    "summaryEn": "I use AI, media operation and vibe coding to turn ideas into shippable products."
   },
   "contact": {
     "email": "116484728@qq.com",
     "phone": "16634118851",
-    "note": "Open to collaboration / portfolio showcase / product building"
+    "note": "欢迎项目合作 / 产品共创 / 内容运营交流"
   },
   "projects": [
     {
-      "id": "ego-travel",
-      "title": "Ego Travel / 易旅出行",
-      "category": "Travel-tech Product / WeChat Mini Program",
-      "description": "A Gen Z travel planning product focused on DIY itineraries, AI-assisted planning, and creator-led travel experiences.",
-      "role": "Founder / Product direction / UI concept",
-      "year": "2025-2026",
-      "image": "./assets/covers/wechat-article-exporter-desktop.png"
-    },
-    {
-      "id": "itinerary-builder",
-      "title": "DIY Itinerary Builder",
-      "category": "Mini Program UI / Product Interaction",
-      "description": "A timeline-based itinerary editor with drag-and-drop planning, day tabs, route structure, and visual schedule organization.",
-      "role": "Product UI / Interaction design",
-      "year": "2025-2026",
-      "image": "./assets/covers/ios-long-screenshot.png"
-    },
-    {
-      "id": "mac-dynamic-island",
-      "title": "Mac Dynamic Island",
-      "category": "macOS Utility / Product Prototype",
-      "description": "A macOS native notch-style interaction concept with clipboard history, activity notifications, timers, and refined Apple-like UI behavior.",
-      "role": "Product prototype / macOS UI behavior",
-      "year": "2025",
-      "image": "./assets/covers/mac-dynamic-island.png"
-    },
-    {
-      "id": "skuboard",
-      "title": "AI Visual Workflow / SkuBoard",
-      "category": "AI Design Tool / Image Template System",
-      "description": "An AI-assisted visual production workflow for template replacement, product image preparation, background cleanup, and export-ready design boards.",
-      "role": "AI workflow / Visual system",
-      "year": "2025-2026",
+      "id": "ai-course",
+      "title": "AI 系统知识及应用课程",
+      "category": "课程产品 / AI 教育 / SOP 搭建",
+      "description": "从 0 组建团队打磨 AI 系统课程，建立课程 SOP、分销机制与答疑流程，负责 AI 知识讲解和课程交付。",
+      "role": "课程创始人 / 主理人 / 主讲人",
+      "year": "2024.09—2024.10",
       "image": "./assets/covers/gemini-navigator-sidebar.png"
     },
     {
-      "id": "kids-coding",
-      "title": "Kids Coding Course",
-      "category": "Education Product / Web Prototype",
-      "description": "A Code.org-inspired children’s programming course interface with interactive levels, visual feedback, Blockly-style learning, and playful AI-assisted teaching.",
-      "role": "Education product / Web prototype",
-      "year": "2025",
-      "image": "./assets/covers/shadownote.png"
+      "id": "songguoren-media",
+      "title": "松果仁研习社新媒体项目",
+      "category": "新媒体运营 / 公众号 / 团队培养",
+      "description": "负责公司公众号运营、新人面试与培养，带领团队快速理解公众号基础技能、内容流程与项目协作方式。",
+      "role": "新媒体项目部负责人",
+      "year": "2024.09—2024.10",
+      "image": "./assets/covers/wechat-article-exporter-desktop.png"
     },
     {
-      "id": "wechat-covers",
-      "title": "WeChat Content Covers",
-      "category": "Editorial Design / AI Visual Direction",
-      "description": "A series of metaphorical minimalist charcoal cover images for公众号 articles, using strong visual symbolism and consistent art direction.",
-      "role": "Editorial direction / AI visual production",
-      "year": "2025-2026",
+      "id": "shuchenglin-ip",
+      "title": "树成林 IP 觉醒课程实践",
+      "category": "社群运营 / 知识星球 / 内容整理",
+      "description": "参与杭州树成林教育科技集团 IP 觉醒课程实践，负责线上群聊维护、内容整理，并接触知识星球运营管理。",
+      "role": "线上群维护 / 运营执行",
+      "year": "2024.07—2024.09",
       "image": "./assets/covers/movie-stamps-cinepost.png"
+    },
+    {
+      "id": "vibe-coding",
+      "title": "Vibe Coding 软件作品集",
+      "category": "AI Coding / 全栈开发 / 软件原型",
+      "description": "一年内用 AI 辅助开发 10+ 款软件与原型，包含 Mac 灵动岛、公众号工具、自主下单网站、记账软件、小程序与网页产品。",
+      "role": "个体开发者 / 产品原型实现",
+      "year": "2025—至今",
+      "image": "./assets/covers/mac-dynamic-island.png"
+    },
+    {
+      "id": "video-account-viral",
+      "title": "微信视频号爆款内容",
+      "category": "短视频内容 / AI 视频 / 流量增长",
+      "description": "围绕 AI 视频与平台选题做内容实验，微信视频号爆款视频累计约 300w 播放，形成选题、生成、发布、复盘的实战经验。",
+      "role": "选题 / 生成 / 发布 / 复盘",
+      "year": "2025—至今",
+      "image": "./assets/covers/ios-long-screenshot.png"
+    },
+    {
+      "id": "xianyu-growth",
+      "title": "闲鱼引流变现项目",
+      "category": "需求捕捉 / 引流转化 / 商业验证",
+      "description": "通过闲鱼捕捉真实需求并做引流转化，曾实现 24 小时收入 4k，用低成本验证需求、话术、成交链路与交付效率。",
+      "role": "个人项目 / 获客与成交",
+      "year": "2024—2025",
+      "image": "./assets/covers/shadownote.png"
     }
   ],
   "experience": [
-    "Travel-tech startup exploration and WeChat mini-program product design",
-    "Independent product prototyping with AI-assisted coding and visual workflows",
-    "Editorial content creation, WeChat content covers, and visual storytelling"
+    "2025 至今：Vibe Coding 个体开发者，一年内完成 10+ 款软件与原型。",
+    "2025 至今：微信视频号 AI 视频爆款内容实验，累计约 300w 播放。",
+    "2024-2025：闲鱼引流变现项目，曾实现 24 小时收入 4k。",
+    "2024.09-2024.10：AI 系统知识及应用课程创始人/主理人/主讲人。",
+    "2024.09-2024.10：重庆松果仁研习社新媒体项目部负责人。",
+    "2024.07-2024.09：杭州树成林教育科技集团 IP 觉醒课程实践。"
+  ],
+  "honors": [
+    "2024“浪前答辩”全国赛区答辩初赛二等奖"
   ],
   "skills": [
-    "Visual Design 视觉设计",
-    "Product Thinking 产品思维",
-    "WeChat Mini Program 小程序设计",
-    "AI Workflow AI 工作流",
-    "Prompt Engineering 提示词工程",
-    "Editorial Design 编辑设计",
-    "Branding 品牌视觉",
-    "Front-end Collaboration 前端协作",
-    "Travel Product Design 旅行产品设计"
+    "AI 产品实践 AI Product",
+    "Vibe Coding AI Coding",
+    "新媒体运营 Media Operation",
+    "社群运营 Community",
+    "课程产品 Course Product",
+    "内容选题 Content Growth",
+    "商业转化 Conversion",
+    "视觉设计 Visual Design",
+    "产品思维 Product Thinking"
   ]
 }
