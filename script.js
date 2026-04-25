@@ -11,64 +11,81 @@ let updateRevealScenes = () => {};
 
 const projectData = [
   {
-    id: 'ai-course',
-    title: 'AI 系统知识及应用课程',
-    category: '课程产品 / AI 教育 / SOP 搭建',
-    year: '2024.09—2024.10',
-    role: '课程创始人 / 主理人 / 主讲人',
-    image: './assets/covers/gemini-navigator-sidebar.png',
-    alt: 'AI 系统知识及应用课程项目预览',
-    description: '从 0 组建团队打磨 AI 系统课程，建立课程 SOP、分销机制与答疑流程，负责 AI 知识讲解和课程交付。'
-  },
-  {
-    id: 'songguoren-media',
-    title: '松果仁研习社新媒体项目',
-    category: '新媒体运营 / 公众号 / 团队培养',
-    year: '2024.09—2024.10',
-    role: '新媒体项目部负责人',
-    image: './assets/covers/wechat-article-exporter-desktop.png',
-    alt: '松果仁研习社新媒体项目预览',
-    description: '负责公司公众号运营、新人面试与培养，带领团队快速理解公众号基础技能、内容流程与项目协作方式。'
-  },
-  {
-    id: 'shuchenglin-ip',
-    title: '树成林 IP 觉醒课程实践',
-    category: '社群运营 / 知识星球 / 内容整理',
-    year: '2024.07—2024.09',
-    role: '线上群维护 / 运营执行',
-    image: './assets/covers/movie-stamps-cinepost.png',
-    alt: '树成林 IP 觉醒课程实践项目预览',
-    description: '参与杭州树成林教育科技集团 IP 觉醒课程实践，负责线上群聊维护、内容整理，并接触知识星球运营管理。'
-  },
-  {
-    id: 'vibe-coding',
-    title: 'Vibe Coding 软件作品集',
-    category: 'AI Coding / 全栈开发 / 软件原型',
-    year: '2025—至今',
-    role: '个体开发者 / 产品原型实现',
+    id: 'mac-dynamic-island',
+    title: 'Mac 灵动岛',
+    category: 'macOS 工具 / Vibe Coding',
+    year: '2025',
+    role: 'macOS 交互原型',
     image: './assets/covers/mac-dynamic-island.png',
-    alt: 'Vibe Coding 软件作品集项目预览',
-    description: '一年内用 AI 辅助开发 10+ 款软件与原型，包含 Mac 灵动岛、公众号工具、自主下单网站、记账软件、小程序与网页产品。'
+    alt: 'Mac 灵动岛项目预览',
+    repo: 'https://github.com/YYH123123813/mac-dynamic-island',
+    description: '桌面端灵动岛交互实验，把通知、快捷操作和状态信息做成更轻的 macOS 浮层体验。'
   },
   {
-    id: 'video-account-viral',
-    title: '微信视频号爆款内容',
-    category: '短视频内容 / AI 视频 / 流量增长',
-    year: '2025—至今',
-    role: '选题 / 生成 / 发布 / 复盘',
-    image: './assets/covers/ios-long-screenshot.png',
-    alt: '微信视频号爆款内容项目预览',
-    description: '围绕 AI 视频与平台选题做内容实验，微信视频号爆款视频累计约 300w 播放，形成选题、生成、发布、复盘的实战经验。'
-  },
-  {
-    id: 'xianyu-growth',
-    title: '闲鱼引流变现项目',
-    category: '需求捕捉 / 引流转化 / 商业验证',
-    year: '2024—2025',
-    role: '个人项目 / 获客与成交',
+    id: 'shadownote',
+    title: 'ShadowNote 记账软件',
+    category: 'iOS App / 个人效率 / Vibe Coding',
+    year: '2025',
+    role: 'iOS 应用原型',
     image: './assets/covers/shadownote.png',
-    alt: '闲鱼引流变现项目预览',
-    description: '通过闲鱼捕捉真实需求并做引流转化，曾实现 24 小时收入 4k，用低成本验证需求、话术、成交链路与交付效率。'
+    alt: 'ShadowNote 记账软件预览',
+    repo: 'https://github.com/YYH123123813/shadownote',
+    description: '围绕预算、账单、交易记录、提醒与 OCR 记账做的个人管理类 App 原型。'
+  },
+  {
+    id: 'wechat-article-exporter-desktop',
+    title: '公众号导出桌面工具',
+    category: '桌面工具 / 内容自动化 / Vibe Coding',
+    year: '2025',
+    role: 'Electron 工具原型',
+    image: './assets/covers/wechat-article-exporter-desktop.png',
+    alt: '公众号导出桌面工具预览',
+    repo: 'https://github.com/YYH123123813/wechat-article-exporter-desktop',
+    description: '用于公众号文章、图片和媒体内容批量导出的桌面工具，减少重复整理成本。'
+  },
+  {
+    id: 'ios-long-screenshot',
+    title: 'iOS 长截屏工具',
+    category: 'iOS Utility / Screenshot / Vibe Coding',
+    year: '2025',
+    role: 'iOS 工具原型',
+    image: './assets/covers/ios-long-screenshot.png',
+    alt: 'iOS 长截屏工具预览',
+    repo: 'https://github.com/YYH123123813/ios-long-screenshot',
+    description: '面向移动端长图拼接、页面整理和截图导出的 iOS 工具尝试。'
+  },
+  {
+    id: 'gemini-navigator-sidebar',
+    title: 'Gemini Navigator Sidebar',
+    category: 'Browser Extension / AI Workflow',
+    year: '2025',
+    role: '浏览器扩展原型',
+    image: './assets/covers/gemini-navigator-sidebar.png',
+    alt: 'Gemini Navigator Sidebar 项目预览',
+    repo: 'https://github.com/YYH123123813/gemini-navigator-sidebar',
+    description: '围绕 Gemini 使用场景做的侧边栏扩展，把导航、上下文和操作入口集中到浏览器侧栏。'
+  },
+  {
+    id: 'movie-stamps-cinepost',
+    title: '电影邮票 CinePost',
+    category: 'iOS App / Visual Product / Vibe Coding',
+    year: '2025',
+    role: '视觉产品原型',
+    image: './assets/covers/movie-stamps-cinepost.png',
+    alt: '电影邮票 CinePost 项目预览',
+    repo: 'https://github.com/YYH123123813/movie-stamps-cinepost',
+    description: '把电影画面、邮票式视觉和收藏卡片结合，探索影像内容的移动端视觉呈现。'
+  },
+  {
+    id: 'antigravity-auto-approve',
+    title: 'Antigravity Auto Approve',
+    category: 'VS Code Extension / Automation',
+    year: '2025',
+    role: '开发自动化插件',
+    image: './assets/covers/antigravity-auto-approve.png',
+    alt: 'Antigravity Auto Approve 项目预览',
+    repo: 'https://github.com/YYH123123813/antigravity-auto-approve',
+    description: '面向 Antigravity/Coding Agent 工作流的自动确认插件，减少重复点击和上下文切换。'
   }
 ];
 

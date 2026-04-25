@@ -190,7 +190,7 @@ body.motion-ready .reveal-scene:not(.is-visible) .note-card {
 }
 
 .project-card::before {
-  content: "Open sheet →";
+  content: "GitHub →";
   position: absolute;
   right: 18px;
   bottom: 14px;
