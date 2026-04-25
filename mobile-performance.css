@@ -1,0 +1,75 @@
+/* Mobile performance layer.
+   Goal: keep the current UI and interactions visually intact, but avoid expensive
+   mobile scroll work and offscreen rendering cost. */
+
+@media (max-width: 767px), (pointer: coarse) {
+  .site-shell,
+  .hero-section,
+  .editorial-spread,
+  .lower-spread,
+  .footer-board,
+  .project-drawer {
+    -webkit-tap-highlight-color: rgba(166, 93, 61, 0.14);
+  }
+
+  .hero-title,
+  .handwritten-note,
+  .ink-doodle,
+  .surface-stamp {
+    translate: none !important;
+  }
+
+  .scroll-tag .arrow {
+    animation: none !important;
+  }
+
+  .project-thumb img,
+  .drawer-image-wrap img,
+  .portrait-photo,
+  .coast-photo img {
+    transition: none !important;
+  }
+
+  .drawer-backdrop {
+    backdrop-filter: none !important;
+  }
+
+  .depth-ao,
+  .depth-page-ao {
+    filter: blur(8px) !important;
+  }
+
+  @supports (content-visibility: auto) {
+    .editorial-spread,
+    .lower-spread,
+    .footer-board {
+      content-visibility: auto;
+      contain-intrinsic-size: 900px;
+    }
+  }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .reveal-scene.is-visible .section-heading,
+  .reveal-scene.is-visible .works-board,
+  .reveal-scene.is-visible .manifesto-card,
+  .reveal-scene.is-visible .timeline-item,
+  .reveal-scene.is-visible .skills-card,
+  .reveal-scene.is-visible .resume-tile,
+  .reveal-scene.is-visible .contact-block,
+  .reveal-scene.is-visible .coast-photo,
+  .reveal-scene.is-visible .note-card {
+    transition-duration: 520ms !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}

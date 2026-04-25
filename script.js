@@ -2,40 +2,73 @@ const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
 const scrollLinks = Array.from(document.querySelectorAll('a[href^="#"]:not(.project-card)'));
 const projectCards = Array.from(document.querySelectorAll('.project-card[data-project]'));
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+const isMobileViewport = window.matchMedia('(max-width: 767px)').matches;
+const useLightweightMobile = isCoarsePointer || isMobileViewport;
 let manualActiveUntil = 0;
 let lastFocusedElement = null;
 let updateRevealScenes = () => {};
 
 const projectData = [
   {
-    id: 'ouur',
-    title: 'Ouur Coffee',
-    category: 'Branding & Packaging',
-    year: '2024',
-    role: 'Identity system / packaging rhythm',
-    image: './assets/editorial/work-1.png',
-    alt: 'Ouur Coffee branding and packaging grayscale project preview',
-    description: 'A packaging system for a slower lifestyle ritual — built around warm material cues, quiet typography, and a restrained archive-like visual language.'
+    id: 'ego-travel',
+    title: 'Ego Travel / 易旅出行',
+    category: 'Travel-tech Product / WeChat Mini Program',
+    year: '2025-2026',
+    role: 'Founder / Product direction / UI concept',
+    image: './assets/covers/wechat-article-exporter-desktop.png',
+    alt: 'Ego Travel travel-tech mini program product preview',
+    description: 'A Gen Z travel planning product focused on DIY itineraries, AI-assisted planning, and creator-led travel experiences.'
   },
   {
-    id: 'lightfall',
-    title: 'Lightfall',
-    category: 'Visual Identity',
-    year: '2023',
-    role: 'Art direction / identity logic',
-    image: './assets/editorial/work-2.png',
-    alt: 'Lightfall visual identity grayscale project preview',
-    description: 'A visual identity built around contrast, glow, and restraint — a system that turns light, darkness, and negative space into a brand rhythm.'
+    id: 'itinerary-builder',
+    title: 'DIY Itinerary Builder',
+    category: 'Mini Program UI / Product Interaction',
+    year: '2025-2026',
+    role: 'Product UI / Interaction design',
+    image: './assets/covers/ios-long-screenshot.png',
+    alt: 'DIY itinerary builder timeline interface preview',
+    description: 'A timeline-based itinerary editor with drag-and-drop planning, day tabs, route structure, and visual schedule organization.'
   },
   {
-    id: 'chaos',
-    title: 'Wonder in Chaos',
-    category: 'Gallery Website',
-    year: '2023',
-    role: 'Web design / editorial interface',
-    image: './assets/editorial/work-3.png',
-    alt: 'Wonder in Chaos gallery website grayscale project preview',
-    description: 'An online gallery rhythm shaped for visual disorder — designed as a controlled sequence of visual tension, breathing space, and discovery.'
+    id: 'mac-dynamic-island',
+    title: 'Mac Dynamic Island',
+    category: 'macOS Utility / Product Prototype',
+    year: '2025',
+    role: 'Product prototype / macOS UI behavior',
+    image: './assets/covers/mac-dynamic-island.png',
+    alt: 'Mac Dynamic Island macOS utility preview',
+    description: 'A macOS native notch-style interaction concept with clipboard history, activity notifications, timers, and refined Apple-like UI behavior.'
+  },
+  {
+    id: 'skuboard',
+    title: 'AI Visual Workflow / SkuBoard',
+    category: 'AI Design Tool / Image Template System',
+    year: '2025-2026',
+    role: 'AI workflow / Visual system',
+    image: './assets/covers/gemini-navigator-sidebar.png',
+    alt: 'AI visual workflow and template system preview',
+    description: 'An AI-assisted visual production workflow for template replacement, product image preparation, background cleanup, and export-ready design boards.'
+  },
+  {
+    id: 'kids-coding',
+    title: 'Kids Coding Course',
+    category: 'Education Product / Web Prototype',
+    year: '2025',
+    role: 'Education product / Web prototype',
+    image: './assets/covers/shadownote.png',
+    alt: 'Kids coding course web prototype preview',
+    description: 'A Code.org-inspired children’s programming course interface with interactive levels, visual feedback, Blockly-style learning, and playful AI-assisted teaching.'
+  },
+  {
+    id: 'wechat-covers',
+    title: 'WeChat Content Covers',
+    category: 'Editorial Design / AI Visual Direction',
+    year: '2025-2026',
+    role: 'Editorial direction / AI visual production',
+    image: './assets/covers/movie-stamps-cinepost.png',
+    alt: 'WeChat content cover visual direction preview',
+    description: 'A series of metaphorical minimalist charcoal cover images for公众号 articles, using strong visual symbolism and consistent art direction.'
   }
 ];
 
@@ -84,6 +117,7 @@ function scrollToHash(hash) {
 }
 
 function updateActiveLink() {
+  if (useLightweightMobile) return;
   if (Date.now() < manualActiveUntil) return;
 
   const targets = getSectionTargets();
@@ -128,6 +162,24 @@ function initScrollLinks() {
 
 function initReveals() {
   const scenes = Array.from(document.querySelectorAll('.reveal-scene'));
+
+  if (useLightweightMobile) {
+    if (!('IntersectionObserver' in window) || prefersReducedMotion) {
+      scenes.forEach((scene) => scene.classList.add('is-visible'));
+      return;
+    }
+
+    const mobileObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        mobileObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -4% 0px' });
+
+    scenes.forEach((scene) => mobileObserver.observe(scene));
+    return;
+  }
 
   updateRevealScenes = () => {
     scenes.forEach((scene) => {
@@ -248,7 +300,7 @@ function initTimeline() {
     });
   });
 
-  if (!timeline || prefersReducedMotion) {
+  if (!timeline || prefersReducedMotion || useLightweightMobile) {
     timeline?.style.setProperty('--timeline-progress', '100%');
     return;
   }
@@ -320,7 +372,7 @@ function initPortraitInteraction() {
     portrait.setAttribute('aria-expanded', String(isOpen));
   });
 
-  if (prefersReducedMotion || !window.matchMedia('(hover: hover)').matches) return;
+  if (prefersReducedMotion || useLightweightMobile || !window.matchMedia('(hover: hover)').matches) return;
 
   portrait.addEventListener('mousemove', (event) => {
     const rect = portrait.getBoundingClientRect();
@@ -337,7 +389,7 @@ function initPortraitInteraction() {
 }
 
 function initParallax() {
-  if (prefersReducedMotion) return;
+  if (prefersReducedMotion || useLightweightMobile) return;
   const title = document.querySelector('.hero-title');
   const note = document.querySelector('.handwritten-note');
   const doodle = document.querySelector('.ink-doodle');
@@ -363,15 +415,17 @@ function initParallax() {
 }
 
 let ticking = false;
-window.addEventListener('scroll', () => {
-  if (ticking) return;
-  ticking = true;
-  window.requestAnimationFrame(() => {
-    updateActiveLink();
-    updateRevealScenes();
-    ticking = false;
-  });
-}, { passive: true });
+if (!useLightweightMobile) {
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      updateActiveLink();
+      updateRevealScenes();
+      ticking = false;
+    });
+  }, { passive: true });
+}
 
 window.addEventListener('resize', () => {
   updateActiveLink();

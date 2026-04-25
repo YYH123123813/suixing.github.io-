@@ -1,0 +1,93 @@
+{
+  "displayName": "NexTrek-CEO",
+  "realNameZh": "杨煜辉",
+  "aliases": ["Yang Yuhui", "YYH"],
+  "location": "Guangzhou, China",
+  "education": {
+    "school": "广州城市理工学院",
+    "major": "新能源汽车工程"
+  },
+  "positioning": {
+    "zh": "旅游创业者 / 视觉设计师 / AI 产品实践者",
+    "en": "Travel-tech founder, visual designer, and AI-assisted product builder",
+    "summaryZh": "以设计表达审美，以 AI 放大执行力，把旅行、内容与产品变成可展示的作品。",
+    "summaryEn": "I build visual systems, AI-assisted products, and travel-tech experiences that turn ideas into usable digital work."
+  },
+  "contact": {
+    "email": "116484728@qq.com",
+    "phone": "16634118851",
+    "note": "Open to collaboration / portfolio showcase / product building"
+  },
+  "projects": [
+    {
+      "id": "ego-travel",
+      "title": "Ego Travel / 易旅出行",
+      "category": "Travel-tech Product / WeChat Mini Program",
+      "description": "A Gen Z travel planning product focused on DIY itineraries, AI-assisted planning, and creator-led travel experiences.",
+      "role": "Founder / Product direction / UI concept",
+      "year": "2025-2026",
+      "image": "./assets/covers/wechat-article-exporter-desktop.png"
+    },
+    {
+      "id": "itinerary-builder",
+      "title": "DIY Itinerary Builder",
+      "category": "Mini Program UI / Product Interaction",
+      "description": "A timeline-based itinerary editor with drag-and-drop planning, day tabs, route structure, and visual schedule organization.",
+      "role": "Product UI / Interaction design",
+      "year": "2025-2026",
+      "image": "./assets/covers/ios-long-screenshot.png"
+    },
+    {
+      "id": "mac-dynamic-island",
+      "title": "Mac Dynamic Island",
+      "category": "macOS Utility / Product Prototype",
+      "description": "A macOS native notch-style interaction concept with clipboard history, activity notifications, timers, and refined Apple-like UI behavior.",
+      "role": "Product prototype / macOS UI behavior",
+      "year": "2025",
+      "image": "./assets/covers/mac-dynamic-island.png"
+    },
+    {
+      "id": "skuboard",
+      "title": "AI Visual Workflow / SkuBoard",
+      "category": "AI Design Tool / Image Template System",
+      "description": "An AI-assisted visual production workflow for template replacement, product image preparation, background cleanup, and export-ready design boards.",
+      "role": "AI workflow / Visual system",
+      "year": "2025-2026",
+      "image": "./assets/covers/gemini-navigator-sidebar.png"
+    },
+    {
+      "id": "kids-coding",
+      "title": "Kids Coding Course",
+      "category": "Education Product / Web Prototype",
+      "description": "A Code.org-inspired children’s programming course interface with interactive levels, visual feedback, Blockly-style learning, and playful AI-assisted teaching.",
+      "role": "Education product / Web prototype",
+      "year": "2025",
+      "image": "./assets/covers/shadownote.png"
+    },
+    {
+      "id": "wechat-covers",
+      "title": "WeChat Content Covers",
+      "category": "Editorial Design / AI Visual Direction",
+      "description": "A series of metaphorical minimalist charcoal cover images for公众号 articles, using strong visual symbolism and consistent art direction.",
+      "role": "Editorial direction / AI visual production",
+      "year": "2025-2026",
+      "image": "./assets/covers/movie-stamps-cinepost.png"
+    }
+  ],
+  "experience": [
+    "Travel-tech startup exploration and WeChat mini-program product design",
+    "Independent product prototyping with AI-assisted coding and visual workflows",
+    "Editorial content creation, WeChat content covers, and visual storytelling"
+  ],
+  "skills": [
+    "Visual Design 视觉设计",
+    "Product Thinking 产品思维",
+    "WeChat Mini Program 小程序设计",
+    "AI Workflow AI 工作流",
+    "Prompt Engineering 提示词工程",
+    "Editorial Design 编辑设计",
+    "Branding 品牌视觉",
+    "Front-end Collaboration 前端协作",
+    "Travel Product Design 旅行产品设计"
+  ]
+}

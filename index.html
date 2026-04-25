@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JIAHAO LI｜Editorial Portfolio</title>
+  <title>NexTrek-CEO｜杨煜辉个人作品集</title>
   <meta
     name="description"
-    content="Jiahao Li's bilingual editorial portfolio and visual resume — a responsive editorial website with tactile paper, monochrome portrait, selected works, manifesto, experience, skills, resume metadata, and contact links."
+    content="杨煜辉 / NexTrek-CEO 的真实个人作品集：旅游创业者、视觉设计师、AI 产品实践者，展示旅行产品、小程序 UI、AI 工作流与视觉叙事项目。"
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./depth.css">
   <link rel="stylesheet" href="./interaction.css">
+  <link rel="stylesheet" href="./mobile-performance.css">
+  <link rel="preload" href="./content/profile.json" as="fetch" type="application/json" crossorigin>
 </head>
 <body>
   <a class="skip-link" href="#works">Skip to selected works</a>
@@ -22,7 +24,7 @@
   <main class="site-shell depth-page portfolio-page" id="top">
     <span class="depth-page-ao" aria-hidden="true"></span>
     <span class="depth-page-edge" aria-hidden="true"></span>
-    <div class="surface-stamp depth-stamp" aria-hidden="true">JH / 1997</div>
+    <div class="surface-stamp depth-stamp" aria-hidden="true">YYH / 2005</div>
     <div class="paper-registration" aria-hidden="true">
       <span></span>
       <span></span>
@@ -30,9 +32,9 @@
 
     <header class="site-header" aria-label="Primary navigation">
       <a class="brandmark" href="#top" aria-label="Back to top">
-        <span class="brand-en">JIAHAO LI</span>
+        <span class="brand-en">NexTrek-CEO</span>
         <span class="brand-dot" aria-hidden="true"></span>
-        <span class="brand-zh">李嘉豪</span>
+        <span class="brand-zh">杨煜辉</span>
       </a>
 
       <nav class="site-nav" aria-label="Sections">
@@ -53,36 +55,35 @@
           </svg>
         </div>
 
-        <p class="eyebrow">Editorial Portfolio / Visual Resume</p>
+        <p class="eyebrow">旅游创业者 / 视觉设计师 / AI 产品实践者</p>
         <h1 class="hero-title" id="hero-title">
-          <span>DESIGN</span>
-          <span>AS POETRY<span class="headline-dot" aria-hidden="true"></span></span>
+          <span>IDEAS INTO</span>
+          <span>PRODUCTS<span class="headline-dot" aria-hidden="true"></span></span>
         </h1>
 
         <div class="hero-body-grid">
           <p class="hero-chinese">
-            以設計為詩，<br>
-            以視覺為語言，<br>
-            在混沌中尋找秩序。
+            以设计表达审美，<br>
+            以 AI 放大执行力，<br>
+            把旅行、内容与产品变成可展示的作品。
           </p>
 
           <p class="hero-english">
-            I believe design is more than solving problems—it’s about expressing perspective,
-            evoking emotion, and shaping meaning.
+            I build visual systems, AI-assisted products, and travel-tech experiences that turn ideas into usable digital work.
           </p>
         </div>
 
         <div class="hero-meta-row" aria-hidden="true">
-          <span>001 / Identity</span>
-          <span>Monochrome editorial system</span>
-          <span>Taipei → Global</span>
+          <span>001 / Real profile</span>
+          <span>AI-native product builder</span>
+          <span>Guangzhou → Digital products</span>
         </div>
 
         <div class="hero-actions">
           <a class="text-cta" href="#works">VIEW SELECTED WORKS</a>
           <p class="handwritten-note" aria-hidden="true">
-            Design is where<br>
-            logic and intuition meet.
+            Build with taste.<br>
+            Ship with AI.
           </p>
         </div>
       </div>
@@ -96,7 +97,7 @@
             <img
               class="portrait-photo"
               src="./assets/editorial/portrait-photo.png"
-              alt="Monochrome editorial portrait of a young East Asian man looking to the right"
+              alt="Monochrome editorial portrait for Yang Yuhui personal portfolio"
               loading="eager"
             >
           </div>
@@ -114,10 +115,10 @@
         </svg>
 
         <div class="portrait-caption depth-caption" aria-hidden="true">
-          <span>Portrait study</span>
-          <span>Monochrome archive</span>
+          <span>Real profile</span>
+          <span>Yang Yuhui / YYH</span>
         </div>
-        <p class="portrait-secret" aria-hidden="true">Profile note / I build quiet systems with visible craft.</p>
+        <p class="portrait-secret" aria-hidden="true">Profile note / Chinese Gen Z creative entrepreneur building travel-tech, AI workflows, and visual products.</p>
       </div>
     </section>
 
@@ -125,7 +126,7 @@
       <section class="works-section" id="works" aria-labelledby="works-title">
         <div class="section-heading">
           <p class="section-index">01 / Selected archive</p>
-          <h2 id="works-title">SELECTED WORKS <span>精選作品</span></h2>
+          <h2 id="works-title">SELECTED WORKS <span>精选作品</span></h2>
         </div>
 
         <div class="works-stage">
@@ -135,54 +136,101 @@
             <span class="paperclip depth-paperclip" aria-hidden="true"></span>
             <div class="board-meta" aria-hidden="true">
               <span>Portfolio evidence</span>
-              <span>03 selected studies</span>
+              <span>06 real directions</span>
             </div>
 
             <ol class="project-list">
+
               <li>
-                <a class="project-card depth-card" href="#project-ouur" data-project="ouur" aria-label="Open Ouur Coffee project sheet">
+                <a class="project-card depth-card" href="#project-ego-travel" data-project="ego-travel" aria-label="Open Ego Travel / 易旅出行 project sheet">
                   <span class="project-thumb depth-photo">
-                    <img src="./assets/editorial/work-1.png" alt="Ouur Coffee branding and packaging grayscale project preview" loading="lazy">
+                    <img src="./assets/covers/wechat-article-exporter-desktop.png" alt="Ego Travel / 易旅出行 project preview" loading="lazy">
                   </span>
                   <span class="project-copy">
                     <span class="project-no">01</span>
-                    <span class="project-title">Ouur Coffee</span>
-                    <span class="project-type">Branding &amp; Packaging</span>
-                    <span class="project-summary">A packaging system for a slower lifestyle ritual.</span>
+                    <span class="project-title">Ego Travel / 易旅出行</span>
+                    <span class="project-type">Travel-tech Product / WeChat Mini Program</span>
+                    <span class="project-summary">A Gen Z travel planning product focused on DIY itineraries, AI-assisted planning, and creator-led travel experiences.</span>
                     <span class="project-mobile-action">Open project sheet →</span>
                   </span>
                 </a>
               </li>
 
               <li>
-                <a class="project-card depth-card" href="#project-lightfall" data-project="lightfall" aria-label="Open Lightfall project sheet">
+                <a class="project-card depth-card" href="#project-itinerary-builder" data-project="itinerary-builder" aria-label="Open DIY Itinerary Builder project sheet">
                   <span class="project-thumb depth-photo">
-                    <img src="./assets/editorial/work-2.png" alt="Lightfall visual identity grayscale project preview" loading="lazy">
+                    <img src="./assets/covers/ios-long-screenshot.png" alt="DIY Itinerary Builder project preview" loading="lazy">
                   </span>
                   <span class="project-copy">
                     <span class="project-no">02</span>
-                    <span class="project-title">Lightfall</span>
-                    <span class="project-type">Visual Identity</span>
-                    <span class="project-summary">A visual identity built around contrast, glow, and restraint.</span>
+                    <span class="project-title">DIY Itinerary Builder</span>
+                    <span class="project-type">Mini Program UI / Product Interaction</span>
+                    <span class="project-summary">A timeline-based itinerary editor with drag-and-drop planning, day tabs, route structure, and visual schedule organization.</span>
                     <span class="project-mobile-action">Open project sheet →</span>
                   </span>
                 </a>
               </li>
 
               <li>
-                <a class="project-card depth-card" href="#project-chaos" data-project="chaos" aria-label="Open Wonder in Chaos project sheet">
+                <a class="project-card depth-card" href="#project-mac-dynamic-island" data-project="mac-dynamic-island" aria-label="Open Mac Dynamic Island project sheet">
                   <span class="project-thumb depth-photo">
-                    <img src="./assets/editorial/work-3.png" alt="Wonder in Chaos gallery website grayscale project preview" loading="lazy">
+                    <img src="./assets/covers/mac-dynamic-island.png" alt="Mac Dynamic Island project preview" loading="lazy">
                   </span>
                   <span class="project-copy">
                     <span class="project-no">03</span>
-                    <span class="project-title">Wonder in Chaos</span>
-                    <span class="project-type">Gallery Website</span>
-                    <span class="project-summary">An online gallery rhythm shaped for visual disorder.</span>
+                    <span class="project-title">Mac Dynamic Island</span>
+                    <span class="project-type">macOS Utility / Product Prototype</span>
+                    <span class="project-summary">A macOS native notch-style interaction concept with clipboard history, activity notifications, timers, and refined Apple-like UI behavior.</span>
                     <span class="project-mobile-action">Open project sheet →</span>
                   </span>
                 </a>
               </li>
+
+              <li>
+                <a class="project-card depth-card" href="#project-skuboard" data-project="skuboard" aria-label="Open AI Visual Workflow / SkuBoard project sheet">
+                  <span class="project-thumb depth-photo">
+                    <img src="./assets/covers/gemini-navigator-sidebar.png" alt="AI Visual Workflow / SkuBoard project preview" loading="lazy">
+                  </span>
+                  <span class="project-copy">
+                    <span class="project-no">04</span>
+                    <span class="project-title">AI Visual Workflow / SkuBoard</span>
+                    <span class="project-type">AI Design Tool / Image Template System</span>
+                    <span class="project-summary">An AI-assisted visual production workflow for template replacement, product image preparation, background cleanup, and export-ready design boards.</span>
+                    <span class="project-mobile-action">Open project sheet →</span>
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a class="project-card depth-card" href="#project-kids-coding" data-project="kids-coding" aria-label="Open Kids Coding Course project sheet">
+                  <span class="project-thumb depth-photo">
+                    <img src="./assets/covers/shadownote.png" alt="Kids Coding Course project preview" loading="lazy">
+                  </span>
+                  <span class="project-copy">
+                    <span class="project-no">05</span>
+                    <span class="project-title">Kids Coding Course</span>
+                    <span class="project-type">Education Product / Web Prototype</span>
+                    <span class="project-summary">A Code.org-inspired children’s programming course interface with interactive levels, visual feedback, Blockly-style learning, and playful AI-assisted teaching.</span>
+                    <span class="project-mobile-action">Open project sheet →</span>
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a class="project-card depth-card" href="#project-wechat-covers" data-project="wechat-covers" aria-label="Open WeChat Content Covers project sheet">
+                  <span class="project-thumb depth-photo">
+                    <img src="./assets/covers/movie-stamps-cinepost.png" alt="WeChat Content Covers project preview" loading="lazy">
+                  </span>
+                  <span class="project-copy">
+                    <span class="project-no">06</span>
+                    <span class="project-title">WeChat Content Covers</span>
+                    <span class="project-type">Editorial Design / AI Visual Direction</span>
+                    <span class="project-summary">A series of metaphorical minimalist charcoal cover images for公众号 articles, using strong visual symbolism and consistent art direction.</span>
+                    <span class="project-mobile-action">Open project sheet →</span>
+                  </span>
+                </a>
+              </li>
+
             </ol>
 
             <a class="board-link" href="#contact">VIEW ALL WORKS <span aria-hidden="true">→</span></a>
@@ -192,7 +240,7 @@
             <span class="depth-ao" aria-hidden="true"></span>
             <span class="depth-thickness" aria-hidden="true"></span>
             <img src="./assets/editorial/coast-photo.png" alt="Small monochrome coastal landscape print" loading="lazy">
-            <figcaption>Quiet reference / visual rhythm</figcaption>
+            <figcaption>Product evidence / visual rhythm</figcaption>
           </figure>
         </div>
       </section>
@@ -203,29 +251,28 @@
           <span class="depth-thickness" aria-hidden="true"></span>
           <div class="section-heading compact-heading">
             <p class="section-index">02 / Manifesto</p>
-            <h2 id="manifesto-title">A LITTLE MANIFESTO <span>一些想法</span></h2>
+            <h2 id="manifesto-title">BUILDING MANIFESTO <span>实践宣言</span></h2>
           </div>
-          <span class="manifesto-pin" aria-hidden="true">depth / craft / honesty</span>
+          <span class="manifesto-pin" aria-hidden="true">product / design / AI workflow</span>
 
           <div class="manifesto-text">
             <p class="manifesto-en">
-              In a world that moves fast,<br>
-              I choose depth over speed.<br>
-              I care about craft, process,<br>
-              and the quiet details that<br>
-              make something honest.
+              I care about ideas that can ship,<br>
+              interfaces that can be used,<br>
+              and visuals that make a product<br>
+              feel clear, credible, and memorable.
             </p>
 
             <p class="manifesto-zh">
-              在這個追求效率的時代，<br>
-              我更在意深度與真誠。<br>
-              好的設計，<br>
-              來自於對細節的偏執與熱愛。
+              我不是只做漂亮页面，<br>
+              也不是只堆 AI 工具。<br>
+              我更在意从需求、界面、内容到交付，<br>
+              把想法变成真正能被看见的产品。
             </p>
           </div>
 
           <div class="manifesto-extra" id="manifesto-extra" hidden>
-            <p>I design slowly because meaning needs silence. I care about the space between image and thought, between structure and emotion.</p>
+            <p>我相信年轻创作者最大的优势，是能快速学习、快速试错，也能用审美和产品感把 AI 的执行力变成真实作品。</p>
           </div>
 
           <button class="manifesto-toggle" type="button" aria-expanded="false" aria-controls="manifesto-extra">
@@ -247,46 +294,46 @@
     </section>
 
     <section class="lower-spread reveal-scene" aria-label="Experience and skills spread" data-scene="depth">
-      <aside class="lower-index" aria-hidden="true">2018—Now / Practice record</aside>
+      <aside class="lower-index" aria-hidden="true">2024—Now / Practice record</aside>
 
       <section class="experience-section" id="experience" aria-labelledby="experience-title">
         <div class="section-heading">
           <p class="section-index">03 / Chronology</p>
-          <h2 id="experience-title">EXPERIENCE <span>經歷</span></h2>
+          <h2 id="experience-title">EXPERIENCE <span>经历</span></h2>
         </div>
 
         <div class="timeline" role="list">
-          <article class="timeline-item" role="listitem" data-note="Selected practice period">
-            <time datetime="2022">2022 — Now</time>
+          <article class="timeline-item" role="listitem" data-note="Travel-tech startup exploration">
+            <time datetime="2025">2025 — Now</time>
             <div class="timeline-role">
-              <h3>Freelance Designer &amp; Art Director</h3>
-              <p>Taipei, Taiwan</p>
+              <h3>Travel-tech Founder / NexTrek-CEO</h3>
+              <p>Ego Travel / 易旅出行 · Guangzhou</p>
             </div>
-            <p class="timeline-desc">Working with global clients and independent studios on branding, digital, and art direction.</p>
+            <p class="timeline-desc">Exploring DIY itinerary planning, AI-assisted travel decisions, creator-led travel experiences, and WeChat mini-program product design.</p>
             <button class="timeline-toggle" type="button" aria-expanded="false">More detail</button>
-            <p class="timeline-more" hidden>Selected practice period: visual systems, art direction, and client-facing creative delivery.</p>
+            <p class="timeline-more" hidden>Focus: product positioning, itinerary editor UX, route structure, mini-program interface, and travel content commercialization.</p>
           </article>
 
-          <article class="timeline-item" role="listitem" data-note="Visual systems">
-            <time datetime="2020">2020 — 2022</time>
+          <article class="timeline-item" role="listitem" data-note="AI product and workflow building">
+            <time datetime="2024">2024 — Now</time>
             <div class="timeline-role">
-              <h3>Art Director</h3>
-              <p>Simple Studio, Taipei</p>
+              <h3>AI-assisted Product Builder</h3>
+              <p>Independent prototypes / vibe coding</p>
             </div>
-            <p class="timeline-desc">Led branding and visual projects across lifestyle, culture, and tech industries.</p>
+            <p class="timeline-desc">Building small software ideas with AI coding, design systems, workflow automation, macOS utilities, image tools, and interactive web prototypes.</p>
             <button class="timeline-toggle" type="button" aria-expanded="false">More detail</button>
-            <p class="timeline-more" hidden>Visual systems: identity rhythm, campaign language, and refined execution across touchpoints.</p>
+            <p class="timeline-more" hidden>Representative work includes Mac Dynamic Island, AI visual workflows, desktop utilities, and rapid front-end product prototypes.</p>
           </article>
 
-          <article class="timeline-item" role="listitem" data-note="Brand and editorial work">
-            <time datetime="2018">2018 — 2020</time>
+          <article class="timeline-item" role="listitem" data-note="Visual design and content direction">
+            <time datetime="2023">2023 — Now</time>
             <div class="timeline-role">
-              <h3>Graphic Designer</h3>
-              <p>InBloom Design, Taipei</p>
+              <h3>Visual Designer / Editorial Creator</h3>
+              <p>Design, AI covers, WeChat content</p>
             </div>
-            <p class="timeline-desc">Focused on visual identity, print design, and creative collaborations.</p>
+            <p class="timeline-desc">Creating visual systems, metaphorical article covers, editorial layouts, AI-assisted image direction, and content assets for public-account experiments.</p>
             <button class="timeline-toggle" type="button" aria-expanded="false">More detail</button>
-            <p class="timeline-more" hidden>Brand and editorial work: layout craft, print sensibility, and material-first visual thinking.</p>
+            <p class="timeline-more" hidden>Focus: minimalist charcoal cover direction, symbolic visuals, consistent art direction, and readable content packaging.</p>
           </article>
         </div>
       </section>
@@ -302,48 +349,63 @@
           <path d="M46 59C38 61 29 67 21 77"></path>
           <path d="M52 62C60 63 69 69 78 80"></path>
         </svg>
-        <p>Ideas<br>come from<br>life.</p>
+        <p>Ideas<br>become<br>products.</p>
       </aside>
 
       <section class="skills-section" id="skills" aria-labelledby="skills-title">
         <div class="section-heading compact-heading">
           <p class="section-index">04 / Disciplines</p>
-          <h2 id="skills-title">SKILLS &amp; DISCIPLINES <span>技能與專長</span></h2>
+          <h2 id="skills-title">SKILLS &amp; DISCIPLINES <span>技能与方向</span></h2>
         </div>
 
         <div class="skills-card paper-card depth-card">
           <span class="depth-ao" aria-hidden="true"></span>
           <span class="depth-thickness" aria-hidden="true"></span>
           <ul class="skills-list">
-            <li data-skill-note="Identity systems and narrative logic.">
-              <span class="skill-label"><strong>Branding</strong><em>品牌識別</em></span>
-              <span class="dot-scale" aria-label="Branding proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <li data-skill-note="Visual systems, image taste, composition, and UI polish.">
+              <span class="skill-label"><strong>Visual Design</strong><em>视觉设计</em></span>
+              <span class="dot-scale" aria-label="Visual Design proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Visual Design note">?</button>
+            </li>
+            <li data-skill-note="Finding real needs, simplifying flows, and turning ideas into usable products.">
+              <span class="skill-label"><strong>Product Thinking</strong><em>产品思维</em></span>
+              <span class="dot-scale" aria-label="Product Thinking proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Product Thinking note">?</button>
+            </li>
+            <li data-skill-note="Mini-program UI, itinerary planning flows, and WeChat ecosystem thinking.">
+              <span class="skill-label"><strong>WeChat Mini Program</strong><em>小程序设计</em></span>
+              <span class="dot-scale" aria-label="WeChat Mini Program proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="WeChat Mini Program note">?</button>
+            </li>
+            <li data-skill-note="Using AI to accelerate coding, image production, copy iteration, and product experiments.">
+              <span class="skill-label"><strong>AI Workflow</strong><em>AI 工作流</em></span>
+              <span class="dot-scale" aria-label="AI Workflow proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="AI Workflow note">?</button>
+            </li>
+            <li data-skill-note="Prompting for visual direction, product logic, and repeatable AI execution.">
+              <span class="skill-label"><strong>Prompt Engineering</strong><em>提示词工程</em></span>
+              <span class="dot-scale" aria-label="Prompt Engineering proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Prompt Engineering note">?</button>
+            </li>
+            <li data-skill-note="Article covers, content packaging, reading rhythm, and visual storytelling.">
+              <span class="skill-label"><strong>Editorial Design</strong><em>编辑设计</em></span>
+              <span class="dot-scale" aria-label="Editorial Design proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Editorial Design note">?</button>
+            </li>
+            <li data-skill-note="Identity direction, naming logic, visual tone, and brand consistency.">
+              <span class="skill-label"><strong>Branding</strong><em>品牌视觉</em></span>
+              <span class="dot-scale" aria-label="Branding proficiency 4 of 6"><i></i><i></i><i></i><i></i><i class="muted-dot"></i><i class="muted-dot"></i></span>
               <button class="skill-note-trigger" type="button" aria-label="Branding note">?</button>
             </li>
-            <li data-skill-note="Mood, material, visual rhythm.">
-              <span class="skill-label"><strong>Art Direction</strong><em>藝術指導</em></span>
-              <span class="dot-scale" aria-label="Art Direction proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-              <button class="skill-note-trigger" type="button" aria-label="Art Direction note">?</button>
+            <li data-skill-note="Communicating UI behavior, interaction detail, and implementation intent.">
+              <span class="skill-label"><strong>Front-end Collaboration</strong><em>前端协作</em></span>
+              <span class="dot-scale" aria-label="Front-end Collaboration proficiency 4 of 6"><i></i><i></i><i></i><i></i><i class="muted-dot"></i><i class="muted-dot"></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Front-end Collaboration note">?</button>
             </li>
-            <li data-skill-note="Editorial hierarchy and emotional tone.">
-              <span class="skill-label"><strong>Typography</strong><em>排版設計</em></span>
-              <span class="dot-scale" aria-label="Typography proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
-              <button class="skill-note-trigger" type="button" aria-label="Typography note">?</button>
-            </li>
-            <li data-skill-note="Responsive interfaces and crafted interactions.">
-              <span class="skill-label"><strong>Web Design</strong><em>網頁設計</em></span>
-              <span class="dot-scale" aria-label="Web Design proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
-              <button class="skill-note-trigger" type="button" aria-label="Web Design note">?</button>
-            </li>
-            <li data-skill-note="Layout rhythm, sequence, and reading flow.">
-              <span class="skill-label"><strong>Editorial</strong><em>編輯設計</em></span>
-              <span class="dot-scale" aria-label="Editorial proficiency 6 of 6"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-              <button class="skill-note-trigger" type="button" aria-label="Editorial note">?</button>
-            </li>
-            <li data-skill-note="Material thinking and tactile presentation.">
-              <span class="skill-label"><strong>Packaging</strong><em>包裝設計</em></span>
-              <span class="dot-scale" aria-label="Packaging proficiency 4 of 6"><i></i><i></i><i></i><i></i><i class="muted-dot"></i><i class="muted-dot"></i></span>
-              <button class="skill-note-trigger" type="button" aria-label="Packaging note">?</button>
+            <li data-skill-note="DIY itinerary planning, route structure, trip content, and creator-led travel products.">
+              <span class="skill-label"><strong>Travel Product Design</strong><em>旅行产品设计</em></span>
+              <span class="dot-scale" aria-label="Travel Product Design proficiency 5 of 6"><i></i><i></i><i></i><i></i><i></i><i class="muted-dot"></i></span>
+              <button class="skill-note-trigger" type="button" aria-label="Travel Product Design note">?</button>
             </li>
           </ul>
 
@@ -353,32 +415,32 @@
     </section>
 
     <section class="resume-contact depth-surface reveal-scene" id="contact" aria-labelledby="contact-title" data-scene="closure">
-      <div class="archive-ruler" aria-hidden="true">Archive strip / web résumé / contact record</div>
+      <div class="archive-ruler" aria-hidden="true">Archive strip / real portfolio / collaboration record</div>
 
-      <a class="resume-tile depth-card" href="mailto:hello@jiahaoli.com?subject=Resume%20request" aria-label="Request resume by email">
+      <a class="resume-tile depth-card" href="mailto:116484728@qq.com?subject=Portfolio%20collaboration" aria-label="Request resume by email">
         <span class="depth-ao" aria-hidden="true"></span>
         <span class="depth-thickness" aria-hidden="true"></span>
-        <span class="resume-label">RESUME</span>
-        <span class="resume-sub">個人檔案</span>
+        <span class="resume-label">PROFILE</span>
+        <span class="resume-sub">个人档案</span>
         <span class="resume-arrow" aria-hidden="true">↘</span>
       </a>
 
       <div class="meta-columns" aria-label="Personal metadata">
         <div class="meta-column">
-          <span class="meta-label">Born</span>
-          <strong class="meta-value">1997: Taipei, Taiwan</strong>
+          <span class="meta-label">Profile</span>
+          <strong class="meta-value">杨煜辉 / NexTrek-CEO</strong>
         </div>
         <div class="meta-column">
           <span class="meta-label">Based in</span>
-          <strong class="meta-value">Taipei, Taiwan</strong>
+          <strong class="meta-value">Guangzhou, China</strong>
         </div>
         <div class="meta-column">
-          <span class="meta-label">Languages</span>
-          <strong class="meta-value">中文 / English</strong>
+          <span class="meta-label">Education</span>
+          <strong class="meta-value">广州城市理工学院 · 新能源汽车工程</strong>
         </div>
         <div class="meta-column">
           <span class="meta-label">Currently</span>
-          <strong class="meta-value">Available for work</strong>
+          <strong class="meta-value">Travel-tech / AI products / visual design</strong>
         </div>
       </div>
 
@@ -386,10 +448,10 @@
         <span class="depth-ao" aria-hidden="true"></span>
         <span class="depth-thickness" aria-hidden="true"></span>
         <div class="contact-copy">
-          <h2 id="contact-title">LET’S CONNECT <span>聯繫我</span></h2>
-          <a href="mailto:hello@jiahaoli.com">hello@jiahaoli.com</a>
-          <a href="https://instagram.com/jiahao.li.design" target="_blank" rel="noreferrer">@jiahao.li.design</a>
-          <a href="tel:+886-912-345-678">+886 912 345 678</a>
+          <h2 id="contact-title">LET’S CONNECT <span>联系我</span></h2>
+          <a href="mailto:116484728@qq.com">116484728@qq.com</a>
+          <span>Open to collaboration / product building</span>
+          <a href="tel:16634118851">16634118851</a>
         </div>
 
         <div class="contact-seal" aria-hidden="true">
