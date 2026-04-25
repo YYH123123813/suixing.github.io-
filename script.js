@@ -1,5 +1,274 @@
-const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
-const scrollLinks = Array.from(document.querySelectorAll('a[href^="#"]:not(.project-card)'));
+const portfolioRepoUrl = 'https://github.com/yyh123123813/suixing.github.io-';
+
+const navItems = [
+  {
+    label: '首页',
+    labelEn: 'Home',
+    href: '#top'
+  },
+  {
+    label: '我的作品集',
+    labelEn: 'Portfolio',
+    href: portfolioRepoUrl,
+    external: true
+  },
+  {
+    label: '项目',
+    labelEn: 'Projects',
+    children: [
+      {
+        label: '旅行科技',
+        labelEn: 'Travel Tech',
+        children: [
+          {
+            label: '易旅出行',
+            labelEn: 'Ego Travel',
+            children: [
+              {
+                label: 'DIY 行程规划',
+                labelEn: 'DIY Itinerary',
+                children: [
+                  { label: '时间轴编辑器', labelEn: 'Timeline Editor', href: '#timeline-interaction' },
+                  { label: '城市选择系统', labelEn: 'City Selector', href: '#city-selector' },
+                  { label: '多日路线规划', labelEn: 'Multi-day Route', href: '#multi-day-route' }
+                ]
+              },
+              {
+                label: 'Creator-led Travel',
+                labelEn: 'Creator-led Travel',
+                children: [
+                  { label: '行程产品化', labelEn: 'Itinerary Productization', href: '#itinerary-productization' },
+                  { label: '链上旅行资产概念', labelEn: 'On-chain Travel Asset', href: '#travel-asset' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Mac 灵动岛',
+        labelEn: 'Mac Dynamic Island',
+        children: [
+          {
+            label: 'macOS Utility',
+            labelEn: 'macOS Utility',
+            children: [
+              {
+                label: 'Clipboard History',
+                labelEn: 'Clipboard History',
+                children: [
+                  { label: 'Image Preview', labelEn: 'Image Preview', href: 'https://github.com/YYH123123813/mac-dynamic-island', external: true },
+                  { label: 'Activity Center', labelEn: 'Activity Center', href: 'https://github.com/YYH123123813/mac-dynamic-island', external: true }
+                ]
+              },
+              {
+                label: 'Notch Overlay',
+                labelEn: 'Notch Overlay',
+                children: [
+                  { label: 'Compact Mode', labelEn: 'Compact Mode', href: 'https://github.com/YYH123123813/mac-dynamic-island', external: true },
+                  { label: 'Expanded Mode', labelEn: 'Expanded Mode', href: 'https://github.com/YYH123123813/mac-dynamic-island', external: true },
+                  { label: 'Drag & Drop', labelEn: 'Drag & Drop', href: 'https://github.com/YYH123123813/mac-dynamic-island', external: true }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Vibe Coding Repos',
+        labelEn: 'GitHub Works',
+        children: [
+          {
+            label: '工具与应用',
+            labelEn: 'Tools & Apps',
+            children: [
+              {
+                label: '个人效率',
+                labelEn: 'Personal Utility',
+                children: [
+                  { label: 'ShadowNote 记账软件', labelEn: 'ShadowNote', href: 'https://github.com/YYH123123813/shadownote', external: true },
+                  { label: 'iOS 长截屏工具', labelEn: 'Long Screenshot', href: 'https://github.com/YYH123123813/ios-long-screenshot', external: true }
+                ]
+              },
+              {
+                label: '内容自动化',
+                labelEn: 'Content Automation',
+                children: [
+                  { label: '公众号导出桌面工具', labelEn: 'WeChat Exporter', href: 'https://github.com/YYH123123813/wechat-article-exporter-desktop', external: true },
+                  { label: 'Antigravity Auto Approve', labelEn: 'Automation Plugin', href: 'https://github.com/YYH123123813/antigravity-auto-approve', external: true }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: '视觉系统',
+    labelEn: 'Visual System',
+    children: [
+      {
+        label: 'Brand Identity',
+        labelEn: 'Brand Identity',
+        children: [
+          {
+            label: 'Typography',
+            labelEn: 'Typography',
+            children: [
+              {
+                label: 'Serif System',
+                labelEn: 'Serif System',
+                children: [
+                  { label: 'Display Title', labelEn: 'Display Title', href: '#visual-display-title' },
+                  { label: 'Micro Labels', labelEn: 'Micro Labels', href: '#visual-micro-labels' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Color System',
+        labelEn: 'Color System',
+        children: [
+          {
+            label: 'Paper Palette',
+            labelEn: 'Paper Palette',
+            children: [
+              {
+                label: 'Terracotta Accent',
+                labelEn: 'Terracotta Accent',
+                children: [
+                  { label: 'Charcoal Contrast', labelEn: 'Charcoal Contrast', href: '#color-charcoal-contrast' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Editorial Layout',
+        labelEn: 'Editorial Layout',
+        children: [
+          {
+            label: 'Paper Collage',
+            labelEn: 'Paper Collage',
+            children: [
+              {
+                label: 'Shadow System',
+                labelEn: 'Shadow System',
+                children: [
+                  { label: 'Tape / Stamp / Paperclip', labelEn: 'Tactile Objects', href: '#paper-object-system' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'AI 工作流',
+    labelEn: 'AI Workflow',
+    children: [
+      {
+        label: 'Prompt Engineering',
+        labelEn: 'Prompt Engineering',
+        children: [
+          {
+            label: 'Image Prompt System',
+            labelEn: 'Image Prompt System',
+            children: [
+              {
+                label: 'Website Portrait Prompts',
+                labelEn: 'Website Portrait Prompts',
+                children: [
+                  { label: 'Editorial Portrait', labelEn: 'Editorial Portrait', href: '#editorial-portrait' },
+                  { label: 'Monochrome Photo', labelEn: 'Monochrome Photo', href: '#monochrome-photo' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Product Workflow',
+        labelEn: 'Product Workflow',
+        children: [
+          {
+            label: 'AI Coding',
+            labelEn: 'AI Coding',
+            children: [
+              {
+                label: 'WeChat Mini Program',
+                labelEn: 'WeChat Mini Program',
+                children: [
+                  { label: 'UI Reconstruction', labelEn: 'UI Reconstruction', href: '#ui-reconstruction' },
+                  { label: 'Interaction Optimization', labelEn: 'Interaction Optimization', href: '#interaction-optimization' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: '关于我',
+    labelEn: 'About',
+    children: [
+      {
+        label: '个人定位',
+        labelEn: 'Positioning',
+        children: [
+          {
+            label: 'AI-native Builder',
+            labelEn: 'AI-native Builder',
+            children: [
+              {
+                label: 'Visual Designer',
+                labelEn: 'Visual Designer',
+                children: [
+                  { label: 'Product Executor', labelEn: 'Product Executor', href: '#about' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: '联系',
+    labelEn: 'Contact',
+    children: [
+      {
+        label: 'Collaboration',
+        labelEn: 'Collaboration',
+        children: [
+          {
+            label: 'Product',
+            labelEn: 'Product',
+            children: [
+              {
+                label: 'Design',
+                labelEn: 'Design',
+                children: [
+                  { label: 'AI Workflow', labelEn: 'AI Workflow', href: '#contact' },
+                  { label: 'WeChat / Email', labelEn: 'WeChat / Email', href: '#contact' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
+
+let navLinks = [];
+let scrollLinks = [];
 const projectCards = Array.from(document.querySelectorAll('.project-card[data-project]'));
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
@@ -104,10 +373,392 @@ const drawerImage = document.querySelector('#drawer-image');
 const drawerDescription = document.querySelector('#drawer-description');
 let activeProjectIndex = 0;
 
+function isInternalHash(href) {
+  return typeof href === 'string' && href.startsWith('#') && href.length > 1;
+}
+
+function formatIndex(index) {
+  return String(index + 1).padStart(2, '0');
+}
+
+function createNavLabel(item, index, { external = false, hasChildren = false } = {}) {
+  const fragment = document.createDocumentFragment();
+  const idx = document.createElement('span');
+  idx.className = 'nav-index';
+  idx.textContent = formatIndex(index);
+  fragment.append(idx);
+
+  const labels = document.createElement('span');
+  labels.className = 'nav-labels';
+  const zh = document.createElement('span');
+  zh.className = 'nav-label-zh';
+  zh.textContent = item.label;
+  const en = document.createElement('span');
+  en.className = 'nav-label-en';
+  en.textContent = item.labelEn || item.label;
+  labels.append(zh, en);
+  fragment.append(labels);
+
+  if (external) {
+    const ext = document.createElement('span');
+    ext.className = 'nav-external';
+    ext.setAttribute('aria-hidden', 'true');
+    ext.textContent = '↗';
+    fragment.append(ext);
+  } else if (hasChildren) {
+    const chev = document.createElement('span');
+    chev.className = 'nav-chevron';
+    chev.setAttribute('aria-hidden', 'true');
+    chev.textContent = '›';
+    fragment.append(chev);
+  }
+
+  return fragment;
+}
+
+function renderDesktopNavList(items, depth = 1, path = []) {
+  const list = document.createElement('ul');
+  list.className = `nav-list nav-depth-${depth}`;
+  list.setAttribute('role', depth === 1 ? 'menubar' : 'menu');
+
+  items.forEach((item, index) => {
+    const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+    const li = document.createElement('li');
+    li.className = `nav-item nav-item-depth-${depth}`;
+    li.dataset.depth = String(depth);
+    li.dataset.path = [...path, item.label].join(' / ');
+    li.setAttribute('role', 'none');
+
+    if (hasChildren) {
+      const button = document.createElement('button');
+      button.className = 'nav-trigger';
+      button.type = 'button';
+      button.setAttribute('role', 'menuitem');
+      button.setAttribute('aria-haspopup', 'true');
+      button.setAttribute('aria-expanded', 'false');
+      button.append(createNavLabel(item, index, { hasChildren: true }));
+      li.append(button);
+
+      const panel = document.createElement('div');
+      panel.className = `nav-panel nav-panel-depth-${depth + 1}`;
+      panel.append(renderDesktopNavList(item.children, depth + 1, [...path, item.label]));
+      li.append(panel);
+    } else {
+      const link = document.createElement('a');
+      link.className = 'nav-link';
+      link.href = item.href || '#top';
+      link.setAttribute('role', 'menuitem');
+      if (item.external) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', `${item.label} / ${item.labelEn || ''}，在新标签页打开`);
+      }
+      link.append(createNavLabel(item, index, { external: item.external }));
+      li.append(link);
+    }
+
+    list.append(li);
+  });
+
+  return list;
+}
+
+function renderMobileNavList(items, depth = 1, path = []) {
+  const list = document.createElement('ul');
+  list.className = `nav-list mobile-nav-depth-${depth}`;
+
+  items.forEach((item, index) => {
+    const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+    const li = document.createElement('li');
+    li.className = `mobile-nav-item mobile-nav-item-depth-${depth}`;
+    li.style.setProperty('--nav-mobile-depth', String(depth - 1));
+    const itemPath = [...path, item.label];
+    const pathText = itemPath.join(' / ');
+
+    if (hasChildren) {
+      const id = `mobile-nav-${depth}-${pathText.replace(/[^a-zA-Z0-9\u4e00-\u9fa5]+/g, '-').slice(0, 48)}-${index}`;
+      const button = document.createElement('button');
+      button.className = 'mobile-nav-row mobile-nav-trigger';
+      button.type = 'button';
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-controls', id);
+      button.dataset.path = pathText;
+      button.append(createNavLabel(item, index, { hasChildren: true }));
+      li.append(button);
+
+      const children = document.createElement('div');
+      children.className = 'mobile-nav-children';
+      children.id = id;
+      children.hidden = true;
+      children.append(renderMobileNavList(item.children, depth + 1, itemPath));
+      li.append(children);
+    } else {
+      const link = document.createElement('a');
+      link.className = 'mobile-nav-row mobile-nav-link';
+      link.href = item.href || '#top';
+      link.dataset.path = pathText;
+      if (item.external) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', `${item.label} / ${item.labelEn || ''}，在新标签页打开`);
+      }
+      link.append(createNavLabel(item, index, { external: item.external }));
+      li.append(link);
+    }
+
+    list.append(li);
+  });
+
+  return list;
+}
+
+function closeDesktopNav() {
+  document.querySelectorAll('.site-nav .nav-item.is-open').forEach((item) => {
+    item.classList.remove('is-open', 'is-flipped');
+    item.querySelector(':scope > .nav-trigger')?.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function positionNavPanels() {
+  const panels = Array.from(document.querySelectorAll('.site-nav .nav-panel'));
+  panels.forEach((panel) => panel.parentElement?.classList.remove('is-flipped'));
+  panels.forEach((panel) => {
+    const item = panel.parentElement;
+    if (!item) return;
+    const rect = panel.getBoundingClientRect();
+    if (rect.right > window.innerWidth - 12) item.classList.add('is-flipped');
+    const flippedRect = panel.getBoundingClientRect();
+    if (flippedRect.left < 12 && item.dataset.depth !== '1') item.classList.remove('is-flipped');
+  });
+}
+
+function openDesktopItem(item, { closeSiblings = true } = {}) {
+  if (!item) return;
+  const parentList = item.parentElement;
+  if (closeSiblings && parentList) {
+    Array.from(parentList.children).forEach((sibling) => {
+      if (sibling !== item) {
+        sibling.classList.remove('is-open', 'is-flipped');
+        sibling.querySelector(':scope > .nav-trigger')?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+  item.classList.add('is-open');
+  item.querySelector(':scope > .nav-trigger')?.setAttribute('aria-expanded', 'true');
+  requestAnimationFrame(positionNavPanels);
+}
+
+function closeDesktopBranch(item) {
+  if (!item) return;
+  item.querySelectorAll('.nav-item.is-open').forEach((child) => {
+    child.classList.remove('is-open', 'is-flipped');
+    child.querySelector(':scope > .nav-trigger')?.setAttribute('aria-expanded', 'false');
+  });
+  item.classList.remove('is-open', 'is-flipped');
+  item.querySelector(':scope > .nav-trigger')?.setAttribute('aria-expanded', 'false');
+}
+
+function initDesktopNavInteraction() {
+  const nav = document.querySelector('.site-nav');
+  if (!nav) return;
+
+  nav.querySelectorAll('.nav-item').forEach((item) => {
+    const trigger = item.querySelector(':scope > .nav-trigger');
+    if (!trigger) return;
+
+    item.addEventListener('mouseenter', () => {
+      if (window.matchMedia('(hover: hover) and (min-width: 1100px)').matches) openDesktopItem(item);
+    });
+    item.addEventListener('mouseleave', () => {
+      if (window.matchMedia('(hover: hover) and (min-width: 1100px)').matches) closeDesktopBranch(item);
+    });
+    item.addEventListener('focusin', () => openDesktopItem(item, { closeSiblings: true }));
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      const isOpen = item.classList.contains('is-open');
+      if (isOpen) closeDesktopBranch(item);
+      else openDesktopItem(item);
+    });
+  });
+
+  nav.addEventListener('keydown', (event) => {
+    const current = event.target.closest('.nav-link, .nav-trigger');
+    if (!current) return;
+    const item = current.closest('.nav-item');
+    const list = item?.parentElement;
+    const peers = list ? Array.from(list.children).map((li) => li.querySelector(':scope > .nav-link, :scope > .nav-trigger')).filter(Boolean) : [];
+    const index = peers.indexOf(current);
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      const parentItem = item?.parentElement?.closest('.nav-item');
+      if (parentItem) {
+        closeDesktopBranch(item);
+        parentItem.querySelector(':scope > .nav-trigger')?.focus();
+      } else {
+        closeDesktopNav();
+        current.blur();
+      }
+    }
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      if (current.classList.contains('nav-trigger')) {
+        openDesktopItem(item);
+        item.querySelector('.nav-panel .nav-link, .nav-panel .nav-trigger')?.focus();
+      } else if (peers.length) {
+        peers[(index + 1) % peers.length]?.focus();
+      }
+    }
+
+    if (event.key === 'ArrowUp' && peers.length) {
+      event.preventDefault();
+      peers[(index - 1 + peers.length) % peers.length]?.focus();
+    }
+
+    if (event.key === 'ArrowRight') {
+      const child = item?.querySelector(':scope > .nav-panel .nav-link, :scope > .nav-panel .nav-trigger');
+      if (child) {
+        event.preventDefault();
+        openDesktopItem(item);
+        child.focus();
+      }
+    }
+
+    if (event.key === 'ArrowLeft') {
+      const parentItem = item?.parentElement?.closest('.nav-item');
+      if (parentItem) {
+        event.preventDefault();
+        closeDesktopBranch(item);
+        parentItem.querySelector(':scope > .nav-trigger')?.focus();
+      }
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!nav.contains(event.target)) closeDesktopNav();
+  });
+}
+
+function getFocusableIn(element) {
+  return Array.from(element.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+    .filter((el) => !el.hidden && el.offsetParent !== null);
+}
+
+let lastMobileNavFocus = null;
+
+function openMobileNav() {
+  const drawer = document.querySelector('.mobile-nav-drawer');
+  const panel = document.querySelector('.mobile-nav-panel');
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  if (!drawer || !panel || !toggle) return;
+  lastMobileNavFocus = document.activeElement;
+  drawer.classList.add('is-open');
+  drawer.setAttribute('aria-hidden', 'false');
+  toggle.setAttribute('aria-expanded', 'true');
+  document.body.classList.add('mobile-nav-open');
+  requestAnimationFrame(() => panel.focus());
+}
+
+function closeMobileNav({ restoreFocus = true } = {}) {
+  const drawer = document.querySelector('.mobile-nav-drawer');
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  if (!drawer || !toggle) return;
+  drawer.classList.remove('is-open');
+  drawer.setAttribute('aria-hidden', 'true');
+  toggle.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('mobile-nav-open');
+  if (restoreFocus && lastMobileNavFocus && typeof lastMobileNavFocus.focus === 'function') {
+    lastMobileNavFocus.focus({ preventScroll: true });
+  }
+}
+
+function updateMobileBreadcrumb(path = '首页 / Home') {
+  const crumb = document.querySelector('[data-mobile-nav-breadcrumb]');
+  if (crumb) crumb.textContent = path;
+}
+
+function initMobileNavInteraction() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const drawer = document.querySelector('.mobile-nav-drawer');
+  const panel = document.querySelector('.mobile-nav-panel');
+  const close = document.querySelector('.mobile-nav-close');
+  const backdrop = document.querySelector('.mobile-nav-backdrop');
+  if (!toggle || !drawer || !panel) return;
+
+  toggle.addEventListener('click', () => {
+    if (drawer.classList.contains('is-open')) closeMobileNav();
+    else openMobileNav();
+  });
+  close?.addEventListener('click', () => closeMobileNav());
+  backdrop?.addEventListener('click', () => closeMobileNav());
+
+  drawer.querySelectorAll('.mobile-nav-trigger').forEach((button) => {
+    const target = document.getElementById(button.getAttribute('aria-controls'));
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+      target.hidden = expanded;
+      target.classList.toggle('is-open', !expanded);
+      if (!expanded) updateMobileBreadcrumb(button.dataset.path || 'Archive');
+    });
+  });
+
+  drawer.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      updateMobileBreadcrumb(link.dataset.path || 'Archive');
+      if (!link.target && isInternalHash(link.getAttribute('href'))) {
+        closeMobileNav({ restoreFocus: false });
+      }
+    });
+  });
+
+  drawer.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeMobileNav();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const focusable = getFocusableIn(panel);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
+
+function initNavigation() {
+  const desktopRoot = document.querySelector('[data-nav-root]');
+  const mobileRoot = document.querySelector('[data-mobile-nav-root]');
+  if (desktopRoot) {
+    desktopRoot.innerHTML = '';
+    desktopRoot.append(renderDesktopNavList(navItems));
+    desktopRoot.dataset.navReady = 'true';
+  }
+  if (mobileRoot) {
+    mobileRoot.innerHTML = '';
+    mobileRoot.append(renderMobileNavList(navItems));
+  }
+  navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
+  scrollLinks = Array.from(document.querySelectorAll('a[href^="#"]:not(.project-card)'));
+  initDesktopNavInteraction();
+  initMobileNavInteraction();
+  positionNavPanels();
+}
+
 function getSectionTargets() {
   return navLinks
     .map((link, index) => {
-      const section = document.querySelector(link.getAttribute('href'));
+      const href = link.getAttribute('href');
+      if (!isInternalHash(href)) return null;
+      const section = document.querySelector(href);
       if (!section) return null;
       return {
         id: section.id,
@@ -121,8 +772,20 @@ function getSectionTargets() {
 }
 
 function setActiveLink(id) {
+  document.querySelectorAll('.site-nav .nav-item.is-current-path').forEach((item) => item.classList.remove('is-current-path'));
   navLinks.forEach((link) => {
-    link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+    const active = link.getAttribute('href') === `#${id}`;
+    link.classList.toggle('is-active', active);
+    if (active) {
+      link.setAttribute('aria-current', 'page');
+      let currentItem = link.closest('.nav-item');
+      while (currentItem) {
+        currentItem.classList.add('is-current-path');
+        currentItem = currentItem.parentElement?.closest('.nav-item');
+      }
+    } else {
+      link.removeAttribute('aria-current');
+    }
   });
 }
 
@@ -167,11 +830,15 @@ function initScrollLinks() {
     link.addEventListener('click', (event) => {
       if (!document.querySelector(href)) return;
       event.preventDefault();
+      closeDesktopNav();
+      closeMobileNav({ restoreFocus: false });
       scrollToHash(href);
       history.pushState(null, '', href);
       if (href !== '#top') {
         manualActiveUntil = Date.now() + 1600;
         setActiveLink(href.slice(1));
+      } else {
+        setActiveLink('top');
       }
     });
   });
@@ -447,10 +1114,14 @@ if (!useLightweightMobile) {
 window.addEventListener('resize', () => {
   updateActiveLink();
   updateRevealScenes();
+  positionNavPanels();
 });
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && drawer?.classList.contains('is-open')) {
     closeProject();
+  } else if (event.key === 'Escape') {
+    closeDesktopNav();
+    if (document.querySelector('.mobile-nav-drawer')?.classList.contains('is-open')) closeMobileNav();
   }
 });
 
@@ -463,6 +1134,7 @@ window.addEventListener('load', () => {
 });
 
 initPageLoad();
+initNavigation();
 initScrollLinks();
 initReveals();
 initProjectDrawer();

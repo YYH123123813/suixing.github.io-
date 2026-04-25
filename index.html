@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./depth.css">
   <link rel="stylesheet" href="./interaction.css">
+  <link rel="stylesheet" href="./navigation.css">
   <link rel="stylesheet" href="./mobile-performance.css">
   <link rel="preload" href="./content/profile.json" as="fetch" type="application/json" crossorigin>
 </head>
@@ -37,13 +38,27 @@
         <span class="brand-zh">杨煜辉</span>
       </a>
 
-      <nav class="site-nav" aria-label="Sections">
-        <a href="#works">WORKS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#note">NOTE</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
+      <nav class="site-nav" aria-label="Portfolio archive navigation" data-nav-root></nav>
+
+      <button class="mobile-menu-toggle" type="button" aria-controls="mobile-nav-drawer" aria-expanded="false">
+        <span class="mobile-menu-index" aria-hidden="true">INDEX</span>
+        <span class="mobile-menu-label">菜单</span>
+        <span class="mobile-menu-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </header>
+
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <button class="mobile-nav-backdrop" type="button" aria-label="关闭导航菜单"></button>
+      <aside class="mobile-nav-panel" role="dialog" aria-modal="true" aria-labelledby="mobile-nav-title" tabindex="-1">
+        <div class="mobile-nav-topline">
+          <p class="mobile-nav-kicker">Portfolio Archive Index</p>
+          <button class="mobile-nav-close" type="button" aria-label="关闭导航菜单">×</button>
+        </div>
+        <h2 id="mobile-nav-title">作品宇宙导航</h2>
+        <p class="mobile-nav-breadcrumb" data-mobile-nav-breadcrumb>首页 / Home</p>
+        <nav class="mobile-nav-tree" aria-label="Mobile portfolio archive navigation" data-mobile-nav-root></nav>
+      </aside>
+    </div>
 
     <section class="hero-section reveal-scene" aria-labelledby="hero-title" data-scene="arrival">
       <div class="hero-copy depth-surface">
