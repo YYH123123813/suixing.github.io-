@@ -4,22 +4,23 @@
   not flat cards with generic shadows.
 */
 :root {
-  --depth-perspective: 1800px;
-  --depth-light-x: -10px;
-  --depth-light-y: -12px;
+  --depth-perspective: 1180px;
+  --depth-perspective-mobile: 1050px;
+  --depth-light-x: -14px;
+  --depth-light-y: -16px;
   --depth-z-page: 0px;
-  --depth-z-surface: 14px;
-  --depth-z-card: 34px;
-  --depth-z-lifted: 58px;
-  --depth-z-floating: 82px;
-  --depth-z-detail: 112px;
+  --depth-z-surface: 18px;
+  --depth-z-card: 44px;
+  --depth-z-lifted: 92px;
+  --depth-z-floating: 124px;
+  --depth-z-detail: 176px;
 
   --depth-desk: #d8c9b8;
   --depth-paper: #f5efe6;
   --depth-paper-soft: #efe5da;
   --depth-paper-card: #f8f2ea;
   --depth-paper-edge: #d4c2ae;
-  --depth-paper-edge-dark: #b89f88;
+  --depth-paper-edge-dark: #a98466;
   --depth-ink: #191511;
   --depth-charcoal: #12100e;
   --depth-charcoal-soft: #1a1714;
@@ -28,28 +29,28 @@
   --depth-terracotta-faded: #c18462;
 
   --depth-shadow-contact:
-    0 1px 1px rgba(35, 26, 18, 0.16),
-    0 2px 4px rgba(35, 26, 18, 0.10);
+    0 1px 1px rgba(35, 26, 18, 0.20),
+    0 3px 6px rgba(35, 26, 18, 0.14);
   --depth-shadow-paper:
-    0 1px 2px rgba(35, 26, 18, 0.12),
-    0 10px 24px rgba(35, 26, 18, 0.12),
-    0 28px 60px rgba(35, 26, 18, 0.08);
+    0 1px 2px rgba(35, 26, 18, 0.16),
+    0 14px 30px rgba(35, 26, 18, 0.16),
+    0 36px 78px rgba(35, 26, 18, 0.11);
   --depth-shadow-lifted:
-    0 2px 4px rgba(35, 26, 18, 0.16),
-    0 18px 36px rgba(35, 26, 18, 0.16),
-    0 48px 100px rgba(35, 26, 18, 0.10);
+    0 2px 4px rgba(35, 26, 18, 0.20),
+    0 24px 48px rgba(35, 26, 18, 0.22),
+    0 72px 150px rgba(35, 26, 18, 0.15);
   --depth-shadow-board:
-    0 2px 4px rgba(0, 0, 0, 0.26),
-    0 18px 42px rgba(22, 17, 13, 0.28),
-    0 60px 120px rgba(22, 17, 13, 0.16);
+    0 3px 6px rgba(0, 0, 0, 0.34),
+    0 28px 62px rgba(22, 17, 13, 0.36),
+    0 86px 170px rgba(22, 17, 13, 0.22);
   --depth-shadow-floating:
-    0 2px 3px rgba(35, 26, 18, 0.18),
-    0 16px 34px rgba(35, 26, 18, 0.16),
-    0 46px 90px rgba(35, 26, 18, 0.10);
+    0 2px 4px rgba(35, 26, 18, 0.22),
+    0 22px 46px rgba(35, 26, 18, 0.20),
+    0 66px 130px rgba(35, 26, 18, 0.14);
   --depth-shadow-tape:
-    0 1px 1px rgba(35, 26, 18, 0.16),
-    0 4px 8px rgba(35, 26, 18, 0.10);
-  --depth-edge-light: inset 0 1px 0 rgba(255,255,255,0.50), inset 0 -1px 0 rgba(67, 49, 35, 0.08);
+    0 1px 1px rgba(35, 26, 18, 0.20),
+    0 5px 11px rgba(35, 26, 18, 0.14);
+  --depth-edge-light: inset 0 1px 0 rgba(255,255,255,0.58), inset 0 -1px 0 rgba(67, 49, 35, 0.12);
 
   --z-depth-page: 1;
   --z-depth-surface: 5;
@@ -63,10 +64,26 @@
 .depth-scene {
   position: relative;
   perspective: var(--depth-perspective);
-  perspective-origin: 50% 28%;
+  perspective-origin: 50% 24%;
   transform-style: preserve-3d;
   isolation: isolate;
   overflow-x: clip;
+}
+
+.depth-scene::before {
+  content: "";
+  position: fixed;
+  left: 4vw;
+  right: 4vw;
+  top: 3vh;
+  bottom: 3vh;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 16%, rgba(255, 248, 236, 0.54), transparent 46%),
+    radial-gradient(ellipse at 55% 88%, rgba(57, 40, 27, 0.16), transparent 58%);
+  filter: blur(4px);
+  opacity: 0.62;
 }
 
 .depth-page,
@@ -77,44 +94,45 @@
   transform-style: preserve-3d;
   transform: translateZ(var(--depth-z-page));
   box-shadow:
-    0 2px 2px rgba(45, 34, 24, 0.08),
-    0 28px 70px rgba(45, 34, 24, 0.18),
-    0 90px 180px rgba(45, 34, 24, 0.14);
+    0 2px 3px rgba(45, 34, 24, 0.12),
+    0 38px 86px rgba(45, 34, 24, 0.23),
+    0 118px 220px rgba(45, 34, 24, 0.16);
 }
 
 .depth-page-ao,
 .depth-page-edge,
 .depth-ao,
-.depth-thickness {
+.depth-thickness,
+.depth-cast {
   position: absolute;
   display: block;
   pointer-events: none;
 }
 
 .depth-page-ao {
-  left: 3.5%;
-  right: 3.5%;
-  bottom: -46px;
-  height: 94px;
-  z-index: -3;
-  background: radial-gradient(ellipse at center, rgba(39, 28, 20, 0.22), transparent 72%);
-  filter: blur(26px);
-  opacity: 0.72;
-  transform: translateZ(-34px);
+  left: 3%;
+  right: 3%;
+  bottom: -62px;
+  height: 126px;
+  z-index: -4;
+  background: radial-gradient(ellipse at center, rgba(39, 28, 20, 0.32), rgba(39, 28, 20, 0.16) 42%, transparent 74%);
+  filter: blur(30px);
+  opacity: 0.82;
+  transform: translateZ(-56px);
 }
 
 .depth-page-edge {
-  left: 10px;
-  right: -10px;
-  bottom: -12px;
-  height: 18px;
-  z-index: -2;
+  left: 12px;
+  right: -14px;
+  bottom: -18px;
+  height: 26px;
+  z-index: -3;
   background:
-    linear-gradient(90deg, rgba(160, 136, 111, 0.20), rgba(190, 166, 140, 0.30) 18%, rgba(122, 98, 76, 0.19) 100%),
-    var(--depth-paper-edge);
+    linear-gradient(90deg, rgba(255,255,255,0.18), transparent 15%, rgba(93, 67, 45, 0.18) 100%),
+    linear-gradient(180deg, rgba(226, 209, 189, 0.95), rgba(151, 122, 95, 0.40));
   filter: blur(0.35px);
-  opacity: 0.70;
-  transform: translateZ(-18px);
+  opacity: 0.82;
+  transform: translateZ(-32px);
 }
 
 .depth-surface,
@@ -169,250 +187,307 @@
 .depth-board,
 .depth-contact {
   z-index: var(--z-depth-lifted);
-  box-shadow: var(--depth-shadow-board), inset 0 1px 0 rgba(255,255,255,0.07), inset 0 -1px 0 rgba(0,0,0,0.42);
+  box-shadow: var(--depth-shadow-board), inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.50);
 }
 
 .depth-ao {
-  left: 8%;
-  right: 8%;
-  bottom: -18px;
-  height: 34px;
-  z-index: -3;
-  background: radial-gradient(ellipse at center, rgba(30, 22, 16, 0.22), rgba(30, 22, 16, 0.08) 38%, transparent 74%);
-  filter: blur(12px);
-  opacity: 0.82;
-  transform: translateZ(-18px);
+  left: 5.5%;
+  right: 5%;
+  bottom: -28px;
+  height: 54px;
+  z-index: -4;
+  background: radial-gradient(ellipse at center, rgba(30, 22, 16, 0.34), rgba(30, 22, 16, 0.14) 40%, transparent 75%);
+  filter: blur(15px);
+  opacity: 0.92;
+  transform: translateZ(-26px);
 }
 
 .depth-thickness {
-  left: 4px;
-  right: -5px;
-  bottom: -8px;
-  height: 10px;
-  z-index: -2;
-  border-radius: 0 0 2px 2px;
+  left: 5px;
+  right: -8px;
+  bottom: -13px;
+  height: 17px;
+  z-index: -3;
+  border-radius: 0 0 3px 3px;
   background:
-    linear-gradient(90deg, rgba(255,255,255,0.18), transparent 16%, rgba(72, 51, 35, 0.10) 100%),
-    linear-gradient(180deg, rgba(212, 194, 174, 0.76), rgba(157, 129, 102, 0.32));
-  filter: blur(0.24px);
-  opacity: 0.86;
-  transform: translateZ(-8px);
+    linear-gradient(90deg, rgba(255,255,255,0.18), transparent 16%, rgba(66, 45, 30, 0.18) 100%),
+    linear-gradient(180deg, rgba(224, 205, 184, 0.98), rgba(141, 111, 84, 0.46));
+  filter: blur(0.28px);
+  opacity: 0.94;
+  transform: translateZ(-14px);
 }
 
 .depth-board > .depth-ao,
 .depth-contact > .depth-ao {
-  left: 6%;
-  right: 5%;
-  bottom: -24px;
-  height: 44px;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.34), rgba(26, 19, 14, 0.16) 42%, transparent 75%);
-  filter: blur(16px);
-  opacity: 0.88;
+  left: 4.5%;
+  right: 4%;
+  bottom: -36px;
+  height: 66px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.46), rgba(26, 19, 14, 0.22) 42%, transparent 76%);
+  filter: blur(20px);
+  opacity: 0.96;
 }
 
 .depth-board > .depth-thickness,
 .depth-contact > .depth-thickness {
-  left: 5px;
-  right: -8px;
-  bottom: -12px;
-  height: 14px;
+  left: 7px;
+  right: -14px;
+  bottom: -20px;
+  height: 24px;
   background:
-    linear-gradient(90deg, rgba(255,255,255,0.06), transparent 20%, rgba(0,0,0,0.32) 100%),
-    linear-gradient(180deg, #1d1915, #090806);
-  opacity: 0.92;
+    linear-gradient(90deg, rgba(255,255,255,0.06), transparent 18%, rgba(0,0,0,0.42) 100%),
+    linear-gradient(180deg, #25201b, #070605);
+  opacity: 0.98;
 }
 
 .depth-photo > .depth-thickness,
 .coast-photo > .depth-thickness {
-  left: 3px;
-  right: -4px;
-  bottom: -7px;
-  height: 8px;
+  left: 4px;
+  right: -7px;
+  bottom: -11px;
+  height: 13px;
   background:
-    linear-gradient(90deg, rgba(255,255,255,0.16), transparent 22%, rgba(64, 47, 33, 0.11)),
-    linear-gradient(180deg, #ded0bf, #b9a18a);
+    linear-gradient(90deg, rgba(255,255,255,0.16), transparent 22%, rgba(64, 47, 33, 0.16)),
+    linear-gradient(180deg, #e1d2bf, #a78970);
 }
 
-/* Physical object mapping: each object keeps its designed rotation but gets a Z position. */
+/* Object hierarchy: strong Z-axis and visible physical body. */
 .portrait-card.depth-photo-mount {
   overflow: visible;
-  transform: translate3d(0, 0, var(--depth-z-lifted)) rotate(0.75deg);
+  transform: translate3d(0, 0, 104px) rotate(0.75deg);
   box-shadow:
-    var(--depth-shadow-lifted),
-    7px 10px 0 rgba(147, 126, 103, 0.18),
+    0 3px 6px rgba(35, 26, 18, 0.22),
+    0 30px 62px rgba(35, 26, 18, 0.24),
+    0 92px 176px rgba(35, 26, 18, 0.17),
+    13px 17px 0 rgba(147, 126, 103, 0.22),
     var(--depth-edge-light);
 }
 
 .portrait-card.depth-photo-mount > .depth-ao {
-  bottom: -26px;
-  height: 48px;
-  opacity: 0.92;
+  left: 4%;
+  right: 3%;
+  bottom: -44px;
+  height: 76px;
+  opacity: 1;
+  filter: blur(20px);
 }
 
 .portrait-card.depth-photo-mount > .depth-thickness {
-  left: 7px;
-  right: -7px;
-  bottom: -10px;
-  height: 13px;
+  left: 9px;
+  right: -13px;
+  bottom: -19px;
+  height: 23px;
 }
 
 .portrait-photo-frame.depth-photo {
-  transform: translateZ(22px);
+  transform: translateZ(48px);
   box-shadow:
-    0 1px 1px rgba(26, 19, 14, 0.16),
-    0 9px 18px rgba(26, 19, 14, 0.16),
-    inset 0 0 0 1px rgba(43, 33, 25, 0.20),
-    inset 12px 0 22px rgba(32, 26, 20, 0.10),
-    inset 0 -18px 30px rgba(18, 15, 13, 0.15);
+    0 2px 3px rgba(26, 19, 14, 0.22),
+    0 15px 30px rgba(26, 19, 14, 0.22),
+    5px 7px 0 rgba(40, 28, 19, 0.12),
+    inset 0 0 0 1px rgba(43, 33, 25, 0.23),
+    inset 16px 0 24px rgba(32, 26, 20, 0.12),
+    inset 0 -22px 34px rgba(18, 15, 13, 0.18);
 }
 
 .portrait-photo-frame.depth-photo::after {
   content: "";
   position: absolute;
   inset: auto 0 0 0;
-  height: 10px;
+  height: 15px;
   z-index: 3;
-  background: linear-gradient(180deg, transparent, rgba(21, 17, 13, 0.18));
+  background: linear-gradient(180deg, transparent, rgba(21, 17, 13, 0.24));
   pointer-events: none;
 }
 
 .masking-tape.depth-tape {
   z-index: var(--z-depth-detail);
-  transform: translateX(-50%) translateZ(var(--depth-z-detail)) rotate(-4.8deg);
+  transform: translateX(-50%) translateZ(184px) rotate(-4.8deg);
   box-shadow: var(--depth-shadow-tape);
-  filter: drop-shadow(1px 2px 1px rgba(35,26,18,0.12));
+  filter: drop-shadow(1px 2px 1px rgba(35,26,18,0.18)) drop-shadow(0 7px 9px rgba(35,26,18,0.10));
 }
 
 .note-tape.depth-tape {
   z-index: var(--z-depth-detail);
-  transform: translateX(-50%) translateZ(var(--depth-z-detail)) rotate(4deg);
+  transform: translateX(-50%) translateZ(178px) rotate(4deg);
   box-shadow: var(--depth-shadow-tape);
-  filter: drop-shadow(1px 2px 1px rgba(35,26,18,0.13));
+  filter: drop-shadow(1px 2px 1px rgba(35,26,18,0.18)) drop-shadow(0 7px 9px rgba(35,26,18,0.10));
 }
 
 .scroll-tag.depth-floating {
   z-index: var(--z-depth-floating);
-  transform: translateZ(74px);
-  box-shadow: var(--depth-shadow-floating);
+  transform: translateZ(132px);
+  box-shadow:
+    0 2px 3px rgba(35,26,18,0.20),
+    0 18px 35px rgba(35,26,18,0.18),
+    0 48px 90px rgba(35,26,18,0.12);
 }
 
 .ink-doodle.depth-floating {
   z-index: var(--z-depth-floating);
-  transform: translateZ(80px);
-  filter: drop-shadow(0 3px 2px rgba(35,26,18,0.10));
+  transform: translateZ(126px);
+  filter: drop-shadow(0 5px 3px rgba(35,26,18,0.16));
 }
 
 .portrait-caption.depth-caption {
   z-index: var(--z-depth-floating);
-  transform: translateZ(88px);
-  box-shadow: var(--depth-shadow-contact);
+  transform: translateZ(142px) rotate(-2deg);
+  box-shadow:
+    0 1px 2px rgba(35,26,18,0.16),
+    0 10px 18px rgba(35,26,18,0.14),
+    4px 5px 0 rgba(158, 132, 106, 0.15);
 }
 
 .works-board.depth-board {
   overflow: visible;
-  transform: translate3d(0, 0, 48px) rotate(-0.32deg);
+  transform: translate3d(0, 0, 86px) rotate(-0.32deg);
   box-shadow:
-    var(--depth-shadow-board),
-    8px 11px 0 rgba(11, 9, 7, 0.26),
-    inset 0 1px 0 rgba(255,255,255,0.075),
-    inset 0 -1px 0 rgba(0,0,0,0.48);
+    0 4px 8px rgba(0, 0, 0, 0.38),
+    0 34px 76px rgba(22, 17, 13, 0.40),
+    0 112px 210px rgba(22, 17, 13, 0.26),
+    14px 18px 0 rgba(11, 9, 7, 0.34),
+    inset 0 1px 0 rgba(255,255,255,0.085),
+    inset 0 -1px 0 rgba(0,0,0,0.56);
 }
 
 .depth-paperclip {
   z-index: var(--z-depth-detail);
-  transform: translateZ(118px) rotate(9deg);
-  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.26)) drop-shadow(0 7px 8px rgba(0,0,0,0.18));
+  transform: translateZ(196px) rotate(9deg);
+  filter: drop-shadow(0 2px 1px rgba(0,0,0,0.30)) drop-shadow(0 10px 12px rgba(0,0,0,0.22));
 }
 
 .project-card.depth-card {
-  transform: translateZ(12px);
+  transform: translateZ(22px);
   box-shadow: none;
 }
 
 .project-thumb.depth-photo {
-  transform: translateZ(24px);
+  transform: translateZ(42px);
   box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.24),
-    0 8px 15px rgba(0, 0, 0, 0.20),
-    3px 4px 0 rgba(0, 0, 0, 0.12);
+    0 1px 2px rgba(0, 0, 0, 0.28),
+    0 12px 22px rgba(0, 0, 0, 0.26),
+    5px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
 .coast-photo.depth-floating {
   overflow: visible;
-  transform: translate3d(0, 0, 82px) rotate(-2.4deg);
+  transform: translate3d(0, 0, 128px) rotate(-4.2deg) translate(-18px, -22px);
   box-shadow:
     var(--depth-shadow-floating),
-    5px 6px 0 rgba(151, 126, 102, 0.22),
+    8px 9px 0 rgba(151, 126, 102, 0.26),
     var(--depth-edge-light);
 }
 
 .manifesto-card.depth-paper-insert {
   overflow: visible;
-  transform: translate3d(0, 0, 38px) rotate(0.24deg);
+  transform: translate3d(0, 0, 66px) rotate(0.24deg);
   box-shadow:
-    var(--depth-shadow-paper),
-    5px 7px 0 rgba(170, 146, 120, 0.20),
+    var(--depth-shadow-lifted),
+    9px 11px 0 rgba(170, 146, 120, 0.24),
     var(--depth-edge-light);
 }
 
 .manifesto-card.depth-paper-insert > .depth-ao {
-  opacity: 0.68;
+  bottom: -28px;
+  height: 52px;
+  opacity: 0.84;
 }
 
 .note-card.depth-note {
   overflow: visible;
-  transform: translate3d(0, 0, 84px) rotate(-3.1deg);
+  transform: translate3d(0, 0, 142px) rotate(-5deg) translateY(-22px);
   box-shadow:
     var(--depth-shadow-floating),
-    5px 7px 0 rgba(170, 146, 120, 0.20),
+    8px 10px 0 rgba(170, 146, 120, 0.26),
     var(--depth-edge-light);
 }
 
 .skills-card.depth-card {
   overflow: visible;
-  transform: translateZ(28px);
+  transform: translateZ(46px);
   box-shadow:
     var(--depth-shadow-paper),
-    4px 6px 0 rgba(170, 146, 120, 0.14),
+    6px 8px 0 rgba(170, 146, 120, 0.18),
     var(--depth-edge-light);
 }
 
 .resume-contact.depth-surface {
-  transform: translateZ(18px);
+  transform: translateZ(24px);
 }
 
 .resume-tile.depth-card {
   overflow: visible;
-  transform: translateZ(42px) rotate(-1deg);
+  transform: translateZ(68px) rotate(-1.4deg);
   box-shadow:
-    var(--depth-shadow-paper),
-    6px 7px 0 rgba(127, 63, 44, 0.18),
+    var(--depth-shadow-lifted),
+    8px 10px 0 rgba(127, 63, 44, 0.22),
     var(--depth-edge-light);
 }
 
 .contact-block.depth-contact {
   overflow: visible;
-  transform: translate3d(0, 0, 50px) rotate(-0.7deg);
+  transform: translate3d(0, 0, 78px) rotate(-0.9deg);
   box-shadow:
     var(--depth-shadow-board),
-    8px 10px 0 rgba(11, 9, 7, 0.28),
-    inset 0 1px 0 rgba(255,255,255,0.06),
-    inset 0 -1px 0 rgba(0,0,0,0.42);
+    12px 15px 0 rgba(11, 9, 7, 0.34),
+    inset 0 1px 0 rgba(255,255,255,0.065),
+    inset 0 -1px 0 rgba(0,0,0,0.48);
 }
 
 .depth-stamp {
   z-index: var(--z-depth-surface);
-  transform: translateZ(18px) rotate(-14deg);
-  filter: drop-shadow(0 1px 0 rgba(127,63,44,0.08));
+  transform: translateZ(34px) rotate(-14deg);
+  filter: drop-shadow(0 1px 0 rgba(127,63,44,0.12)) drop-shadow(0 7px 10px rgba(127,63,44,0.08));
 }
 
+/* Desktop composition: make overlap and lateral depth more obvious. */
 @media (min-width: 1100px) {
   .hero-visual.depth-surface {
     height: clamp(650px, 48vw, 720px);
+    transform: translate3d(0, -10px, 28px);
+  }
+
+  .hero-copy.depth-surface {
+    transform: translate3d(0, 10px, 14px);
+  }
+
+  .works-stage {
+    transform: translateX(10px);
+  }
+
+  .about-section {
+    transform: translate3d(-18px, 32px, 0);
+  }
+
+  .lower-spread {
+    transform-style: preserve-3d;
+  }
+
+  .note-card.depth-note {
+    margin-left: -20px;
+    margin-right: -10px;
   }
 }
 
-/* Tactile hover behavior: subtle Z-axis lift, no flashy motion. */
+@media (min-width: 768px) and (max-width: 1099px) {
+  .depth-scene {
+    perspective: 1320px;
+  }
+
+  .works-board.depth-board {
+    transform: translateZ(64px) rotate(-0.32deg);
+  }
+
+  .manifesto-card.depth-paper-insert {
+    transform: translateZ(48px) rotate(0.24deg);
+  }
+
+  .note-card.depth-note {
+    transform: translateZ(96px) rotate(-4deg);
+  }
+}
+
+/* Tactile hover behavior: stronger but still editorial, no cheap motion. */
 @media (hover: hover) {
   .depth-card,
   .depth-card-lifted,
@@ -422,42 +497,42 @@
   .depth-contact,
   .depth-photo,
   .depth-tape {
-    transition: transform 280ms ease, box-shadow 280ms ease, filter 280ms ease;
+    transition: transform 320ms cubic-bezier(.2,.8,.2,1), box-shadow 320ms cubic-bezier(.2,.8,.2,1), filter 320ms ease;
   }
 
   .portrait-card.depth-photo-mount:hover {
-    transform: translate3d(0, -4px, 76px) rotate(0.75deg);
+    transform: translate3d(0, -8px, 128px) rotate(0.75deg);
     box-shadow:
-      0 2px 4px rgba(35, 26, 18, 0.18),
-      0 24px 48px rgba(35, 26, 18, 0.18),
-      0 68px 132px rgba(35, 26, 18, 0.12),
-      8px 12px 0 rgba(147, 126, 103, 0.18),
+      0 4px 9px rgba(35, 26, 18, 0.24),
+      0 38px 78px rgba(35, 26, 18, 0.26),
+      0 116px 218px rgba(35, 26, 18, 0.18),
+      14px 20px 0 rgba(147, 126, 103, 0.24),
       var(--depth-edge-light);
   }
 
   .works-board.depth-board:hover {
-    transform: translate3d(0, -3px, 62px) rotate(-0.32deg);
+    transform: translate3d(0, -7px, 106px) rotate(-0.32deg);
     box-shadow:
-      0 2px 5px rgba(0, 0, 0, 0.28),
-      0 24px 50px rgba(22, 17, 13, 0.30),
-      0 76px 140px rgba(22, 17, 13, 0.18),
-      8px 12px 0 rgba(11, 9, 7, 0.28),
-      inset 0 1px 0 rgba(255,255,255,0.08),
-      inset 0 -1px 0 rgba(0,0,0,0.48);
+      0 5px 10px rgba(0, 0, 0, 0.42),
+      0 42px 90px rgba(22, 17, 13, 0.44),
+      0 132px 240px rgba(22, 17, 13, 0.28),
+      15px 20px 0 rgba(11, 9, 7, 0.36),
+      inset 0 1px 0 rgba(255,255,255,0.09),
+      inset 0 -1px 0 rgba(0,0,0,0.58);
   }
 
   .project-card.depth-card:hover,
   .project-card.depth-card:focus-visible {
-    transform: translate3d(0, -3px, 34px);
+    transform: translate3d(0, -4px, 48px);
   }
 
   .project-card.depth-card:hover .project-thumb.depth-photo,
   .project-card.depth-card:focus-visible .project-thumb.depth-photo {
-    transform: translateZ(38px);
+    transform: translateZ(64px);
     box-shadow:
-      0 1px 1px rgba(0, 0, 0, 0.26),
-      0 12px 22px rgba(0, 0, 0, 0.24),
-      4px 5px 0 rgba(0, 0, 0, 0.14);
+      0 2px 2px rgba(0, 0, 0, 0.30),
+      0 17px 30px rgba(0, 0, 0, 0.30),
+      6px 7px 0 rgba(0, 0, 0, 0.18);
   }
 
   .manifesto-card.depth-paper-insert:hover,
@@ -465,87 +540,117 @@
   .note-card.depth-note:hover {
     box-shadow:
       var(--depth-shadow-lifted),
-      6px 8px 0 rgba(170, 146, 120, 0.20),
+      9px 12px 0 rgba(170, 146, 120, 0.24),
       var(--depth-edge-light);
   }
 
   .manifesto-card.depth-paper-insert:hover {
-    transform: translate3d(0, -3px, 50px) rotate(0.24deg);
+    transform: translate3d(0, -6px, 84px) rotate(0.24deg);
   }
 
   .note-card.depth-note:hover {
-    transform: translate3d(0, -4px, 98px) rotate(-3.1deg);
+    transform: translate3d(0, -8px, 162px) rotate(-5deg) translateY(-22px);
   }
 
   .resume-tile.depth-card:hover,
   .resume-tile.depth-card:focus-visible {
-    transform: translate3d(0, -3px, 58px) rotate(-1deg);
+    transform: translate3d(0, -5px, 86px) rotate(-1.4deg);
   }
 
   .contact-block.depth-contact:hover {
-    transform: translate3d(0, -2px, 62px) rotate(-0.7deg);
+    transform: translate3d(0, -5px, 98px) rotate(-0.9deg);
   }
 }
 
 @media (max-width: 767px) {
   .depth-scene {
-    perspective: 1300px;
-    perspective-origin: 50% 18%;
+    perspective: var(--depth-perspective-mobile);
+    perspective-origin: 50% 16%;
   }
 
   .depth-page,
   .portfolio-page {
     box-shadow:
-      0 1px 1px rgba(45, 34, 24, 0.08),
-      0 16px 38px rgba(45, 34, 24, 0.14);
+      0 1px 2px rgba(45, 34, 24, 0.10),
+      0 18px 44px rgba(45, 34, 24, 0.18),
+      0 44px 100px rgba(45, 34, 24, 0.10);
   }
 
   .depth-page-edge {
-    bottom: -8px;
-    height: 12px;
-    opacity: 0.48;
+    left: 6px;
+    right: -6px;
+    bottom: -10px;
+    height: 15px;
+    opacity: 0.62;
   }
 
   .depth-page-ao {
-    bottom: -28px;
-    height: 56px;
-    filter: blur(18px);
-    opacity: 0.42;
+    bottom: -34px;
+    height: 70px;
+    filter: blur(20px);
+    opacity: 0.54;
   }
 
   .depth-ao {
-    bottom: -12px;
-    height: 24px;
-    filter: blur(9px);
-    opacity: 0.58;
+    bottom: -17px;
+    height: 32px;
+    filter: blur(11px);
+    opacity: 0.70;
   }
 
   .depth-thickness {
     left: 2px;
     right: 0;
-    bottom: -5px;
-    height: 7px;
-    opacity: 0.62;
+    bottom: -7px;
+    height: 9px;
+    opacity: 0.72;
   }
 
   .portrait-card.depth-photo-mount {
-    transform: translateZ(32px) rotate(0.75deg);
+    transform: translateZ(54px) rotate(0.75deg);
+    box-shadow:
+      0 2px 4px rgba(35, 26, 18, 0.20),
+      0 18px 38px rgba(35, 26, 18, 0.20),
+      0 46px 96px rgba(35, 26, 18, 0.12),
+      8px 10px 0 rgba(147, 126, 103, 0.18),
+      var(--depth-edge-light);
+  }
+
+  .portrait-photo-frame.depth-photo {
+    transform: translateZ(30px);
   }
 
   .works-board.depth-board {
-    transform: translateZ(30px) rotate(-0.32deg);
+    transform: translateZ(50px) rotate(-0.32deg);
   }
 
   .manifesto-card.depth-paper-insert {
-    transform: translateZ(24px) rotate(0.24deg);
+    transform: translateZ(36px) rotate(0.24deg);
   }
 
   .note-card.depth-note {
-    transform: translateZ(48px) rotate(-3.1deg);
+    transform: translateZ(72px) rotate(-4.2deg);
+  }
+
+  .skills-card.depth-card {
+    transform: translateZ(34px);
+  }
+
+  .resume-tile.depth-card {
+    transform: translateZ(46px) rotate(-1.2deg);
   }
 
   .contact-block.depth-contact {
-    transform: translateZ(30px) rotate(-0.7deg);
+    transform: translateZ(50px) rotate(-0.7deg);
+  }
+
+  .masking-tape.depth-tape,
+  .note-tape.depth-tape {
+    transform: translateX(-50%) translateZ(118px) rotate(-4.8deg);
+  }
+
+  .note-tape.depth-tape {
+    transform: translateX(-50%) translateZ(118px) rotate(4deg);
   }
 }
 
